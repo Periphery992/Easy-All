@@ -1,0 +1,31 @@
+//
+//  CommonDefine.pch
+//  Easy-All
+//
+//  Created by chen on 23/09/2017.
+//  Copyright © 2017 chensa. All rights reserved.
+//
+
+#ifndef CommonDefine_pch
+#define CommonDefine_pch
+
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+#pragma mark - IOS_VERSION
+#define IS_IOS10_OR_LATER        ([[[UIDevice currentDevice] systemVersion] floatValue] >= 10.0)  //系统版本不小于ios10
+#define IS_IOS9_OR_LATER         ([[[UIDevice currentDevice] systemVersion] floatValue] >= 9.0)  //系统版本不小于ios9
+#define IS_IOS8_OR_LATER         ([[[UIDevice currentDevice] systemVersion] floatValue] >= 8.0)  //系统版本不小于ios8
+
+#define IS_IOS10_BEFORE          ([[[UIDevice currentDevice] systemVersion] floatValue] < 10.0)  //系统版本小于ios10
+#define IS_IOS9_BEFORE           ([[[UIDevice currentDevice] systemVersion] floatValue] < 9.0)  //系统版本小于ios9
+#define IS_IOS8_BEFORE           ([[[UIDevice currentDevice] systemVersion] floatValue] < 8.0)  //系统版本小于ios8
+
+#pragma mark - SCREEN_SIZE
+#define SCREEN_WIDTH  [[UIScreen mainScreen]bounds].size.width      //手机屏幕宽
+#define SCREEN_HEIGHT  [[UIScreen mainScreen]bounds].size.height    //手机屏幕高
+
+#define isIphone4OR5 SCREEN_WIDTH<=320?YES:NO
+
+
+
+#endif /* CommonDefine_pch */
