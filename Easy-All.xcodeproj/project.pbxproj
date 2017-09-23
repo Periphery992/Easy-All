@@ -13,6 +13,7 @@
 		552FA3C61F7424DC009EB5B2 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 552FA3C51F7424DC009EB5B2 /* main.m */; };
 		55B3EE7D1F7560C30073DB65 /* UIView+Frame.m in Sources */ = {isa = PBXBuildFile; fileRef = 55B3EE7C1F7560C30073DB65 /* UIView+Frame.m */; };
 		55B3EE841F7570520073DB65 /* InfoDictionary.m in Sources */ = {isa = PBXBuildFile; fileRef = 55B3EE831F7570520073DB65 /* InfoDictionary.m */; };
+		55CCD6681F75F2AA00370A33 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 55CCD6671F75F2AA00370A33 /* MainViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,8 @@
 		55B3EE7C1F7560C30073DB65 /* UIView+Frame.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIView+Frame.m"; sourceTree = "<group>"; };
 		55B3EE821F7570520073DB65 /* InfoDictionary.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = InfoDictionary.h; sourceTree = "<group>"; };
 		55B3EE831F7570520073DB65 /* InfoDictionary.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = InfoDictionary.m; sourceTree = "<group>"; };
+		55CCD6661F75F2AA00370A33 /* MainViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
+		55CCD6671F75F2AA00370A33 /* MainViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
 		692A85F1BB50A18BF0605C34 /* Pods-Easy-All.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Easy-All.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Easy-All/Pods-Easy-All.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -86,6 +89,8 @@
 		552FA3CD1F74269F009EB5B2 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				55CCD6661F75F2AA00370A33 /* MainViewController.h */,
+				55CCD6671F75F2AA00370A33 /* MainViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -257,6 +262,7 @@
 				55B3EE7D1F7560C30073DB65 /* UIView+Frame.m in Sources */,
 				55B3EE841F7570520073DB65 /* InfoDictionary.m in Sources */,
 				552FA3C61F7424DC009EB5B2 /* main.m in Sources */,
+				55CCD6681F75F2AA00370A33 /* MainViewController.m in Sources */,
 				552FA3B81F7424DC009EB5B2 /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
