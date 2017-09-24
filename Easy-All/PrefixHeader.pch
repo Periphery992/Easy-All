@@ -13,5 +13,21 @@
 // You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
 #import "UIColorDefine.h"
 #import "CommonDefine.pch"
+#import "UIView+Frame.h"
+
+
+#pragma mark - DDLog
+#define LOG_LEVEL_DEF ddLogLevel
+#import <CocoaLumberjack/CocoaLumberjack.h>
+//#import "DDLog.h"
+//#import "DDASLLogger.h"
+//#import "DDFileLogger.h"
+//#import "DDTTYLogger.h"
+//设置DDLog日志等级
+#ifdef DEBUG
+static const DDLogLevel ddLogLevel = DDLogLevelAll;
+#else
+static const DDLogLevel ddLogLevel = DDLogLevelOff;
+#endif
 
 #endif /* PrefixHeader_pch */

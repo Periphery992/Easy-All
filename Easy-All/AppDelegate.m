@@ -22,9 +22,14 @@
     self.window = [[UIWindow alloc]initWithFrame:[[UIScreen mainScreen] bounds]];
     [self.window makeKeyAndVisible];
     
+    MainViewController *controller = [[MainViewController alloc]init];
+    self.window.rootViewController = controller;
     
+    [DDLog addLogger:[[DDFileLogger alloc]init]withLevel:DDLogLevelVerbose];
+    [DDLog addLogger:[DDTTYLogger sharedInstance]withLevel:DDLogLevelVerbose];
     
-    
+    DDLogVerbose(@"1");
+
     return YES;
 }
 

@@ -1,13 +1,13 @@
 //
-//  MainListManager.h
+//  ApplicationInit.h
 //  Easy-All
 //
-//  Created by chensa on 2017/9/23.
+//  Created by chensa on 2017/9/24.
 //  Copyright © 2017年 chensa. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>
 
-@interface MainListManager : NSObject
+@interface ApplicationInit : NSObject
 
 @end
