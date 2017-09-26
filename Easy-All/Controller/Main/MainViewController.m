@@ -10,6 +10,8 @@
 #import "DeviceInfoViewController.h"
 #import "MainManager.h"
 
+#import "HouseLoanManager.h"
+
 
 @interface MainViewController ()
 
@@ -23,15 +25,9 @@
     
 //    DeviceInfoViewController *controller = [[DeviceInfoViewController alloc]init];
 //    [self.navigationController pushViewController:controller animated:YES];
-    NSMutableArray *mutarr =  [[MainManager sharedInstance] getMainList];
-    MainBean *bean = [mutarr objectAtIndex:0];
+      [HouseLoanManager sharedInstance];
+
     
-    bean.Name = @"1";
-    
-    
-    NSMutableArray *mutarr2 =  [[MainManager sharedInstance] getMainList];
-    
-    NSLog(@"1");
 }
 
 

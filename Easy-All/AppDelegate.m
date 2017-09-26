@@ -29,13 +29,6 @@
     self.window.rootViewController = nav;
     
     [ApplicationInit sharedInstance];
-    
-    
-    DDLogInfo(@"%@",[InfoDictionary getDeviceName]);
-    DDLogInfo(@"%@",[InfoDictionary getDeivceModel]);
-    DDLogInfo(@"%@",[InfoDictionary getDeivceLocalizedModel]);
-    DDLogInfo(@"%@",[InfoDictionary getDeivceSystemVersion]);
-    DDLogInfo(@"%@",[InfoDictionary getDeivceSystemName]);
 
     return YES;
 }

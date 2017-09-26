@@ -18,7 +18,6 @@
 
 - (id)copyWithZone:(NSZone *)zone
 {
-
     MainBean *bean  = [[self class] allocWithZone:zone];
     bean.Name       = [_Name copy];
     bean.Controller = [_Controller copy];

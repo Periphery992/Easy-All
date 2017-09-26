@@ -11,6 +11,8 @@
 		552FA3B81F7424DC009EB5B2 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 552FA3B71F7424DC009EB5B2 /* AppDelegate.m */; };
 		552FA3C01F7424DC009EB5B2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 552FA3BF1F7424DC009EB5B2 /* Assets.xcassets */; };
 		552FA3C61F7424DC009EB5B2 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 552FA3C51F7424DC009EB5B2 /* main.m */; };
+		5534D19D1F7A9F5200BF84CF /* HouseLoanManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 5534D19C1F7A9F5200BF84CF /* HouseLoanManager.m */; };
+		5536F8141F7AAB8600765E15 /* MonthPayBean.m in Sources */ = {isa = PBXBuildFile; fileRef = 5536F8131F7AAB8600765E15 /* MonthPayBean.m */; };
 		555D3B351F76B15F00C561FA /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 555D3B341F76B15F00C561FA /* MainViewController.m */; };
 		55B3EE7D1F7560C30073DB65 /* UIView+Frame.m in Sources */ = {isa = PBXBuildFile; fileRef = 55B3EE7C1F7560C30073DB65 /* UIView+Frame.m */; };
 		55B3EE841F7570520073DB65 /* InfoDictionary.m in Sources */ = {isa = PBXBuildFile; fileRef = 55B3EE831F7570520073DB65 /* InfoDictionary.m */; };
@@ -33,6 +35,10 @@
 		552FA3BF1F7424DC009EB5B2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		552FA3C41F7424DC009EB5B2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		552FA3C51F7424DC009EB5B2 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		5534D19B1F7A9F5200BF84CF /* HouseLoanManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HouseLoanManager.h; sourceTree = "<group>"; };
+		5534D19C1F7A9F5200BF84CF /* HouseLoanManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HouseLoanManager.m; sourceTree = "<group>"; };
+		5536F8121F7AAB8600765E15 /* MonthPayBean.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MonthPayBean.h; sourceTree = "<group>"; };
+		5536F8131F7AAB8600765E15 /* MonthPayBean.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MonthPayBean.m; sourceTree = "<group>"; };
 		555D3B331F76B15F00C561FA /* MainViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
 		555D3B341F76B15F00C561FA /* MainViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
 		55B3EE7B1F7560C30073DB65 /* UIView+Frame.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIView+Frame.h"; sourceTree = "<group>"; };
@@ -111,6 +117,7 @@
 		552FA3CC1F742695009EB5B2 /* Manager */ = {
 			isa = PBXGroup;
 			children = (
+				5534D19A1F7A9EE400BF84CF /* HouseLoan */,
 				74CCEE4F1F7A227100A88A5B /* Main */,
 				741B75121F79104F00BFDA2F /* DeviceInfo */,
 				741B750E1F78A3CF00BFDA2F /* DDLog */,
@@ -125,6 +132,17 @@
 				555D3B321F76B14900C561FA /* Main */,
 			);
 			path = Controller;
+			sourceTree = "<group>";
+		};
+		5534D19A1F7A9EE400BF84CF /* HouseLoan */ = {
+			isa = PBXGroup;
+			children = (
+				5534D19B1F7A9F5200BF84CF /* HouseLoanManager.h */,
+				5534D19C1F7A9F5200BF84CF /* HouseLoanManager.m */,
+				5536F8121F7AAB8600765E15 /* MonthPayBean.h */,
+				5536F8131F7AAB8600765E15 /* MonthPayBean.m */,
+			);
+			path = HouseLoan;
 			sourceTree = "<group>";
 		};
 		555D3B321F76B14900C561FA /* Main */ = {
@@ -373,7 +391,9 @@
 				74CCEE581F7A2BC400A88A5B /* MainBean.m in Sources */,
 				55B3EE7D1F7560C30073DB65 /* UIView+Frame.m in Sources */,
 				74ADDF0A1F7651DC008980A5 /* CommonViewController.m in Sources */,
+				5534D19D1F7A9F5200BF84CF /* HouseLoanManager.m in Sources */,
 				55B3EE841F7570520073DB65 /* InfoDictionary.m in Sources */,
+				5536F8141F7AAB8600765E15 /* MonthPayBean.m in Sources */,
 				74CCEE521F7A271900A88A5B /* MainManager.m in Sources */,
 				552FA3C61F7424DC009EB5B2 /* main.m in Sources */,
 				741B75151F79106C00BFDA2F /* DeviceInfoViewController.m in Sources */,
