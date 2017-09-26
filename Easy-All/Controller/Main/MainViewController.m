@@ -8,6 +8,7 @@
 
 #import "MainViewController.h"
 #import "DeviceInfoViewController.h"
+#import "MainManager.h"
 
 
 @interface MainViewController ()
@@ -20,9 +21,19 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
-    DeviceInfoViewController *controller = [[DeviceInfoViewController alloc]init];
-    [self.navigationController pushViewController:controller animated:YES];
+//    DeviceInfoViewController *controller = [[DeviceInfoViewController alloc]init];
+//    [self.navigationController pushViewController:controller animated:YES];
+    NSMutableArray *mutarr =  [[MainManager sharedInstance] getMainList];
+    MainBean *bean = [mutarr objectAtIndex:0];
+    
+    bean.Name = @"1";
+    
+    
+    NSMutableArray *mutarr2 =  [[MainManager sharedInstance] getMainList];
+    
+    NSLog(@"1");
 }
+
 
 
 

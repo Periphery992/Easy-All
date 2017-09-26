@@ -13,12 +13,12 @@ typedef NS_ENUM(NSUInteger, MainType) {
 };
 
 
-@interface MainBean : NSObject
+@interface MainBean : NSObject<NSCopying,NSMutableCopying>
 
-@property (nonatomic, copy) NSString *strName;
-@property (nonatomic, copy) NSString *strController;
-@property (nonatomic, assign) MainType mainType;
-
+@property (nonatomic, copy) NSString *Name;
+@property (nonatomic, copy) NSString *Controller;
+@property (nonatomic, assign) MainType Type;
+@property (nonatomic, copy) NSString *iCon;
 
 
 @end

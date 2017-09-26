@@ -19,6 +19,7 @@
 		741B75151F79106C00BFDA2F /* DeviceInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 741B75141F79106C00BFDA2F /* DeviceInfoViewController.m */; };
 		74ADDF0A1F7651DC008980A5 /* CommonViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 74ADDF091F7651DC008980A5 /* CommonViewController.m */; };
 		74ADDF0E1F7653C6008980A5 /* UIImage+Color.m in Sources */ = {isa = PBXBuildFile; fileRef = 74ADDF0D1F7653C6008980A5 /* UIImage+Color.m */; };
+		74AEAF951F7A6CAB00D7095F /* MainList.plist in Resources */ = {isa = PBXBuildFile; fileRef = 74AEAF941F7A6CAB00D7095F /* MainList.plist */; };
 		74CCEE521F7A271900A88A5B /* MainManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 74CCEE511F7A271900A88A5B /* MainManager.m */; };
 		74CCEE581F7A2BC400A88A5B /* MainBean.m in Sources */ = {isa = PBXBuildFile; fileRef = 74CCEE571F7A2BC400A88A5B /* MainBean.m */; };
 /* End PBXBuildFile section */
@@ -53,6 +54,7 @@
 		74ADDF101F7653EC008980A5 /* UIColorDefine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIColorDefine.h; sourceTree = "<group>"; };
 		74ADDF111F76541B008980A5 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 		74ADDF121F7656B0008980A5 /* CommonDefine.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CommonDefine.pch; sourceTree = "<group>"; };
+		74AEAF941F7A6CAB00D7095F /* MainList.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = MainList.plist; sourceTree = "<group>"; };
 		74CCEE501F7A271900A88A5B /* MainManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainManager.h; sourceTree = "<group>"; };
 		74CCEE511F7A271900A88A5B /* MainManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainManager.m; sourceTree = "<group>"; };
 		74CCEE561F7A2BC400A88A5B /* MainBean.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainBean.h; sourceTree = "<group>"; };
@@ -225,6 +227,7 @@
 				74CCEE511F7A271900A88A5B /* MainManager.m */,
 				74CCEE561F7A2BC400A88A5B /* MainBean.h */,
 				74CCEE571F7A2BC400A88A5B /* MainBean.m */,
+				74AEAF941F7A6CAB00D7095F /* MainList.plist */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -308,6 +311,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				552FA3C01F7424DC009EB5B2 /* Assets.xcassets in Resources */,
+				74AEAF951F7A6CAB00D7095F /* MainList.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

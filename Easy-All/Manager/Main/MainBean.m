@@ -16,4 +16,26 @@
 
 @implementation MainBean
 
+- (id)copyWithZone:(NSZone *)zone
+{
+
+    MainBean *bean  = [[self class] allocWithZone:zone];
+    bean.Name       = [_Name copy];
+    bean.Controller = [_Controller copy];
+    bean.Type = _Type;
+    bean.iCon = [_iCon copy];
+    return bean;
+}
+
+- (id)mutableCopyWithZone:(NSZone *)zone
+{
+    MainBean *bean  = [[self class] allocWithZone:zone];
+    bean.Name       = [_Name mutableCopy];
+    bean.Controller = [_Controller mutableCopy];
+    bean.Type = _Type;
+    bean.iCon = [_iCon mutableCopy];
+    return bean;
+}
+
+
 @end

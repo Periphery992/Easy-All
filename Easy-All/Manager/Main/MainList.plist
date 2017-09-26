@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<dict>
+		<key>Name</key>
+		<string>DeviceInfo</string>
+		<key>Controller</key>
+		<string>DeviceInfoViewContoller</string>
+		<key>Type</key>
+		<integer>0</integer>
+		<key>iCon</key>
+		<string></string>
+	</dict>
+	<dict>
+		<key>Name</key>
+		<string>DeviceInfo1</string>
+		<key>Controller</key>
+		<string>DeviceInfoViewContoller</string>
+		<key>Type</key>
+		<integer>1</integer>
+		<key>iCon</key>
+		<string></string>
+	</dict>
+	<dict>
+		<key>Name</key>
+		<string>DeviceInfo2</string>
+		<key>Controller</key>
+		<string>DeviceInfoViewContoller</string>
+		<key>Type</key>
+		<integer>1</integer>
+		<key>iCon</key>
+		<string></string>
+	</dict>
+	<dict>
+		<key>Name</key>
+		<string>DeviceInfo3</string>
+		<key>Controller</key>
+		<string>DeviceInfoViewContoller</string>
+		<key>Type</key>
+		<integer>0</integer>
+		<key>iCon</key>
+		<string></string>
+	</dict>
+	<dict>
+		<key>Name</key>
+		<string>DeviceInfo4</string>
+		<key>Controller</key>
+		<string>DeviceInfoViewContoller</string>
+		<key>Type</key>
+		<integer>0</integer>
+		<key>iCon</key>
+		<string></string>
+	</dict>
+</array>
+</plist>
