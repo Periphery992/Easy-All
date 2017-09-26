@@ -15,8 +15,12 @@
 		55B3EE7D1F7560C30073DB65 /* UIView+Frame.m in Sources */ = {isa = PBXBuildFile; fileRef = 55B3EE7C1F7560C30073DB65 /* UIView+Frame.m */; };
 		55B3EE841F7570520073DB65 /* InfoDictionary.m in Sources */ = {isa = PBXBuildFile; fileRef = 55B3EE831F7570520073DB65 /* InfoDictionary.m */; };
 		55F7B6D01F77623E0089B32F /* ApplicationInit.m in Sources */ = {isa = PBXBuildFile; fileRef = 55F7B6CF1F77623E0089B32F /* ApplicationInit.m */; };
+		741B75111F78A44E00BFDA2F /* HLFDDLogFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = 741B75101F78A44E00BFDA2F /* HLFDDLogFormatter.m */; };
+		741B75151F79106C00BFDA2F /* DeviceInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 741B75141F79106C00BFDA2F /* DeviceInfoViewController.m */; };
 		74ADDF0A1F7651DC008980A5 /* CommonViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 74ADDF091F7651DC008980A5 /* CommonViewController.m */; };
 		74ADDF0E1F7653C6008980A5 /* UIImage+Color.m in Sources */ = {isa = PBXBuildFile; fileRef = 74ADDF0D1F7653C6008980A5 /* UIImage+Color.m */; };
+		74CCEE521F7A271900A88A5B /* MainManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 74CCEE511F7A271900A88A5B /* MainManager.m */; };
+		74CCEE581F7A2BC400A88A5B /* MainBean.m in Sources */ = {isa = PBXBuildFile; fileRef = 74CCEE571F7A2BC400A88A5B /* MainBean.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +42,10 @@
 		55F7B6CE1F77623E0089B32F /* ApplicationInit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ApplicationInit.h; sourceTree = "<group>"; };
 		55F7B6CF1F77623E0089B32F /* ApplicationInit.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ApplicationInit.m; sourceTree = "<group>"; };
 		692A85F1BB50A18BF0605C34 /* Pods-Easy-All.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Easy-All.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Easy-All/Pods-Easy-All.debug.xcconfig"; sourceTree = "<group>"; };
+		741B750F1F78A44E00BFDA2F /* HLFDDLogFormatter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HLFDDLogFormatter.h; sourceTree = "<group>"; };
+		741B75101F78A44E00BFDA2F /* HLFDDLogFormatter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HLFDDLogFormatter.m; sourceTree = "<group>"; };
+		741B75131F79106C00BFDA2F /* DeviceInfoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DeviceInfoViewController.h; sourceTree = "<group>"; };
+		741B75141F79106C00BFDA2F /* DeviceInfoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DeviceInfoViewController.m; sourceTree = "<group>"; };
 		74ADDF081F7651DC008980A5 /* CommonViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CommonViewController.h; sourceTree = "<group>"; };
 		74ADDF091F7651DC008980A5 /* CommonViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CommonViewController.m; sourceTree = "<group>"; };
 		74ADDF0C1F7653C6008980A5 /* UIImage+Color.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Color.h"; sourceTree = "<group>"; };
@@ -45,6 +53,10 @@
 		74ADDF101F7653EC008980A5 /* UIColorDefine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIColorDefine.h; sourceTree = "<group>"; };
 		74ADDF111F76541B008980A5 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 		74ADDF121F7656B0008980A5 /* CommonDefine.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CommonDefine.pch; sourceTree = "<group>"; };
+		74CCEE501F7A271900A88A5B /* MainManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainManager.h; sourceTree = "<group>"; };
+		74CCEE511F7A271900A88A5B /* MainManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainManager.m; sourceTree = "<group>"; };
+		74CCEE561F7A2BC400A88A5B /* MainBean.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainBean.h; sourceTree = "<group>"; };
+		74CCEE571F7A2BC400A88A5B /* MainBean.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainBean.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,10 +97,10 @@
 				552FA3CC1F742695009EB5B2 /* Manager */,
 				552FA3B61F7424DC009EB5B2 /* AppDelegate.h */,
 				552FA3B71F7424DC009EB5B2 /* AppDelegate.m */,
+				74ADDF111F76541B008980A5 /* PrefixHeader.pch */,
 				552FA3BF1F7424DC009EB5B2 /* Assets.xcassets */,
 				552FA3C41F7424DC009EB5B2 /* Info.plist */,
 				552FA3C51F7424DC009EB5B2 /* main.m */,
-				74ADDF111F76541B008980A5 /* PrefixHeader.pch */,
 				55F7B6C21F76BFD70089B32F /* LaunchScreen.storyboard */,
 			);
 			path = "Easy-All";
@@ -97,6 +109,9 @@
 		552FA3CC1F742695009EB5B2 /* Manager */ = {
 			isa = PBXGroup;
 			children = (
+				74CCEE4F1F7A227100A88A5B /* Main */,
+				741B75121F79104F00BFDA2F /* DeviceInfo */,
+				741B750E1F78A3CF00BFDA2F /* DDLog */,
 				55F7B6CD1F77622B0089B32F /* ApplicationInit */,
 			);
 			path = Manager;
@@ -159,6 +174,24 @@
 			path = ApplicationInit;
 			sourceTree = "<group>";
 		};
+		741B750E1F78A3CF00BFDA2F /* DDLog */ = {
+			isa = PBXGroup;
+			children = (
+				741B750F1F78A44E00BFDA2F /* HLFDDLogFormatter.h */,
+				741B75101F78A44E00BFDA2F /* HLFDDLogFormatter.m */,
+			);
+			path = DDLog;
+			sourceTree = "<group>";
+		};
+		741B75121F79104F00BFDA2F /* DeviceInfo */ = {
+			isa = PBXGroup;
+			children = (
+				741B75131F79106C00BFDA2F /* DeviceInfoViewController.h */,
+				741B75141F79106C00BFDA2F /* DeviceInfoViewController.m */,
+			);
+			path = DeviceInfo;
+			sourceTree = "<group>";
+		};
 		74ADDF071F7651C7008980A5 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
@@ -183,6 +216,17 @@
 				74ADDF101F7653EC008980A5 /* UIColorDefine.h */,
 			);
 			path = UIColor;
+			sourceTree = "<group>";
+		};
+		74CCEE4F1F7A227100A88A5B /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				74CCEE501F7A271900A88A5B /* MainManager.h */,
+				74CCEE511F7A271900A88A5B /* MainManager.m */,
+				74CCEE561F7A2BC400A88A5B /* MainBean.h */,
+				74CCEE571F7A2BC400A88A5B /* MainBean.m */,
+			);
+			path = Main;
 			sourceTree = "<group>";
 		};
 		842E58931D9438720EBB0FC9 /* Pods */ = {
@@ -322,12 +366,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				74CCEE581F7A2BC400A88A5B /* MainBean.m in Sources */,
 				55B3EE7D1F7560C30073DB65 /* UIView+Frame.m in Sources */,
 				74ADDF0A1F7651DC008980A5 /* CommonViewController.m in Sources */,
 				55B3EE841F7570520073DB65 /* InfoDictionary.m in Sources */,
+				74CCEE521F7A271900A88A5B /* MainManager.m in Sources */,
 				552FA3C61F7424DC009EB5B2 /* main.m in Sources */,
+				741B75151F79106C00BFDA2F /* DeviceInfoViewController.m in Sources */,
 				55F7B6D01F77623E0089B32F /* ApplicationInit.m in Sources */,
 				555D3B351F76B15F00C561FA /* MainViewController.m in Sources */,
+				741B75111F78A44E00BFDA2F /* HLFDDLogFormatter.m in Sources */,
 				74ADDF0E1F7653C6008980A5 /* UIImage+Color.m in Sources */,
 				552FA3B81F7424DC009EB5B2 /* AppDelegate.m in Sources */,
 			);

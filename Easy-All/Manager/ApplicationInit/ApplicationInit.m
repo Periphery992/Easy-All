@@ -7,30 +7,32 @@
 //
 
 #import "ApplicationInit.h"
+#import "HLFDDLogFormatter.h"
 
-#define DDLoggFilePath         [NSSearchPathForDirectoriesInDomains(NSCachesDirectory, NSUserDomainMask, YES) objectAtIndex:0]    //缓存文件路径文件夹 /Library/Caches/DDLogger
-#define DDLoggerFileName         nil                //缓存文件名，nil则使用日期作为文件名.log做后缀
-#define DDLoggerMaxCachesCounts  30                 //缓存内允许存在输出条数  30
-#define DDLoggerMaxCachesSize    256                //缓存内允许存在输出大小  258 KB
-#define DDLoggerMaxFileSize      1024 * 1024 * 50   //本地文件最大大小       50  MB
-#define DDLoggerMaxFileAge       60 * 60 * 24 * 7   //本地文件最长保存期限    7   天
-#define DDLoggeIsCatchException  YES                //是否捕捉奔溃日志       是
+//#define DDLoggFilePath         [NSSearchPathForDirectoriesInDomains(NSCachesDirectory, NSUserDomainMask, YES) objectAtIndex:0]    //缓存文件路径文件夹 /Library/Caches/DDLogger
+//#define DDLoggerFileName         nil                //缓存文件名，nil则使用日期作为文件名.log做后缀
+//#define DDLoggerMaxCachesCounts  30                 //缓存内允许存在输出条数  30
+//#define DDLoggerMaxCachesSize    256                //缓存内允许存在输出大小  258 KB
+//#define DDLoggerMaxFileSize      1024 * 1024 * 50   //本地文件最大大小       50  MB
+//#define DDLoggerMaxFileAge       60 * 60 * 24 * 7   //本地文件最长保存期限    7   天
+//#define DDLoggeIsCatchException  YES                //是否捕捉奔溃日志       是
 
-@interface ApplicationInit()<DDLogFileManager>
+@interface ApplicationInit()
 
 
 @end
 
 @implementation ApplicationInit
-static NSUInteger maximumNumberOfLogFiles = 10;
-static unsigned long long logFilesDiskQuota = 100;
+//static NSUInteger maximumNumberOfLogFiles = 10;
+//static unsigned long long logFilesDiskQuota = 100;
 
 
-+ (ApplicationInit *)sharedInstance{
-    static ApplicationInit *_sharedInstance = nil;
++ (instancetype)sharedInstance{
+    
+    static id _sharedInstance = nil;
     static dispatch_once_t oncePredicate;
     dispatch_once(&oncePredicate, ^{
-        _sharedInstance = [[ApplicationInit alloc] init];
+        _sharedInstance = [[NSClassFromString(@"ApplicationInit") alloc] init];
     });
     return _sharedInstance;
 }
@@ -39,16 +41,23 @@ static unsigned long long logFilesDiskQuota = 100;
 {
     if (self = [super init])
     {
-        
+        [self configDDLog];
     }
     return self;
 }
 
-- (void)configDDLogger
+
+//配置DDLog
+- (void)configDDLog
 {
+    DDFileLogger *fileLogger = [[DDFileLogger alloc]init];  //文件输出日志
+    DDTTYLogger *ttyLogger = [DDTTYLogger sharedInstance];  //控制台输出日志
     
- 
-    [DDLog addLogger:[[DDFileLogger alloc]init]];
-    [DDLog addLogger:[DDTTYLogger sharedInstance]];
+    HLFDDLogFormatter *logFormatter = [[HLFDDLogFormatter alloc]init];  //日志格式
+    fileLogger.logFormatter = logFormatter;
+    ttyLogger.logFormatter = logFormatter;
+    
+    [DDLog addLogger:fileLogger];
+    [DDLog addLogger:ttyLogger];
 }
 @end

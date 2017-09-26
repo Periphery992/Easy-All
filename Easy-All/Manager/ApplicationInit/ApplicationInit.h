@@ -10,4 +10,7 @@
 
 @interface ApplicationInit : NSObject
 
+
++ (instancetype)sharedInstance;
+
 @end

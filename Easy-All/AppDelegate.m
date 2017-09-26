@@ -8,6 +8,8 @@
 
 #import "AppDelegate.h"
 #import "MainViewController.h"
+#import "ApplicationInit.h"
+#import "InfoDictionary.h"
 
 @interface AppDelegate ()
 
@@ -23,12 +25,17 @@
     [self.window makeKeyAndVisible];
     
     MainViewController *controller = [[MainViewController alloc]init];
-    self.window.rootViewController = controller;
+    UINavigationController *nav = [[UINavigationController alloc]initWithRootViewController:controller];
+    self.window.rootViewController = nav;
     
-    [DDLog addLogger:[[DDFileLogger alloc]init]withLevel:DDLogLevelVerbose];
-    [DDLog addLogger:[DDTTYLogger sharedInstance]withLevel:DDLogLevelVerbose];
+    [ApplicationInit sharedInstance];
     
-    DDLogVerbose(@"1");
+    
+    DDLogInfo(@"%@",[InfoDictionary getDeviceName]);
+    DDLogInfo(@"%@",[InfoDictionary getDeivceModel]);
+    DDLogInfo(@"%@",[InfoDictionary getDeivceLocalizedModel]);
+    DDLogInfo(@"%@",[InfoDictionary getDeivceSystemVersion]);
+    DDLogInfo(@"%@",[InfoDictionary getDeivceSystemName]);
 
     return YES;
 }

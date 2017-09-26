@@ -26,6 +26,4 @@
 
 #define isIphone4OR5 SCREEN_WIDTH<=320?YES:NO
 
-
-
 #endif /* CommonDefine_pch */

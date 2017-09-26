@@ -23,14 +23,14 @@
 {
     [super viewDidAppear:animated];
 
-    NSLog(@"%@ appear",[NSString stringWithUTF8String:object_getClassName(self)]); //打印viewcontroller出现
+    DDLogVerbose(@"%@ appear",[NSString stringWithUTF8String:object_getClassName(self)]); //打印viewcontroller出现
 }
 
 - (void)viewDidDisappear:(BOOL)animated
 {
     [super viewDidDisappear:animated];
     
-    NSLog(@"%@ Disappear",[NSString stringWithUTF8String:object_getClassName(self)]); //打印viewcontroller消失
+    DDLogVerbose(@"%@ Disappear",[NSString stringWithUTF8String:object_getClassName(self)]); //打印viewcontroller消失
 }
 
 - (void)viewDidLoad {
@@ -108,9 +108,4 @@
     [UIApplication sharedApplication].statusBarStyle = _statusBarStyle;
 }
 
-
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
 @end
