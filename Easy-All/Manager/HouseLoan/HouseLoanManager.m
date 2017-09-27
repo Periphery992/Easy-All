@@ -46,7 +46,6 @@
     self.fRate = rate/100/12;
 }
 
-- (void)getFixedPaymentResult
 //等额本金
 - (void)getAverageCapitalResult
 {

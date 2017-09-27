@@ -8,6 +8,7 @@
 
 #import "MainViewController.h"
 #import "DeviceInfoViewController.h"
+#import "HouseLoanConfigViewController.h"
 #import "MainManager.h"
 
 #import "HouseLoanManager.h"
@@ -22,10 +23,12 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    
+    self.title = @"Main";
 //    DeviceInfoViewController *controller = [[DeviceInfoViewController alloc]init];
 //    [self.navigationController pushViewController:controller animated:YES];
-      [HouseLoanManager sharedInstance];
+    HouseLoanConfigViewController *controller = [[HouseLoanConfigViewController alloc]init];
+    [self.navigationController pushViewController:controller animated:YES];
+    [HouseLoanManager sharedInstance];
 
     
 }
