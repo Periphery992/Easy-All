@@ -18,7 +18,6 @@
 		55B3EE841F7570520073DB65 /* InfoDictionary.m in Sources */ = {isa = PBXBuildFile; fileRef = 55B3EE831F7570520073DB65 /* InfoDictionary.m */; };
 		55F7B6D01F77623E0089B32F /* ApplicationInit.m in Sources */ = {isa = PBXBuildFile; fileRef = 55F7B6CF1F77623E0089B32F /* ApplicationInit.m */; };
 		741B75111F78A44E00BFDA2F /* HLFDDLogFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = 741B75101F78A44E00BFDA2F /* HLFDDLogFormatter.m */; };
-		741B75151F79106C00BFDA2F /* DeviceInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 741B75141F79106C00BFDA2F /* DeviceInfoViewController.m */; };
 		74ADDF0A1F7651DC008980A5 /* CommonViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 74ADDF091F7651DC008980A5 /* CommonViewController.m */; };
 		74ADDF0E1F7653C6008980A5 /* UIImage+Color.m in Sources */ = {isa = PBXBuildFile; fileRef = 74ADDF0D1F7653C6008980A5 /* UIImage+Color.m */; };
 		74AEAF951F7A6CAB00D7095F /* MainList.plist in Resources */ = {isa = PBXBuildFile; fileRef = 74AEAF941F7A6CAB00D7095F /* MainList.plist */; };
@@ -51,8 +50,6 @@
 		692A85F1BB50A18BF0605C34 /* Pods-Easy-All.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Easy-All.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Easy-All/Pods-Easy-All.debug.xcconfig"; sourceTree = "<group>"; };
 		741B750F1F78A44E00BFDA2F /* HLFDDLogFormatter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HLFDDLogFormatter.h; sourceTree = "<group>"; };
 		741B75101F78A44E00BFDA2F /* HLFDDLogFormatter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HLFDDLogFormatter.m; sourceTree = "<group>"; };
-		741B75131F79106C00BFDA2F /* DeviceInfoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DeviceInfoViewController.h; sourceTree = "<group>"; };
-		741B75141F79106C00BFDA2F /* DeviceInfoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DeviceInfoViewController.m; sourceTree = "<group>"; };
 		74ADDF081F7651DC008980A5 /* CommonViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CommonViewController.h; sourceTree = "<group>"; };
 		74ADDF091F7651DC008980A5 /* CommonViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CommonViewController.m; sourceTree = "<group>"; };
 		74ADDF0C1F7653C6008980A5 /* UIImage+Color.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Color.h"; sourceTree = "<group>"; };
@@ -119,7 +116,6 @@
 			children = (
 				5534D19A1F7A9EE400BF84CF /* HouseLoan */,
 				74CCEE4F1F7A227100A88A5B /* Main */,
-				741B75121F79104F00BFDA2F /* DeviceInfo */,
 				741B750E1F78A3CF00BFDA2F /* DDLog */,
 				55F7B6CD1F77622B0089B32F /* ApplicationInit */,
 			);
@@ -201,15 +197,6 @@
 				741B75101F78A44E00BFDA2F /* HLFDDLogFormatter.m */,
 			);
 			path = DDLog;
-			sourceTree = "<group>";
-		};
-		741B75121F79104F00BFDA2F /* DeviceInfo */ = {
-			isa = PBXGroup;
-			children = (
-				741B75131F79106C00BFDA2F /* DeviceInfoViewController.h */,
-				741B75141F79106C00BFDA2F /* DeviceInfoViewController.m */,
-			);
-			path = DeviceInfo;
 			sourceTree = "<group>";
 		};
 		74ADDF071F7651C7008980A5 /* ViewController */ = {
@@ -396,7 +383,6 @@
 				5536F8141F7AAB8600765E15 /* MonthPayBean.m in Sources */,
 				74CCEE521F7A271900A88A5B /* MainManager.m in Sources */,
 				552FA3C61F7424DC009EB5B2 /* main.m in Sources */,
-				741B75151F79106C00BFDA2F /* DeviceInfoViewController.m in Sources */,
 				55F7B6D01F77623E0089B32F /* ApplicationInit.m in Sources */,
 				555D3B351F76B15F00C561FA /* MainViewController.m in Sources */,
 				741B75111F78A44E00BFDA2F /* HLFDDLogFormatter.m in Sources */,

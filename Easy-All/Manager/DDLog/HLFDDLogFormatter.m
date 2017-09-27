@@ -20,9 +20,9 @@
     if((self = [super init])) {
         self.dateFormatter = [[NSDateFormatter alloc] init];
 #ifdef DEBUG
-        [self.dateFormatter setDateFormat:@"HH:mm:ss:SSS"];
+        [self.dateFormatter setDateFormat:@"[HH:mm:ss:SSS]"];
 #else
-        [self.dateFormatter setDateFormat:@"yy-MM-dd HH:mm:ss:SSS"];
+        [self.dateFormatter setDateFormat:@"[yy-MM-dd HH:mm:ss:SSS]"];
 #endif
     }
     return self;
