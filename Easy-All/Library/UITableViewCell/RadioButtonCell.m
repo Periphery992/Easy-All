@@ -22,6 +22,8 @@
 {
     if (self = [super initWithStyle:style reuseIdentifier:reuseIdentifier])
     {
+        self.selectionStyle = UITableViewCellSelectionStyleNone;
+        
         self.btnRadioFirst = [[UIButton alloc]initWithFrame:CGRectMake(0, 0, 0, 0)];
         [self.btnRadioFirst addTarget:self action:@selector(Touch_btnRadioFirst) forControlEvents:UIControlEventTouchUpInside];
         self.btnRadioFirst.hidden = YES;
@@ -52,6 +54,13 @@
 }
 
 #pragma mark - config
+- (void)configHiddenAllRadioBox
+{
+    self.btnRadioFirst.hidden = YES;
+    self.btnRadioSecond.hidden = YES;
+    self.btnRadioThird.hidden = YES;
+}
+
 - (void)configTitle:(NSString *)title font:(UIFont *)font color:(UIColor *)color
 {
     self.textLabel.text = title;
@@ -110,7 +119,7 @@
         [self.btnRadioThird sizeToFit];
         self.btnRadioThird.rightX = SCREEN_WIDTH - right;
         self.btnRadioThird.centerY = 22;
-        right = right + self.btnRadioThird.width +10;
+        right = right + self.btnRadioThird.width +15;
     }
     
     if(!self.btnRadioSecond.hidden)
@@ -118,7 +127,7 @@
         [self.btnRadioSecond sizeToFit];
         self.btnRadioSecond.rightX = SCREEN_WIDTH - right;
         self.btnRadioSecond.centerY = 22;
-        right = right + self.btnRadioSecond.width +10;
+        right = right + self.btnRadioSecond.width +15;
     }
     
     if(!self.btnRadioFirst.hidden)
@@ -126,7 +135,7 @@
         [self.btnRadioFirst sizeToFit];
         self.btnRadioFirst.rightX = SCREEN_WIDTH - right;
         self.btnRadioFirst.centerY = 22;
-        right = right + self.btnRadioFirst.width +10;
+        right = right + self.btnRadioFirst.width +15;
     }
 
 }
@@ -135,17 +144,23 @@
 
 - (void)Touch_btnRadioFirst
 {
-    
+    self.btnRadioFirst.selected = YES;
+    self.btnRadioSecond.selected = NO;
+    self.btnRadioThird.selected = NO;
 }
 
 - (void)Touch_btnRadioSecond
 {
-    
+    self.btnRadioFirst.selected = NO;
+    self.btnRadioSecond.selected = YES;
+    self.btnRadioThird.selected = NO;
 }
 
 - (void)Touch_btnRadioThird
 {
-    
+    self.btnRadioFirst.selected = NO;
+    self.btnRadioSecond.selected = NO;
+    self.btnRadioThird.selected = YES;
 }
 
 

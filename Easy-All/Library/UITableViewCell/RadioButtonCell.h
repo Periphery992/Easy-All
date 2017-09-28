@@ -10,6 +10,8 @@
 
 @interface RadioButtonCell : UITableViewCell
 
+- (void)configHiddenAllRadioBox;
+
 - (void)configTitle:(NSString *)title font:(UIFont *)font color:(UIColor *)color;
 
 - (void)configRadioFirstWithTitle:(NSString *)title font:(UIFont *)font color:(UIColor *)color;

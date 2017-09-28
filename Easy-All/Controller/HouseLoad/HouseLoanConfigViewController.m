@@ -42,12 +42,12 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return 1;
+    return 2;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    if (indexPath.row == 0)
+    if (indexPath.section == 0)
     {
         NSString *RadioCell = @"RadioCell";
         RadioButtonCell *cell = [tableView dequeueReusableCellWithIdentifier:RadioCell];
@@ -56,10 +56,24 @@
         {
             cell = [[RadioButtonCell alloc]initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:RadioCell];
         }
-        [cell configTitle:@"贷款方式" font:nil color:nil];
-        [cell configRadioFirstWithTitle:@"1" font:nil color:nil];
-        [cell configRadioSecondWithTitle:@"1" font:nil color:nil];
-        [cell configRadioThirdWithTitle:@"1" font:nil color:nil];
+        [cell configHiddenAllRadioBox];
+        
+        
+        if (indexPath.row == 0)
+        {
+            [cell configTitle:@"贷款方式" font:nil color:nil];
+            [cell configRadioFirstWithTitle:@"等额本金" font:nil color:nil];
+            [cell configRadioSecondWithTitle:@"等额本息" font:nil color:nil];
+        }
+        else
+        {
+            [cell configTitle:@"贷款方式" font:nil color:nil];
+            [cell configRadioFirstWithTitle:@"等额本金" font:nil color:nil];
+            [cell configRadioSecondWithTitle:@"等额本息" font:nil color:nil];
+            [cell configRadioThirdWithTitle:@"1" font:nil color:nil];
+        }
+        
+//        [cell configRadioThirdWithTitle:@"1" font:nil color:nil];
         
         
         return cell;
