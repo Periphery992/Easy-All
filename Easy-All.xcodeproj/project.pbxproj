@@ -18,7 +18,7 @@
 		55B3EE841F7570520073DB65 /* InfoDictionary.m in Sources */ = {isa = PBXBuildFile; fileRef = 55B3EE831F7570520073DB65 /* InfoDictionary.m */; };
 		55B624F31F7C073D005B1E9D /* DeviceInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 55B624F21F7C073D005B1E9D /* DeviceInfoViewController.m */; };
 		55B624F71F7C0786005B1E9D /* HouseLoanConfigViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 55B624F61F7C0786005B1E9D /* HouseLoanConfigViewController.m */; };
-		55B624FB1F7C099D005B1E9D /* RadioButtonCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 55B624FA1F7C099D005B1E9D /* RadioButtonCell.m */; };
+		55B624FB1F7C099D005B1E9D /* RadioBoxCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 55B624FA1F7C099D005B1E9D /* RadioBoxCell.m */; };
 		55F7B6D01F77623E0089B32F /* ApplicationInit.m in Sources */ = {isa = PBXBuildFile; fileRef = 55F7B6CF1F77623E0089B32F /* ApplicationInit.m */; };
 		741B75111F78A44E00BFDA2F /* HLFDDLogFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = 741B75101F78A44E00BFDA2F /* HLFDDLogFormatter.m */; };
 		74ADDF0A1F7651DC008980A5 /* CommonViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 74ADDF091F7651DC008980A5 /* CommonViewController.m */; };
@@ -51,8 +51,8 @@
 		55B624F21F7C073D005B1E9D /* DeviceInfoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DeviceInfoViewController.m; sourceTree = "<group>"; };
 		55B624F51F7C0786005B1E9D /* HouseLoanConfigViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HouseLoanConfigViewController.h; sourceTree = "<group>"; };
 		55B624F61F7C0786005B1E9D /* HouseLoanConfigViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HouseLoanConfigViewController.m; sourceTree = "<group>"; };
-		55B624F91F7C099D005B1E9D /* RadioButtonCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RadioButtonCell.h; sourceTree = "<group>"; };
-		55B624FA1F7C099D005B1E9D /* RadioButtonCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RadioButtonCell.m; sourceTree = "<group>"; };
+		55B624F91F7C099D005B1E9D /* RadioBoxCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RadioBoxCell.h; sourceTree = "<group>"; };
+		55B624FA1F7C099D005B1E9D /* RadioBoxCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RadioBoxCell.m; sourceTree = "<group>"; };
 		55F7B6C21F76BFD70089B32F /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		55F7B6CE1F77623E0089B32F /* ApplicationInit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ApplicationInit.h; sourceTree = "<group>"; };
 		55F7B6CF1F77623E0089B32F /* ApplicationInit.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ApplicationInit.m; sourceTree = "<group>"; };
@@ -214,8 +214,8 @@
 		55B624F81F7C0961005B1E9D /* UITableViewCell */ = {
 			isa = PBXGroup;
 			children = (
-				55B624F91F7C099D005B1E9D /* RadioButtonCell.h */,
-				55B624FA1F7C099D005B1E9D /* RadioButtonCell.m */,
+				55B624F91F7C099D005B1E9D /* RadioBoxCell.h */,
+				55B624FA1F7C099D005B1E9D /* RadioBoxCell.m */,
 			);
 			path = UITableViewCell;
 			sourceTree = "<group>";
@@ -421,7 +421,7 @@
 				55B624F71F7C0786005B1E9D /* HouseLoanConfigViewController.m in Sources */,
 				55B3EE841F7570520073DB65 /* InfoDictionary.m in Sources */,
 				5536F8141F7AAB8600765E15 /* MonthPayBean.m in Sources */,
-				55B624FB1F7C099D005B1E9D /* RadioButtonCell.m in Sources */,
+				55B624FB1F7C099D005B1E9D /* RadioBoxCell.m in Sources */,
 				74CCEE521F7A271900A88A5B /* MainManager.m in Sources */,
 				552FA3C61F7424DC009EB5B2 /* main.m in Sources */,
 				55F7B6D01F77623E0089B32F /* ApplicationInit.m in Sources */,

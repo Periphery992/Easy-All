@@ -16,6 +16,7 @@
 #define BlueColor   0x0000FF
 #define WhiteColor  0xFFFFFF
 #define BlackColor  0x000000
+#define lGrayColor  0x8e8e93
 
 /**
   使用16进制RGB值和透明度便捷创建一个UIColor

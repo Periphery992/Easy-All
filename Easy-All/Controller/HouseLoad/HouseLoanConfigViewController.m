@@ -7,10 +7,11 @@
 //
 
 #import "HouseLoanConfigViewController.h"
-#import "RadioButtonCell.h"
+#import "RadioBoxCell.h"
 
-@interface HouseLoanConfigViewController ()<UITableViewDelegate,UITableViewDataSource>
+@interface HouseLoanConfigViewController ()<UITableViewDelegate,UITableViewDataSource,RadioBoxCellDelegate>
 @property (nonatomic, strong) UITableView *tableview;
+@property (nonatomic, assign) BOOL bCalculateAllLoan;
 @end
 
 @implementation HouseLoanConfigViewController
@@ -37,48 +38,46 @@
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
-    return 1;
+    return 2;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return 2;
+    return 0;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    if (indexPath.section == 0)
-    {
+//    if (indexPath.section == 0)
+//    {
         NSString *RadioCell = @"RadioCell";
-        RadioButtonCell *cell = [tableView dequeueReusableCellWithIdentifier:RadioCell];
+        RadioBoxCell *cell = [tableView dequeueReusableCellWithIdentifier:RadioCell];
         
         if (cell == nil)
         {
-            cell = [[RadioButtonCell alloc]initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:RadioCell];
+            cell = [[RadioBoxCell alloc]initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:RadioCell];
+            cell.delegate = self;
         }
         [cell configHiddenAllRadioBox];
         
         
-        if (indexPath.row == 0)
+        if (indexPath.section == 0)
         {
-            [cell configTitle:@"贷款方式" font:nil color:nil];
+            [cell configTitle:@"还款方式" font:nil color:nil];
             [cell configRadioFirstWithTitle:@"等额本金" font:nil color:nil];
             [cell configRadioSecondWithTitle:@"等额本息" font:nil color:nil];
         }
         else
         {
-            [cell configTitle:@"贷款方式" font:nil color:nil];
-            [cell configRadioFirstWithTitle:@"等额本金" font:nil color:nil];
-            [cell configRadioSecondWithTitle:@"等额本息" font:nil color:nil];
-            [cell configRadioThirdWithTitle:@"1" font:nil color:nil];
+            [cell configTitle:@"计算方式" font:nil color:nil];
+            [cell configRadioFirstWithTitle:@"房屋总价" font:nil color:nil];
+            [cell configRadioSecondWithTitle:@"贷款总额" font:nil color:nil];
         }
-        
-//        [cell configRadioThirdWithTitle:@"1" font:nil color:nil];
         
         
         return cell;
-    }
-    return nil;
+//    }
+
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
@@ -86,5 +85,16 @@
     
 }
 
+#pragma mark - RadioBoxCellDelegate
+- (void)radioBoxCell:(RadioBoxCell *)radioBoxCell indexOfSelected:(NSInteger)index
+{
+    NSIndexPath *indexPath = [self.tableview indexPathForCell:radioBoxCell];
+    if (indexPath.row == 1)
+    {
+        self.bCalculateAllLoan = index==1?YES:NO;
+    }
+    
+    
+}
 
 @end
