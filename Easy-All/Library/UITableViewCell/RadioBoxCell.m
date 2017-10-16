@@ -13,7 +13,6 @@
 @property (nonatomic, strong) UIButton *btnRadioSecond;
 @property (nonatomic, strong) UIButton *btnRadioThird;
 
-
 @end
 
 @implementation RadioBoxCell
@@ -25,7 +24,7 @@
         self.selectionStyle = UITableViewCellSelectionStyleNone;
         
         self.btnRadioFirst = [[UIButton alloc]initWithFrame:CGRectMake(0, 0, 0, 0)];
-        [self.btnRadioFirst addTarget:self action:@selector(Touch_btnRadioFirst) forControlEvents:UIControlEventTouchUpInside];
+        [self.btnRadioFirst addTarget:self action:@selector(Touch_btnRadioFirstIsConfig:) forControlEvents:UIControlEventTouchUpInside];
         self.btnRadioFirst.hidden = YES;
         [self.btnRadioFirst setTitleColor:UIColorFromRGB(lGrayColor, 1.0f) forState:UIControlStateNormal];
         [self.btnRadioFirst setImage:[UIImage imageNamed:@"radiobox_sel"] forState:UIControlStateSelected];
@@ -34,7 +33,7 @@
         [self.contentView addSubview:self.btnRadioFirst];
         
         self.btnRadioSecond = [[UIButton alloc]initWithFrame:CGRectMake(0, 0, 0, 0)];
-        [self.btnRadioSecond addTarget:self action:@selector(Touch_btnRadioSecond) forControlEvents:UIControlEventTouchUpInside];
+        [self.btnRadioSecond addTarget:self action:@selector(Touch_btnRadioSecondIsConfig:) forControlEvents:UIControlEventTouchUpInside];
         self.btnRadioSecond.hidden = YES;
         [self.btnRadioSecond setTitleColor:UIColorFromRGB(lGrayColor, 1.0f) forState:UIControlStateNormal];
         [self.btnRadioSecond setImage:[UIImage imageNamed:@"radiobox_sel"] forState:UIControlStateSelected];
@@ -43,7 +42,7 @@
         [self.contentView addSubview:self.btnRadioSecond];
         
         self.btnRadioThird = [[UIButton alloc]initWithFrame:CGRectMake(0, 0, 0, 0)];
-        [self.btnRadioThird addTarget:self action:@selector(Touch_btnRadioThird) forControlEvents:UIControlEventTouchUpInside];
+        [self.btnRadioThird addTarget:self action:@selector(Touch_btnRadioThirdIsConfig:) forControlEvents:UIControlEventTouchUpInside];
         self.btnRadioThird.hidden = YES;
         [self.btnRadioThird setTitleColor:UIColorFromRGB(lGrayColor, 1.0f) forState:UIControlStateNormal];
         [self.btnRadioThird setImage:[UIImage imageNamed:@"radiobox_sel"] forState:UIControlStateSelected];
@@ -84,13 +83,13 @@
     
     if (isSelected)
     {
-            [self Touch_btnRadioFirst];
+            [self Touch_btnRadioFirstIsConfig:NO];
     }
     
     [self fixPosition];
 }
 
-- (void)configRadioSecondWithTitle:(NSString *)title font:(UIFont *)font color:(UIColor *)color sSelected:(BOOL)isSelected
+- (void)configRadioSecondWithTitle:(NSString *)title font:(UIFont *)font color:(UIColor *)color isSelected:(BOOL)isSelected
 {
     self.btnRadioSecond.hidden = NO;
     [self.btnRadioSecond setTitle:title forState:UIControlStateNormal];
@@ -103,13 +102,13 @@
     
     if (isSelected)
     {
-        [self Touch_btnRadioSecond];
+        [self Touch_btnRadioSecondIsConfig:NO];
     }
     
     [self fixPosition];
 }
 
-- (void)configRadioThirdWithTitle:(NSString *)title font:(UIFont *)font color:(UIColor *)color sSelected:(BOOL)isSelected
+- (void)configRadioThirdWithTitle:(NSString *)title font:(UIFont *)font color:(UIColor *)color isSelected:(BOOL)isSelected
 {
     self.btnRadioThird.hidden = NO;
     [self.btnRadioThird setTitle:title forState:UIControlStateNormal];
@@ -122,10 +121,30 @@
     
     if (isSelected)
     {
-       [self Touch_btnRadioThird];
+       [self Touch_btnRadioThirdIsConfig:NO];
     }
     
     [self fixPosition];
+}
+
+- (void)configSelectedWithIndex:(NSInteger)index
+{
+    if (index == 0)
+    {
+        [self Touch_btnRadioFirstIsConfig:YES];
+        return;
+    }
+    else if (index == 1)
+    {
+        [self Touch_btnRadioSecondIsConfig:YES];
+        return;
+    }
+    else if (index == 2)
+    {
+        [self Touch_btnRadioThirdIsConfig:YES];
+        return;
+    }
+   [self Touch_btnRadioFirstIsConfig:YES];
 }
 
 - (void)fixPosition
@@ -160,19 +179,19 @@
 
 - (NSInteger)getIndexOfSelected
 {
-    if (self.btnRadioFirst.hidden)
+    if (self.btnRadioFirst.selected)
+    {
+        return 0;
+    }
+    
+    if (self.btnRadioSecond.selected)
     {
         return 1;
     }
     
-    if (self.btnRadioSecond.hidden)
+    if (self.btnRadioThird.selected)
     {
         return 2;
-    }
-    
-    if (self.btnRadioThird.hidden)
-    {
-        return 3;
     }
     return 0;
 
@@ -180,36 +199,49 @@
 
 #pragma mark - Event
 
-- (void)Touch_btnRadioFirst
+- (void)Touch_btnRadioFirstIsConfig:(BOOL)isConfig
 {
     if (!self.btnRadioThird.selected)
     {
         self.btnRadioFirst.selected = YES;
         self.btnRadioSecond.selected = NO;
         self.btnRadioThird.selected = NO;
-        [self TouchEvent];
+        
+        if (!isConfig)
+        {
+            [self TouchEvent];
+        }
+        
     }
 }
 
-- (void)Touch_btnRadioSecond
+- (void)Touch_btnRadioSecondIsConfig:(BOOL)isConfig
 {
     if (!self.btnRadioThird.selected)
     {
         self.btnRadioFirst.selected = NO;
         self.btnRadioSecond.selected = YES;
         self.btnRadioThird.selected = NO;
-        [self TouchEvent];
+        
+        if (!isConfig)
+        {
+            [self TouchEvent];
+        }
     }
 }
 
-- (void)Touch_btnRadioThird
+- (void)Touch_btnRadioThirdIsConfig:(BOOL)isConfig
 {
     if (!self.btnRadioThird.selected)
     {
         self.btnRadioFirst.selected = NO;
         self.btnRadioSecond.selected = NO;
         self.btnRadioThird.selected = YES;
-        [self TouchEvent];
+        
+        if (!isConfig)
+        {
+            [self TouchEvent];
+        }
     }
 }
 

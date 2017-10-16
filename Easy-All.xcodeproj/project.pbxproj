@@ -14,6 +14,7 @@
 		5534D19D1F7A9F5200BF84CF /* HouseLoanManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 5534D19C1F7A9F5200BF84CF /* HouseLoanManager.m */; };
 		5536F8141F7AAB8600765E15 /* MonthPayBean.m in Sources */ = {isa = PBXBuildFile; fileRef = 5536F8131F7AAB8600765E15 /* MonthPayBean.m */; };
 		555D3B351F76B15F00C561FA /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 555D3B341F76B15F00C561FA /* MainViewController.m */; };
+		55AA76FF1F82836000618628 /* InputBoxCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 55AA76FE1F82836000618628 /* InputBoxCell.m */; };
 		55B3EE7D1F7560C30073DB65 /* UIView+Frame.m in Sources */ = {isa = PBXBuildFile; fileRef = 55B3EE7C1F7560C30073DB65 /* UIView+Frame.m */; };
 		55B3EE841F7570520073DB65 /* InfoDictionary.m in Sources */ = {isa = PBXBuildFile; fileRef = 55B3EE831F7570520073DB65 /* InfoDictionary.m */; };
 		55B624F31F7C073D005B1E9D /* DeviceInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 55B624F21F7C073D005B1E9D /* DeviceInfoViewController.m */; };
@@ -43,6 +44,8 @@
 		5536F8131F7AAB8600765E15 /* MonthPayBean.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MonthPayBean.m; sourceTree = "<group>"; };
 		555D3B331F76B15F00C561FA /* MainViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
 		555D3B341F76B15F00C561FA /* MainViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
+		55AA76FD1F82836000618628 /* InputBoxCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = InputBoxCell.h; sourceTree = "<group>"; };
+		55AA76FE1F82836000618628 /* InputBoxCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = InputBoxCell.m; sourceTree = "<group>"; };
 		55B3EE7B1F7560C30073DB65 /* UIView+Frame.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIView+Frame.h"; sourceTree = "<group>"; };
 		55B3EE7C1F7560C30073DB65 /* UIView+Frame.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIView+Frame.m"; sourceTree = "<group>"; };
 		55B3EE821F7570520073DB65 /* InfoDictionary.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = InfoDictionary.h; sourceTree = "<group>"; };
@@ -216,6 +219,8 @@
 			children = (
 				55B624F91F7C099D005B1E9D /* RadioBoxCell.h */,
 				55B624FA1F7C099D005B1E9D /* RadioBoxCell.m */,
+				55AA76FD1F82836000618628 /* InputBoxCell.h */,
+				55AA76FE1F82836000618628 /* InputBoxCell.m */,
 			);
 			path = UITableViewCell;
 			sourceTree = "<group>";
@@ -416,6 +421,7 @@
 			files = (
 				74CCEE581F7A2BC400A88A5B /* MainBean.m in Sources */,
 				55B3EE7D1F7560C30073DB65 /* UIView+Frame.m in Sources */,
+				55AA76FF1F82836000618628 /* InputBoxCell.m in Sources */,
 				74ADDF0A1F7651DC008980A5 /* CommonViewController.m in Sources */,
 				5534D19D1F7A9F5200BF84CF /* HouseLoanManager.m in Sources */,
 				55B624F71F7C0786005B1E9D /* HouseLoanConfigViewController.m in Sources */,

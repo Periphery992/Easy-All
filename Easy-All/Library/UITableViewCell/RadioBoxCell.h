@@ -22,11 +22,13 @@
 
 - (void)configTitle:(NSString *)title font:(UIFont *)font color:(UIColor *)color;
 
-- (void)configRadioFirstWithTitle:(NSString *)title font:(UIFont *)font color:(UIColor *)color;
+- (void)configRadioFirstWithTitle:(NSString *)title font:(UIFont *)font color:(UIColor *)color isSelected:(BOOL)isSelected;
 
-- (void)configRadioSecondWithTitle:(NSString *)title font:(UIFont *)font color:(UIColor *)color;
+- (void)configRadioSecondWithTitle:(NSString *)title font:(UIFont *)font color:(UIColor *)color isSelected:(BOOL)isSelected;
 
-- (void)configRadioThirdWithTitle:(NSString *)title font:(UIFont *)font color:(UIColor *)color;
+- (void)configRadioThirdWithTitle:(NSString *)title font:(UIFont *)font color:(UIColor *)color isSelected:(BOOL)isSelected;
+
+- (void)configSelectedWithIndex:(NSInteger)index;
 
 - (NSInteger)getIndexOfSelected;
 @end
