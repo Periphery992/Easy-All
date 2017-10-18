@@ -83,6 +83,14 @@
  */
 + (NSString *)getAppBundleVersion;
 
+    
+#pragma mark - Date
 
+/**
+ 获取NSInteger类型当前时间戳
+ 由于NSInteger类型，在32位设备上最多用到2038/1/19 11:14:7
+ @return NSInteger类型当前时间戳
+ */
++ (NSInteger)getNowTimestamp;
 
 @end

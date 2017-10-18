@@ -189,7 +189,15 @@ static const BOOL isAutoPrint = YES; //获取时自动打印
     return [InfoDictionary returnAndPrint:[[[NSBundle mainBundle] infoDictionary] objectForKey:@"CFBundleVersion"]];
 }
 
-
+#pragma mark - Date
+//最多用到2038/1/19 11:14:7
++ (NSInteger)getNowTimestamp
+{
+    NSTimeInterval a = [[NSDate date] timeIntervalSince1970];
+    NSString *timeString = [NSString stringWithFormat:@"%0.0f", a];
+    
+    return [timeString integerValue];
+}
 
 
 @end

@@ -9,7 +9,6 @@
 #import "AppDelegate.h"
 #import "MainViewController.h"
 #import "ApplicationInit.h"
-#import "InfoDictionary.h"
 
 @interface AppDelegate ()
 
@@ -22,12 +21,12 @@
     // Override point for customization after application launch.
     
     self.window = [[UIWindow alloc]initWithFrame:[[UIScreen mainScreen] bounds]];
-    [self.window makeKeyAndVisible];
+    
     
     MainViewController *controller = [[MainViewController alloc]init];
-    UINavigationController *nav = [[UINavigationController alloc]initWithRootViewController:controller];
-    self.window.rootViewController = nav;
-    
+//    UINavigationController *nav = [[UINavigationController alloc]initWithRootViewController:controller];
+    self.window.rootViewController = controller;
+    [self.window makeKeyAndVisible];
     [ApplicationInit sharedInstance];
 
     return YES;

@@ -14,7 +14,9 @@
 #import "UIColorDefine.h"
 #import "CommonDefine.pch"
 #import "UIView+Frame.h"
-
+#import "UIView+AutoAccessID.h"
+#import "UIView+UIAutoTest.h"
+#import "UIResponder+UIAutoTest.h"
 
 #pragma mark - DDLog
 #define LOG_LEVEL_DEF ddLogLevel

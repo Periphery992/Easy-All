@@ -8,9 +8,9 @@
 
 #import "MainViewController.h"
 #import "DeviceInfoViewController.h"
-#import "HouseLoanConfigViewController.h"
+//#import "HouseLoanConfigViewController.h"
 #import "MainManager.h"
-
+#import "InfoDictionary.h"
 #import "HouseLoanManager.h"
 
 
@@ -26,14 +26,18 @@
     self.title = @"Main";
 //    DeviceInfoViewController *controller = [[DeviceInfoViewController alloc]init];
 //    [self.navigationController pushViewController:controller animated:YES];
-    HouseLoanConfigViewController *controller = [[HouseLoanConfigViewController alloc]init];
-    [self.navigationController pushViewController:controller animated:YES];
-    [HouseLoanManager sharedInstance];
-
+//    HouseLoanConfigViewController *controller = [[HouseLoanConfigViewController alloc]init];
+//    [self.navigationController pushViewController:controller animated:YES];
+//    [HouseLoanManager sharedInstance];
+    
+    NSLog(@"%zi", [InfoDictionary getNowTimestamp]);
     
 }
 
-
+- (void)didReceiveMemoryWarning
+{
+    [super didReceiveMemoryWarning];
+}
 
 
 @end
