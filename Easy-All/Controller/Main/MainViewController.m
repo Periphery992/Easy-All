@@ -8,10 +8,11 @@
 
 #import "MainViewController.h"
 #import "DeviceInfoViewController.h"
-//#import "HouseLoanConfigViewController.h"
+#import "HouseLoanConfigViewController.h"
 #import "MainManager.h"
 #import "InfoDictionary.h"
 #import "HouseLoanManager.h"
+#import "AutoUIIDTestViewController.h"
 
 
 @interface MainViewController ()
@@ -29,15 +30,11 @@
 //    HouseLoanConfigViewController *controller = [[HouseLoanConfigViewController alloc]init];
 //    [self.navigationController pushViewController:controller animated:YES];
 //    [HouseLoanManager sharedInstance];
-    
-    NSLog(@"%zi", [InfoDictionary getNowTimestamp]);
+    AutoUIIDTestViewController *controller = [[AutoUIIDTestViewController alloc]init];
+    [self.navigationController pushViewController:controller animated:YES];
     
 }
 
-- (void)didReceiveMemoryWarning
-{
-    [super didReceiveMemoryWarning];
-}
 
 
 @end

@@ -24,8 +24,9 @@
     [self.view addSubview:vwtest1];
     
     
-    
-    
+    self.vwTest2 = [[UIView alloc]initWithFrame:CGRectMake(0, 60, 100, 100)];
+    self.vwTest2.backgroundColor = [UIColor redColor];
+    [self.view addSubview:self.vwTest2];
 }
 
 

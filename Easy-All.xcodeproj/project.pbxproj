@@ -25,12 +25,11 @@
 		74ADDF0A1F7651DC008980A5 /* CommonViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 74ADDF091F7651DC008980A5 /* CommonViewController.m */; };
 		74ADDF0E1F7653C6008980A5 /* UIImage+Color.m in Sources */ = {isa = PBXBuildFile; fileRef = 74ADDF0D1F7653C6008980A5 /* UIImage+Color.m */; };
 		74AEAF951F7A6CAB00D7095F /* MainList.plist in Resources */ = {isa = PBXBuildFile; fileRef = 74AEAF941F7A6CAB00D7095F /* MainList.plist */; };
-		74CC65D31F95967700A0210C /* UIView+AutoAccessID.m in Sources */ = {isa = PBXBuildFile; fileRef = 74CC65CD1F95967700A0210C /* UIView+AutoAccessID.m */; };
-		74CC65D41F95967700A0210C /* UIResponder+UIAutoTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 74CC65D01F95967700A0210C /* UIResponder+UIAutoTest.m */; };
-		74CC65D51F95967700A0210C /* UIView+UIAutoTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 74CC65D21F95967700A0210C /* UIView+UIAutoTest.m */; };
 		74CC65DF1F959E1400A0210C /* AutoUIIDTestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 74CC65DE1F959E1400A0210C /* AutoUIIDTestViewController.m */; };
 		74CCEE521F7A271900A88A5B /* MainManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 74CCEE511F7A271900A88A5B /* MainManager.m */; };
 		74CCEE581F7A2BC400A88A5B /* MainBean.m in Sources */ = {isa = PBXBuildFile; fileRef = 74CCEE571F7A2BC400A88A5B /* MainBean.m */; };
+		74CE3D371F98BECF005CC0A7 /* UIView+AutoAccessID.m in Sources */ = {isa = PBXBuildFile; fileRef = 74CE3D361F98BECF005CC0A7 /* UIView+AutoAccessID.m */; };
+		74CE3D3A1F98CD22005CC0A7 /* UIResponder+AutoAccessID.m in Sources */ = {isa = PBXBuildFile; fileRef = 74CE3D391F98CD22005CC0A7 /* UIResponder+AutoAccessID.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -74,18 +73,16 @@
 		74ADDF111F76541B008980A5 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 		74ADDF121F7656B0008980A5 /* CommonDefine.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CommonDefine.pch; sourceTree = "<group>"; };
 		74AEAF941F7A6CAB00D7095F /* MainList.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = MainList.plist; sourceTree = "<group>"; };
-		74CC65CC1F95967700A0210C /* UIView+AutoAccessID.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+AutoAccessID.h"; sourceTree = "<group>"; };
-		74CC65CD1F95967700A0210C /* UIView+AutoAccessID.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+AutoAccessID.m"; sourceTree = "<group>"; };
-		74CC65CF1F95967700A0210C /* UIResponder+UIAutoTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIResponder+UIAutoTest.h"; sourceTree = "<group>"; };
-		74CC65D01F95967700A0210C /* UIResponder+UIAutoTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIResponder+UIAutoTest.m"; sourceTree = "<group>"; };
-		74CC65D11F95967700A0210C /* UIView+UIAutoTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+UIAutoTest.h"; sourceTree = "<group>"; };
-		74CC65D21F95967700A0210C /* UIView+UIAutoTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+UIAutoTest.m"; sourceTree = "<group>"; };
 		74CC65DD1F959E1400A0210C /* AutoUIIDTestViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AutoUIIDTestViewController.h; sourceTree = "<group>"; };
 		74CC65DE1F959E1400A0210C /* AutoUIIDTestViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AutoUIIDTestViewController.m; sourceTree = "<group>"; };
 		74CCEE501F7A271900A88A5B /* MainManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainManager.h; sourceTree = "<group>"; };
 		74CCEE511F7A271900A88A5B /* MainManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainManager.m; sourceTree = "<group>"; };
 		74CCEE561F7A2BC400A88A5B /* MainBean.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainBean.h; sourceTree = "<group>"; };
 		74CCEE571F7A2BC400A88A5B /* MainBean.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainBean.m; sourceTree = "<group>"; };
+		74CE3D351F98BECF005CC0A7 /* UIView+AutoAccessID.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+AutoAccessID.h"; sourceTree = "<group>"; };
+		74CE3D361F98BECF005CC0A7 /* UIView+AutoAccessID.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+AutoAccessID.m"; sourceTree = "<group>"; };
+		74CE3D381F98CD22005CC0A7 /* UIResponder+AutoAccessID.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIResponder+AutoAccessID.h"; sourceTree = "<group>"; };
+		74CE3D391F98CD22005CC0A7 /* UIResponder+AutoAccessID.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIResponder+AutoAccessID.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -121,7 +118,7 @@
 		552FA3B51F7424DC009EB5B2 /* Easy-All */ = {
 			isa = PBXGroup;
 			children = (
-				74CC65CA1F95967700A0210C /* Utility */,
+				74CE3D2C1F98BE85005CC0A7 /* Utility */,
 				55B3EE781F7560040073DB65 /* Library */,
 				552FA3CD1F74269F009EB5B2 /* Controller */,
 				552FA3CC1F742695009EB5B2 /* Manager */,
@@ -274,35 +271,6 @@
 			path = UIColor;
 			sourceTree = "<group>";
 		};
-		74CC65CA1F95967700A0210C /* Utility */ = {
-			isa = PBXGroup;
-			children = (
-				74CC65CB1F95967700A0210C /* AutoUIID */,
-				74CC65CE1F95967700A0210C /* HookID */,
-			);
-			path = Utility;
-			sourceTree = "<group>";
-		};
-		74CC65CB1F95967700A0210C /* AutoUIID */ = {
-			isa = PBXGroup;
-			children = (
-				74CC65CC1F95967700A0210C /* UIView+AutoAccessID.h */,
-				74CC65CD1F95967700A0210C /* UIView+AutoAccessID.m */,
-			);
-			path = AutoUIID;
-			sourceTree = "<group>";
-		};
-		74CC65CE1F95967700A0210C /* HookID */ = {
-			isa = PBXGroup;
-			children = (
-				74CC65CF1F95967700A0210C /* UIResponder+UIAutoTest.h */,
-				74CC65D01F95967700A0210C /* UIResponder+UIAutoTest.m */,
-				74CC65D11F95967700A0210C /* UIView+UIAutoTest.h */,
-				74CC65D21F95967700A0210C /* UIView+UIAutoTest.m */,
-			);
-			path = HookID;
-			sourceTree = "<group>";
-		};
 		74CC65D81F959D8B00A0210C /* HouseLoan */ = {
 			isa = PBXGroup;
 			children = (
@@ -331,6 +299,33 @@
 				74AEAF941F7A6CAB00D7095F /* MainList.plist */,
 			);
 			path = Main;
+			sourceTree = "<group>";
+		};
+		74CE3D2C1F98BE85005CC0A7 /* Utility */ = {
+			isa = PBXGroup;
+			children = (
+				74CE3D341F98BECF005CC0A7 /* AutoUIID */,
+				74CE3D2D1F98BE94005CC0A7 /* HookID */,
+			);
+			path = Utility;
+			sourceTree = "<group>";
+		};
+		74CE3D2D1F98BE94005CC0A7 /* HookID */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = HookID;
+			sourceTree = "<group>";
+		};
+		74CE3D341F98BECF005CC0A7 /* AutoUIID */ = {
+			isa = PBXGroup;
+			children = (
+				74CE3D351F98BECF005CC0A7 /* UIView+AutoAccessID.h */,
+				74CE3D361F98BECF005CC0A7 /* UIView+AutoAccessID.m */,
+				74CE3D381F98CD22005CC0A7 /* UIResponder+AutoAccessID.h */,
+				74CE3D391F98CD22005CC0A7 /* UIResponder+AutoAccessID.m */,
+			);
+			path = AutoUIID;
 			sourceTree = "<group>";
 		};
 		842E58931D9438720EBB0FC9 /* Pods */ = {
@@ -471,16 +466,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				74CE3D3A1F98CD22005CC0A7 /* UIResponder+AutoAccessID.m in Sources */,
 				74CCEE581F7A2BC400A88A5B /* MainBean.m in Sources */,
 				55B3EE7D1F7560C30073DB65 /* UIView+Frame.m in Sources */,
-				74CC65D31F95967700A0210C /* UIView+AutoAccessID.m in Sources */,
+				74CE3D371F98BECF005CC0A7 /* UIView+AutoAccessID.m in Sources */,
 				55AA76FF1F82836000618628 /* InputBoxCell.m in Sources */,
 				74ADDF0A1F7651DC008980A5 /* CommonViewController.m in Sources */,
 				5534D19D1F7A9F5200BF84CF /* HouseLoanManager.m in Sources */,
 				74CC65DF1F959E1400A0210C /* AutoUIIDTestViewController.m in Sources */,
-				74CC65D41F95967700A0210C /* UIResponder+UIAutoTest.m in Sources */,
 				55B3EE841F7570520073DB65 /* InfoDictionary.m in Sources */,
-				74CC65D51F95967700A0210C /* UIView+UIAutoTest.m in Sources */,
 				7403D6581F974BF700601FFE /* HouseLoanConfigViewController.m in Sources */,
 				5536F8141F7AAB8600765E15 /* MonthPayBean.m in Sources */,
 				55B624FB1F7C099D005B1E9D /* RadioBoxCell.m in Sources */,

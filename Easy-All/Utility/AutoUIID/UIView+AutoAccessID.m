@@ -7,13 +7,21 @@
 //
 
 #import "UIView+AutoAccessID.h"
+#import "UIResponder+AutoAccessID.h"
 #import <objc/runtime.h>
+
+#define TAG_ID @"id_"
 
 @implementation UIView (AutoAccessID)
 
 + (void)load
 {
     [super load];
+    
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        [self replaceSelector:@selector(addSubview:) withNewSelector:@selector(hc_addSubview:)];
+    });
     
 }
 
@@ -22,52 +30,32 @@
     Method originalMethod = class_getInstanceMethod([self class], originalSelector);
     Method newMethod = class_getInstanceMethod([self class], newSelector);
     
-
-
-}
-
-
-
-//+ (void)load {
-//    static dispatch_once_t onceToken;
-//    dispatch_once(&onceToken, ^{
-//        [self swizzleSelector:@selector(accessibilityIdentifier) withAnotherSelector:@selector(tb_accessibilityIdentifier)];
-//        [self swizzleSelector:@selector(accessibilityLabel) withAnotherSelector:@selector(tb_accessibilityLabel)];
-//    });
-//}
-
-//+ (void)swizzleSelector:(SEL)originalSelector withAnotherSelector:(SEL)swizzledSelector
-//{
-//    Class aClass = [self class];
-//    
-//    Method originalMethod = class_getInstanceMethod(aClass, originalSelector);
-//    Method swizzledMethod = class_getInstanceMethod(aClass, swizzledSelector);
-//
-//    BOOL didAddMethod =
-//    class_addMethod(aClass,
-//                    originalSelector,
-//                    method_getImplementation(swizzledMethod),
-//                    method_getTypeEncoding(swizzledMethod));
-//    
-//    if (didAddMethod) {
-//        class_replaceMethod(aClass,
-//                            swizzledSelector,
-//                            method_getImplementation(originalMethod),
-//                            method_getTypeEncoding(originalMethod));
-//    } else {
-//        method_exchangeImplementations(originalMethod, swizzledMethod);
-//    }
-//}
-
-
-- (void)setAccessibilityIdentifier:(NSString *)accessibilityIdentifier
-{
+    Class aClass = [self class];
     
+    BOOL didAddMethod =
+    class_addMethod(aClass,
+                    originalSelector,
+                    method_getImplementation(newMethod),
+                    method_getTypeEncoding(newMethod));
+    
+    if (didAddMethod) {
+        class_replaceMethod(aClass,
+                            newSelector,
+                            method_getImplementation(originalMethod),
+                            method_getTypeEncoding(originalMethod));
+    } else {
+        method_exchangeImplementations(originalMethod, newMethod);
+    }
+
+
 }
 
-- (void)addSubview:(UIView *)view
+- (void)hc_addSubview:(UIView *)view
 {
-    
+    [self hc_addSubview:view];
+    view.accessibilityIdentifier = [NSString stringWithFormat:@"%@%@",TAG_ID,[self findNameWithInstance:view]];
 }
+
+
 
 @end

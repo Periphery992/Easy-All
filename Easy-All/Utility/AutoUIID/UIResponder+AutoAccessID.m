@@ -1,32 +1,27 @@
 //
-//  UIResponder+UIAutoTest.m
-//  AFWealth
+//  UIResponder+AutoAccessID.m
+//  Easy-All
 //
-//  Created by Yinxl on 11/1/16.
-//  Copyright © 2016 opensource. All rights reserved.
+//  Created by chen on 19/10/2017.
+//  Copyright © 2017 chensa. All rights reserved.
 //
 
-#import "UIResponder+UIAutoTest.h"
+#import "UIResponder+AutoAccessID.h"
 #import <objc/runtime.h>
 
-@implementation UIResponder (UIAutoTest)
+@implementation UIResponder (AutoAccessID)
 
 -(NSString *)nameWithInstance:(id)instance {
     unsigned int numIvars = 0;
     NSString *key=nil;
     Ivar * ivars = class_copyIvarList([self class], &numIvars);
     for(int i = 0; i < numIvars; i++) {
-        
-        
         Ivar thisIvar = ivars[i];
-        
         const char *type = ivar_getTypeEncoding(thisIvar);
         NSString *stringType =  [NSString stringWithCString:type encoding:NSUTF8StringEncoding];
         if (![stringType hasPrefix:@"@"]) {
             continue;
         }
-        
-        NSLog(@"%@",object_getIvar(self, thisIvar));
         if ((object_getIvar(self, thisIvar) == instance)) {//此处 crash 不要慌！
             key = [NSString stringWithUTF8String:ivar_getName(thisIvar)];
             break;
@@ -38,7 +33,7 @@
 
 - (NSString *)findNameWithInstance:(UIView *) instance
 {
-    id nextResponder = instance.superview;
+    id nextResponder = [self nextResponder];
     NSString *name = [self nameWithInstance:instance];
     if (!name) {
         return [nextResponder findNameWithInstance:instance];
@@ -48,5 +43,7 @@
     }
     return name;
 }
+
+
 
 @end
