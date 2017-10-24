@@ -22,6 +22,7 @@
 		55F7B6D01F77623E0089B32F /* ApplicationInit.m in Sources */ = {isa = PBXBuildFile; fileRef = 55F7B6CF1F77623E0089B32F /* ApplicationInit.m */; };
 		7403D6581F974BF700601FFE /* HouseLoanConfigViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7403D6571F974BF700601FFE /* HouseLoanConfigViewController.m */; };
 		741B75111F78A44E00BFDA2F /* HLFDDLogFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = 741B75101F78A44E00BFDA2F /* HLFDDLogFormatter.m */; };
+		744E5D891F9F359E009AA1AB /* UIImage+TBUIAutoTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 744E5D881F9F359E009AA1AB /* UIImage+TBUIAutoTest.m */; };
 		74ADDF0A1F7651DC008980A5 /* CommonViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 74ADDF091F7651DC008980A5 /* CommonViewController.m */; };
 		74ADDF0E1F7653C6008980A5 /* UIImage+Color.m in Sources */ = {isa = PBXBuildFile; fileRef = 74ADDF0D1F7653C6008980A5 /* UIImage+Color.m */; };
 		74AEAF951F7A6CAB00D7095F /* MainList.plist in Resources */ = {isa = PBXBuildFile; fileRef = 74AEAF941F7A6CAB00D7095F /* MainList.plist */; };
@@ -30,6 +31,7 @@
 		74CCEE581F7A2BC400A88A5B /* MainBean.m in Sources */ = {isa = PBXBuildFile; fileRef = 74CCEE571F7A2BC400A88A5B /* MainBean.m */; };
 		74CE3D371F98BECF005CC0A7 /* UIView+AutoAccessID.m in Sources */ = {isa = PBXBuildFile; fileRef = 74CE3D361F98BECF005CC0A7 /* UIView+AutoAccessID.m */; };
 		74CE3D3A1F98CD22005CC0A7 /* UIResponder+AutoAccessID.m in Sources */ = {isa = PBXBuildFile; fileRef = 74CE3D391F98CD22005CC0A7 /* UIResponder+AutoAccessID.m */; };
+		74CE3D3D1F99EAE4005CC0A7 /* TestView.m in Sources */ = {isa = PBXBuildFile; fileRef = 74CE3D3C1F99EAE4005CC0A7 /* TestView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -65,6 +67,8 @@
 		7403D6571F974BF700601FFE /* HouseLoanConfigViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HouseLoanConfigViewController.m; sourceTree = "<group>"; };
 		741B750F1F78A44E00BFDA2F /* HLFDDLogFormatter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HLFDDLogFormatter.h; sourceTree = "<group>"; };
 		741B75101F78A44E00BFDA2F /* HLFDDLogFormatter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HLFDDLogFormatter.m; sourceTree = "<group>"; };
+		744E5D871F9F359E009AA1AB /* UIImage+TBUIAutoTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+TBUIAutoTest.h"; sourceTree = "<group>"; };
+		744E5D881F9F359E009AA1AB /* UIImage+TBUIAutoTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+TBUIAutoTest.m"; sourceTree = "<group>"; };
 		74ADDF081F7651DC008980A5 /* CommonViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CommonViewController.h; sourceTree = "<group>"; };
 		74ADDF091F7651DC008980A5 /* CommonViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CommonViewController.m; sourceTree = "<group>"; };
 		74ADDF0C1F7653C6008980A5 /* UIImage+Color.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Color.h"; sourceTree = "<group>"; };
@@ -83,6 +87,8 @@
 		74CE3D361F98BECF005CC0A7 /* UIView+AutoAccessID.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+AutoAccessID.m"; sourceTree = "<group>"; };
 		74CE3D381F98CD22005CC0A7 /* UIResponder+AutoAccessID.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIResponder+AutoAccessID.h"; sourceTree = "<group>"; };
 		74CE3D391F98CD22005CC0A7 /* UIResponder+AutoAccessID.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIResponder+AutoAccessID.m"; sourceTree = "<group>"; };
+		74CE3D3B1F99EAE4005CC0A7 /* TestView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestView.h; sourceTree = "<group>"; };
+		74CE3D3C1F99EAE4005CC0A7 /* TestView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -285,6 +291,8 @@
 			children = (
 				74CC65DD1F959E1400A0210C /* AutoUIIDTestViewController.h */,
 				74CC65DE1F959E1400A0210C /* AutoUIIDTestViewController.m */,
+				74CE3D3B1F99EAE4005CC0A7 /* TestView.h */,
+				74CE3D3C1F99EAE4005CC0A7 /* TestView.m */,
 			);
 			path = AutoUIIDTest;
 			sourceTree = "<group>";
@@ -320,6 +328,8 @@
 		74CE3D341F98BECF005CC0A7 /* AutoUIID */ = {
 			isa = PBXGroup;
 			children = (
+				744E5D871F9F359E009AA1AB /* UIImage+TBUIAutoTest.h */,
+				744E5D881F9F359E009AA1AB /* UIImage+TBUIAutoTest.m */,
 				74CE3D351F98BECF005CC0A7 /* UIView+AutoAccessID.h */,
 				74CE3D361F98BECF005CC0A7 /* UIView+AutoAccessID.m */,
 				74CE3D381F98CD22005CC0A7 /* UIResponder+AutoAccessID.h */,
@@ -473,6 +483,7 @@
 				55AA76FF1F82836000618628 /* InputBoxCell.m in Sources */,
 				74ADDF0A1F7651DC008980A5 /* CommonViewController.m in Sources */,
 				5534D19D1F7A9F5200BF84CF /* HouseLoanManager.m in Sources */,
+				74CE3D3D1F99EAE4005CC0A7 /* TestView.m in Sources */,
 				74CC65DF1F959E1400A0210C /* AutoUIIDTestViewController.m in Sources */,
 				55B3EE841F7570520073DB65 /* InfoDictionary.m in Sources */,
 				7403D6581F974BF700601FFE /* HouseLoanConfigViewController.m in Sources */,
@@ -486,6 +497,7 @@
 				741B75111F78A44E00BFDA2F /* HLFDDLogFormatter.m in Sources */,
 				74ADDF0E1F7653C6008980A5 /* UIImage+Color.m in Sources */,
 				552FA3B81F7424DC009EB5B2 /* AppDelegate.m in Sources */,
+				744E5D891F9F359E009AA1AB /* UIImage+TBUIAutoTest.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

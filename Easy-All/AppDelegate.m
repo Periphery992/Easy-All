@@ -22,12 +22,22 @@
     
     self.window = [[UIWindow alloc]initWithFrame:[[UIScreen mainScreen] bounds]];
     
+    UITabBarController *tabbarController = [[UITabBarController alloc]init];
     
     MainViewController *controller = [[MainViewController alloc]init];
     UINavigationController *nav = [[UINavigationController alloc]initWithRootViewController:controller];
-    self.window.rootViewController = nav;
+    nav.tabBarItem = [[UITabBarItem alloc]initWithTitle:@"1" image:nil selectedImage:nil];
+    
+    tabbarController.viewControllers=@[nav];
+    self.window.rootViewController = tabbarController;
     [self.window makeKeyAndVisible];
+    
+    UIView *vw1 = [[UIView alloc]initWithFrame:CGRectMake(0, 0, 0, 0)];
+    
+    
     [ApplicationInit sharedInstance];
+    
+    
 
     return YES;
 }

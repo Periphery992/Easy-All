@@ -7,6 +7,7 @@
 //
 
 #import "AutoUIIDTestViewController.h"
+#import "TestView.h"
 
 @interface AutoUIIDTestViewController ()
 @property (nonatomic,strong) UIView *vwTest2;
@@ -22,11 +23,15 @@
     UIView *vwtest1 = [[UIView alloc]initWithFrame:CGRectMake(0, 60, 100, 100)];
     vwtest1.backgroundColor = [UIColor redColor];
     [self.view addSubview:vwtest1];
-    
-    
+    NSLog(@"%@",vwtest1);
+    NSLog(@"%@",self.vwTest2);
     self.vwTest2 = [[UIView alloc]initWithFrame:CGRectMake(0, 60, 100, 100)];
     self.vwTest2.backgroundColor = [UIColor redColor];
     [self.view addSubview:self.vwTest2];
+    
+    
+    TestView *testView = [[TestView alloc]initWithFrame:CGRectMake(0, 120, 60, 60)];
+    [self.view addSubview:testView];
 }
 
 

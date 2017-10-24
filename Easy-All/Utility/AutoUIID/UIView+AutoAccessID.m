@@ -20,7 +20,8 @@
     
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
-        [self replaceSelector:@selector(addSubview:) withNewSelector:@selector(hc_addSubview:)];
+//        [self replaceSelector:@selector(addSubview:) withNewSelector:@selector(hc_addSubview:)];
+        [self replaceSelector:@selector(initWithFrame:) withNewSelector:@selector(hc_initWithFrame:)];
     });
     
 }
@@ -50,10 +51,12 @@
 
 }
 
-- (void)hc_addSubview:(UIView *)view
+
+- (void)hc_addSubview:(id)view
 {
     [self hc_addSubview:view];
-    view.accessibilityIdentifier = [NSString stringWithFormat:@"%@%@",TAG_ID,[self findNameWithInstance:view]];
+    UIView *view2 = (UIView *)view;
+    view2.accessibilityIdentifier = [NSString stringWithFormat:@"%@%@",TAG_ID,[self findNameWithInstance:view]];
 }
 
 
