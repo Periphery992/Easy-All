@@ -28,6 +28,7 @@
 		74ADDF0A1F7651DC008980A5 /* CommonViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 74ADDF091F7651DC008980A5 /* CommonViewController.m */; };
 		74ADDF0E1F7653C6008980A5 /* UIImage+Color.m in Sources */ = {isa = PBXBuildFile; fileRef = 74ADDF0D1F7653C6008980A5 /* UIImage+Color.m */; };
 		74AEAF951F7A6CAB00D7095F /* MainList.plist in Resources */ = {isa = PBXBuildFile; fileRef = 74AEAF941F7A6CAB00D7095F /* MainList.plist */; };
+		74C254651FA0841E008E80F2 /* ProgressBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 74C254641FA0841E008E80F2 /* ProgressBar.m */; };
 		74CC65DF1F959E1400A0210C /* AutoUIIDTestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 74CC65DE1F959E1400A0210C /* AutoUIIDTestViewController.m */; };
 		74CCEE521F7A271900A88A5B /* MainManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 74CCEE511F7A271900A88A5B /* MainManager.m */; };
 		74CCEE581F7A2BC400A88A5B /* MainBean.m in Sources */ = {isa = PBXBuildFile; fileRef = 74CCEE571F7A2BC400A88A5B /* MainBean.m */; };
@@ -83,6 +84,8 @@
 		74ADDF111F76541B008980A5 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 		74ADDF121F7656B0008980A5 /* CommonDefine.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CommonDefine.pch; sourceTree = "<group>"; };
 		74AEAF941F7A6CAB00D7095F /* MainList.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = MainList.plist; sourceTree = "<group>"; };
+		74C254631FA0841E008E80F2 /* ProgressBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProgressBar.h; sourceTree = "<group>"; };
+		74C254641FA0841E008E80F2 /* ProgressBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProgressBar.m; sourceTree = "<group>"; };
 		74CC65DD1F959E1400A0210C /* AutoUIIDTestViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AutoUIIDTestViewController.h; sourceTree = "<group>"; };
 		74CC65DE1F959E1400A0210C /* AutoUIIDTestViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AutoUIIDTestViewController.m; sourceTree = "<group>"; };
 		74CCEE501F7A271900A88A5B /* MainManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainManager.h; sourceTree = "<group>"; };
@@ -218,6 +221,8 @@
 				55B3EE7C1F7560C30073DB65 /* UIView+Frame.m */,
 				5524B6E21F98F23C00681717 /* MaskView.h */,
 				5524B6E31F98F23C00681717 /* MaskView.m */,
+				74C254631FA0841E008E80F2 /* ProgressBar.h */,
+				74C254641FA0841E008E80F2 /* ProgressBar.m */,
 			);
 			path = UIView;
 			sourceTree = "<group>";
@@ -331,16 +336,8 @@
 			isa = PBXGroup;
 			children = (
 				74CE3D341F98BECF005CC0A7 /* AutoUIID */,
-				74CE3D2D1F98BE94005CC0A7 /* HookID */,
 			);
 			path = Utility;
-			sourceTree = "<group>";
-		};
-		74CE3D2D1F98BE94005CC0A7 /* HookID */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = HookID;
 			sourceTree = "<group>";
 		};
 		74CE3D341F98BECF005CC0A7 /* AutoUIID */ = {
@@ -498,6 +495,7 @@
 				74CCEE581F7A2BC400A88A5B /* MainBean.m in Sources */,
 				55B3EE7D1F7560C30073DB65 /* UIView+Frame.m in Sources */,
 				74CE3D371F98BECF005CC0A7 /* UIView+AutoAccessID.m in Sources */,
+				74C254651FA0841E008E80F2 /* ProgressBar.m in Sources */,
 				55AA76FF1F82836000618628 /* InputBoxCell.m in Sources */,
 				74ADDF0A1F7651DC008980A5 /* CommonViewController.m in Sources */,
 				5534D19D1F7A9F5200BF84CF /* HouseLoanManager.m in Sources */,

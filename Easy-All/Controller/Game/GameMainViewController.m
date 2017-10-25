@@ -7,14 +7,20 @@
 //
 
 #import "GameMainViewController.h"
+#import "ProgressBar.h"
+
 
 @interface GameMainViewController ()
 @property (nonatomic, strong) UIButton *btnMainMenu;
 @property (nonatomic, strong) UIButton *btnSettingMenu;
+@property (nonatomic, strong) ProgressBar *progressBar;
+
 
 @end
 
 @implementation GameMainViewController
+
+
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -45,7 +51,7 @@
 
 - (void)initTopInfoView
 {
-    UIView *vwBg = [[UIView alloc]initWithFrame:CGRectMake(0, 30, SCREEN_WIDTH, 88)];
+    UIView *vwBg = [[UIView alloc]initWithFrame:CGRectMake(0, STATE_HEIGHT, SCREEN_WIDTH, 88)];
     vwBg.backgroundColor = [UIColor grayColor];
     [self.view addSubview:vwBg];
     
@@ -55,9 +61,19 @@
     [vwBg addSubview:imageLogo];
     
     UILabel *lblName = [[UILabel alloc]initWithFrame:CGRectMake(imageLogo.rightX + 10, 10, 120, 20)];
-    lblName.text = @"名字哦哦哦哦哦哦";
-    lblName.font = [UIFont systemFontOfSize:14];
+    lblName.text = @"sssssssssssssss";
+    lblName.font = [UIFont systemFontOfSize:15];
     [vwBg addSubview:lblName];
+    
+    UILabel *lbLevel = [[UILabel alloc]initWithFrame:CGRectMake(imageLogo.rightX + 10, lblName.bottomY+10, 60, 20)];
+    lbLevel.text = @"hh.999";
+    lbLevel.font = [UIFont systemFontOfSize:15];
+    [vwBg addSubview:lbLevel];
+    
+    self.progressBar = [[ProgressBar alloc]initWithFrame:CGRectMake(lbLevel.rightX+10, lbLevel.centerY-2.5, SCREEN_WIDTH - lbLevel.rightX - 10 - 20, 5)];
+    [vwBg addSubview:self.progressBar];
+    
+    
     
 }
 
