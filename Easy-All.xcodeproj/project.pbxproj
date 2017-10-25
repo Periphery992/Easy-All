@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		2335C818C08412ABA790E455 /* libPods-Easy-All.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2696F10A3D81939386475F7F /* libPods-Easy-All.a */; };
+		5506A4441F9F917200EFAE36 /* GameMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5506A4431F9F917200EFAE36 /* GameMainViewController.m */; };
+		5524B6E41F98F23C00681717 /* MaskView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5524B6E31F98F23C00681717 /* MaskView.m */; };
 		552FA3B81F7424DC009EB5B2 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 552FA3B71F7424DC009EB5B2 /* AppDelegate.m */; };
 		552FA3C01F7424DC009EB5B2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 552FA3BF1F7424DC009EB5B2 /* Assets.xcassets */; };
 		552FA3C61F7424DC009EB5B2 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 552FA3C51F7424DC009EB5B2 /* main.m */; };
@@ -37,6 +39,10 @@
 /* Begin PBXFileReference section */
 		2696F10A3D81939386475F7F /* libPods-Easy-All.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Easy-All.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4B38C7397BD77B4D5754A1DE /* Pods-Easy-All.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Easy-All.release.xcconfig"; path = "Pods/Target Support Files/Pods-Easy-All/Pods-Easy-All.release.xcconfig"; sourceTree = "<group>"; };
+		5506A4421F9F917200EFAE36 /* GameMainViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GameMainViewController.h; sourceTree = "<group>"; };
+		5506A4431F9F917200EFAE36 /* GameMainViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GameMainViewController.m; sourceTree = "<group>"; };
+		5524B6E21F98F23C00681717 /* MaskView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MaskView.h; sourceTree = "<group>"; };
+		5524B6E31F98F23C00681717 /* MaskView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MaskView.m; sourceTree = "<group>"; };
 		552FA3B31F7424DC009EB5B2 /* Easy-All.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Easy-All.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		552FA3B61F7424DC009EB5B2 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		552FA3B71F7424DC009EB5B2 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -153,6 +159,7 @@
 		552FA3CD1F74269F009EB5B2 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				5591B4DD1F9C7E2A00E26024 /* Game */,
 				74CC65DC1F959DED00A0210C /* AutoUIIDTest */,
 				74CC65D81F959D8B00A0210C /* HouseLoan */,
 				55B624F01F7C073D005B1E9D /* DeviceInfo */,
@@ -181,6 +188,15 @@
 			path = Main;
 			sourceTree = "<group>";
 		};
+		5591B4DD1F9C7E2A00E26024 /* Game */ = {
+			isa = PBXGroup;
+			children = (
+				5506A4421F9F917200EFAE36 /* GameMainViewController.h */,
+				5506A4431F9F917200EFAE36 /* GameMainViewController.m */,
+			);
+			path = Game;
+			sourceTree = "<group>";
+		};
 		55B3EE781F7560040073DB65 /* Library */ = {
 			isa = PBXGroup;
 			children = (
@@ -200,6 +216,8 @@
 			children = (
 				55B3EE7B1F7560C30073DB65 /* UIView+Frame.h */,
 				55B3EE7C1F7560C30073DB65 /* UIView+Frame.m */,
+				5524B6E21F98F23C00681717 /* MaskView.h */,
+				5524B6E31F98F23C00681717 /* MaskView.m */,
 			);
 			path = UIView;
 			sourceTree = "<group>";
@@ -490,6 +508,8 @@
 				5536F8141F7AAB8600765E15 /* MonthPayBean.m in Sources */,
 				55B624FB1F7C099D005B1E9D /* RadioBoxCell.m in Sources */,
 				74CCEE521F7A271900A88A5B /* MainManager.m in Sources */,
+				5506A4441F9F917200EFAE36 /* GameMainViewController.m in Sources */,
+				5524B6E41F98F23C00681717 /* MaskView.m in Sources */,
 				552FA3C61F7424DC009EB5B2 /* main.m in Sources */,
 				55F7B6D01F77623E0089B32F /* ApplicationInit.m in Sources */,
 				555D3B351F76B15F00C561FA /* MainViewController.m in Sources */,

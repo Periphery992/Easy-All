@@ -10,11 +10,14 @@
 #import "HouseLoanManager.h"
 #import "RadioBoxCell.h"
 #import "InputBoxCell.h"
+#import "MaskView.h"
 
 @interface HouseLoanConfigViewController ()<UITableViewDelegate,UITableViewDataSource,RadioBoxCellDelegate,InputBoxCellDelegate>
 @property (nonatomic, strong) UITableView *tableview;
 @property (nonatomic, assign) BOOL bCalculateAllLoan;
 @property (nonatomic, strong) NSMutableArray *mutarrMonth;
+@property (nonatomic, strong) MaskView *maskView_Result;
+
 @end
 
 @implementation HouseLoanConfigViewController
@@ -23,7 +26,6 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     self.title = @"House Loan";
-    
     [self initView];
     
 }
@@ -37,6 +39,54 @@
     self.tableview.delegate = self;
     self.tableview.tableFooterView = [[UIView alloc]init];
     [self.view addSubview:self.tableview];
+}
+
+- (void)initResultView
+{
+    if (!self.maskView_Result)
+    {
+        //蒙层
+        self.maskView_Result = [[MaskView alloc]initWithAlpha:0.5f];
+        [[[UIApplication sharedApplication]keyWindow] addSubview:self.maskView_Result];
+        
+        //白底
+        UIView *vwBG = [[UIView alloc]initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH*0.8, 0)];;
+        vwBG.layer.cornerRadius = 8;
+        vwBG.backgroundColor = [UIColor whiteColor];
+        [self.maskView_Result addSubview:vwBG];
+        
+        vwBG.height = vwBG.width;
+        
+        //贷款总金额
+        UILabel *lblAllLoan = [[UILabel alloc]initWithFrame:CGRectMake(vwBG.width/2, 20, vwBG.width/2-10, 20)];
+        lblAllLoan.text = [NSString stringWithFormat:@"贷款总额:%0.2f",[[HouseLoanManager sharedInstance]getAllLoan]/10000];
+        lblAllLoan.font = [UIFont systemFontOfSize:14];
+        [vwBG addSubview:lblAllLoan];
+        
+        //贷款总利息
+        UILabel *lblAllInterest = [[UILabel alloc]initWithFrame:CGRectMake(vwBG.width/2, 45, vwBG.width/2-10, 20)];
+        lblAllInterest.text = [NSString stringWithFormat:@"支付利息:%0.2f",[[HouseLoanManager sharedInstance]getAllInterest]];
+        lblAllInterest.font = [UIFont systemFontOfSize:14];
+        [vwBG addSubview:lblAllInterest];
+        
+        //商贷利率
+        UILabel *lblRate = [[UILabel alloc]initWithFrame:CGRectMake(vwBG.width/2, 70, vwBG.width/2-10, 20)];
+        lblRate.text = [NSString stringWithFormat:@"商贷利率:%0.2f%",[[HouseLoanManager sharedInstance]getRate]];
+        lblRate.font = [UIFont systemFontOfSize:14];
+        [vwBG addSubview:lblRate];
+        
+//        //商贷利率
+//        UILabel *lblRate = [[UILabel alloc]initWithFrame:CGRectMake(vwBG.width/2, 70, vwBG.width/2-10, 20)];
+//        lblRate.text = [NSString stringWithFormat:@"参考月供:%0.2f%",[[HouseLoanManager sharedInstance]getRate]];
+//        lblRate.font = [UIFont systemFontOfSize:14];
+//        [vwBG addSubview:lblRate];
+
+        
+        vwBG.center = self.maskView_Result.center;
+    }
+    
+    self.maskView_Result.hidden = NO;
+    
 }
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
@@ -71,6 +121,7 @@
         {
             cell = [[RadioBoxCell alloc]initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:radioCell];
             cell.delegate = self;
+            cell.selectionStyle = UITableViewCellSelectionStyleNone;
         }
         [cell configHiddenAllRadioBox];
         
@@ -106,6 +157,7 @@
         {
             cell = [[InputBoxCell alloc]initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:inputCell];
             cell.delegate = self;
+            cell.selectionStyle = UITableViewCellSelectionStyleNone;
         }
         
         [cell configUnit:nil font:nil color:nil];
@@ -167,10 +219,14 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
+    [self.tableview deselectRowAtIndexPath:indexPath animated:YES];
+    
     if(indexPath.section == HouseLoanCellSectionEnd)
     {
         self.mutarrMonth = [[NSMutableArray alloc]init];
         [self.mutarrMonth addObjectsFromArray:[[HouseLoanManager sharedInstance]getResult]];
+        
+        [self initResultView];
     }
 }
 
