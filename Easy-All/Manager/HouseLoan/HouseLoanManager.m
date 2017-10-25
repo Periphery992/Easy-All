@@ -241,4 +241,10 @@
     }
 }
 
+//获取贷款利息
+- (CGFloat)getRate
+{
+    return self.fLoanRate;
+}
+
 @end

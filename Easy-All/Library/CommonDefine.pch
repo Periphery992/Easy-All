@@ -23,6 +23,7 @@
 #pragma mark - SCREEN_SIZE
 #define SCREEN_WIDTH  [[UIScreen mainScreen]bounds].size.width      //手机屏幕宽
 #define SCREEN_HEIGHT  [[UIScreen mainScreen]bounds].size.height    //手机屏幕高
+#define NAVBAR_HEIGHT  [[UIScreen mainScreen]bounds].size.height    //手机屏幕高
 
 #define isIphone4OR5 SCREEN_WIDTH<=320?YES:NO
 
