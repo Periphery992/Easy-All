@@ -10,11 +10,11 @@
 
 @interface ProgressBar : UIView
 
-- (void)configWithfNow:(float)fNow fTotal:(float)fTotal animated:(BOOL)animated;
+- (void)configProgressWithfNow:(float)fNow fTotal:(float)fTotal animated:(BOOL)animated;
 
-- (void)configWithfNow:(float)fNow animated:(BOOL)animated;
+- (void)configProgressWithfNow:(float)fNow animated:(BOOL)animated;
 
-- (void)configWithfRate:(float)fRate animated:(BOOL)animated;
+- (void)configProgressWithfRate:(float)fRate animated:(BOOL)animated;
 
 - (void)configBackgroundColor:(UIColor *)color;
 

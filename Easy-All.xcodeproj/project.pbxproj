@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		2335C818C08412ABA790E455 /* libPods-Easy-All.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2696F10A3D81939386475F7F /* libPods-Easy-All.a */; };
 		5506A4441F9F917200EFAE36 /* GameMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5506A4431F9F917200EFAE36 /* GameMainViewController.m */; };
+		5517D46C1FA0D7BC00BFFAC4 /* CountView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5517D46B1FA0D7BC00BFFAC4 /* CountView.m */; };
+		5517D4701FA0DE4900BFFAC4 /* NSString+Modify.m in Sources */ = {isa = PBXBuildFile; fileRef = 5517D46F1FA0DE4900BFFAC4 /* NSString+Modify.m */; };
 		5524B6E41F98F23C00681717 /* MaskView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5524B6E31F98F23C00681717 /* MaskView.m */; };
 		552FA3B81F7424DC009EB5B2 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 552FA3B71F7424DC009EB5B2 /* AppDelegate.m */; };
 		552FA3C01F7424DC009EB5B2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 552FA3BF1F7424DC009EB5B2 /* Assets.xcassets */; };
@@ -42,6 +44,10 @@
 		4B38C7397BD77B4D5754A1DE /* Pods-Easy-All.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Easy-All.release.xcconfig"; path = "Pods/Target Support Files/Pods-Easy-All/Pods-Easy-All.release.xcconfig"; sourceTree = "<group>"; };
 		5506A4421F9F917200EFAE36 /* GameMainViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GameMainViewController.h; sourceTree = "<group>"; };
 		5506A4431F9F917200EFAE36 /* GameMainViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GameMainViewController.m; sourceTree = "<group>"; };
+		5517D46A1FA0D7BC00BFFAC4 /* CountView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CountView.h; sourceTree = "<group>"; };
+		5517D46B1FA0D7BC00BFFAC4 /* CountView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CountView.m; sourceTree = "<group>"; };
+		5517D46E1FA0DE4900BFFAC4 /* NSString+Modify.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSString+Modify.h"; sourceTree = "<group>"; };
+		5517D46F1FA0DE4900BFFAC4 /* NSString+Modify.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSString+Modify.m"; sourceTree = "<group>"; };
 		5524B6E21F98F23C00681717 /* MaskView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MaskView.h; sourceTree = "<group>"; };
 		5524B6E31F98F23C00681717 /* MaskView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MaskView.m; sourceTree = "<group>"; };
 		552FA3B31F7424DC009EB5B2 /* Easy-All.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Easy-All.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -112,6 +118,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5517D4691FA0D77500BFFAC4 /* UIButton */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = UIButton;
+			sourceTree = "<group>";
+		};
+		5517D46D1FA0DD5600BFFAC4 /* NSString */ = {
+			isa = PBXGroup;
+			children = (
+				5517D46E1FA0DE4900BFFAC4 /* NSString+Modify.h */,
+				5517D46F1FA0DE4900BFFAC4 /* NSString+Modify.m */,
+			);
+			path = NSString;
+			sourceTree = "<group>";
+		};
 		552FA3AA1F7424DC009EB5B2 = {
 			isa = PBXGroup;
 			children = (
@@ -203,6 +225,8 @@
 		55B3EE781F7560040073DB65 /* Library */ = {
 			isa = PBXGroup;
 			children = (
+				5517D46D1FA0DD5600BFFAC4 /* NSString */,
+				5517D4691FA0D77500BFFAC4 /* UIButton */,
 				55B624F81F7C0961005B1E9D /* UITableViewCell */,
 				74ADDF0F1F7653EC008980A5 /* UIColor */,
 				74ADDF0B1F7653C0008980A5 /* UIImage */,
@@ -223,6 +247,8 @@
 				5524B6E31F98F23C00681717 /* MaskView.m */,
 				74C254631FA0841E008E80F2 /* ProgressBar.h */,
 				74C254641FA0841E008E80F2 /* ProgressBar.m */,
+				5517D46A1FA0D7BC00BFFAC4 /* CountView.h */,
+				5517D46B1FA0D7BC00BFFAC4 /* CountView.m */,
 			);
 			path = UIView;
 			sourceTree = "<group>";
@@ -491,6 +517,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5517D46C1FA0D7BC00BFFAC4 /* CountView.m in Sources */,
 				74CE3D3A1F98CD22005CC0A7 /* UIResponder+AutoAccessID.m in Sources */,
 				74CCEE581F7A2BC400A88A5B /* MainBean.m in Sources */,
 				55B3EE7D1F7560C30073DB65 /* UIView+Frame.m in Sources */,
@@ -514,6 +541,7 @@
 				55B624F31F7C073D005B1E9D /* DeviceInfoViewController.m in Sources */,
 				741B75111F78A44E00BFDA2F /* HLFDDLogFormatter.m in Sources */,
 				74ADDF0E1F7653C6008980A5 /* UIImage+Color.m in Sources */,
+				5517D4701FA0DE4900BFFAC4 /* NSString+Modify.m in Sources */,
 				552FA3B81F7424DC009EB5B2 /* AppDelegate.m in Sources */,
 				744E5D891F9F359E009AA1AB /* UIImage+TBUIAutoTest.m in Sources */,
 			);

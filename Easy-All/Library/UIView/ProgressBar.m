@@ -38,7 +38,6 @@ typedef enum : NSUInteger {
             self.orientation = ProgressBarOrientationHorizontal;
         }
         
-        
         self.backgroundColor = [UIColor whiteColor];
         
         self.vwProgress = [[UIView alloc]initWithFrame:CGRectMake(0, 0, frame.size.width, frame.size.height)];

@@ -8,13 +8,15 @@
 
 #import "GameMainViewController.h"
 #import "ProgressBar.h"
-
+#import "CountView.h"
 
 @interface GameMainViewController ()
 @property (nonatomic, strong) UIButton *btnMainMenu;
 @property (nonatomic, strong) UIButton *btnSettingMenu;
 @property (nonatomic, strong) ProgressBar *progressBar;
-
+@property (nonatomic, strong) CountView *countView_Gold;
+@property (nonatomic, strong) CountView *countView_Rystal;
+@property (nonatomic, strong) CountView *countView_Essence;
 
 @end
 
@@ -60,20 +62,32 @@
     imageLogo.backgroundColor = [UIColor greenColor];
     [vwBg addSubview:imageLogo];
     
-    UILabel *lblName = [[UILabel alloc]initWithFrame:CGRectMake(imageLogo.rightX + 10, 10, 120, 20)];
+    UILabel *lblName = [[UILabel alloc]initWithFrame:CGRectMake(imageLogo.rightX + 10, 10, 140, 20)];
     lblName.text = @"sssssssssssssss";
-    lblName.font = [UIFont systemFontOfSize:15];
+    lblName.font = [UIFont systemFontOfSize:16];
     [vwBg addSubview:lblName];
     
-    UILabel *lbLevel = [[UILabel alloc]initWithFrame:CGRectMake(imageLogo.rightX + 10, lblName.bottomY+10, 60, 20)];
-    lbLevel.text = @"hh.999";
-    lbLevel.font = [UIFont systemFontOfSize:15];
-    [vwBg addSubview:lbLevel];
+    UILabel *lblLevel = [[UILabel alloc]initWithFrame:CGRectMake(imageLogo.rightX + 10, lblName.bottomY+5, 60, 20)];
+    lblLevel.text = @"hh.999";
+    lblLevel.font = [UIFont systemFontOfSize:15];
+    [vwBg addSubview:lblLevel];
     
-    self.progressBar = [[ProgressBar alloc]initWithFrame:CGRectMake(lbLevel.rightX+10, lbLevel.centerY-2.5, SCREEN_WIDTH - lbLevel.rightX - 10 - 20, 5)];
+    self.progressBar = [[ProgressBar alloc]initWithFrame:CGRectMake(lblLevel.rightX+10, lblLevel.centerY-2.5, SCREEN_WIDTH - lblLevel.rightX - 10 - 20, 5)];
     [vwBg addSubview:self.progressBar];
     
+    CGFloat width = (SCREEN_WIDTH - lblName.originX-10)/3;
     
+    self.countView_Gold = [[CountView alloc]initWithFrame:CGRectMake(lblName.originX, lblLevel.bottomY+5., width -10, 20) icon:nil backgroundImage:nil];
+    [self.countView_Gold configCount:9012312222323];
+    [vwBg addSubview:self.countView_Gold];
+    
+    self.countView_Rystal = [[CountView alloc]initWithFrame:CGRectMake(lblName.originX+width, lblLevel.bottomY+5., width -10, 20) icon:nil backgroundImage:nil];
+    [self.countView_Rystal configCount:10123123];
+    [vwBg addSubview:self.countView_Rystal];
+    
+    self.countView_Essence = [[CountView alloc]initWithFrame:CGRectMake(lblName.originX+width*2, lblLevel.bottomY+5., width -10, 20) icon:nil backgroundImage:nil];
+    [self.countView_Essence configCount:75389];
+    [vwBg addSubview:self.countView_Essence];
     
 }
 
@@ -82,7 +96,18 @@
 {
     [UIView animateWithDuration:0.3 animations:^{
         
-        self.btnMainMenu.center = self.btnMainMenu.centerX == 0?CGPointMake(40, SCREEN_HEIGHT - 40):CGPointMake(0, SCREEN_HEIGHT);
+        if (self.btnMainMenu.selected)
+        {
+            self.btnMainMenu.center = CGPointMake(0, SCREEN_HEIGHT);
+            self.btnMainMenu.selected = NO;
+        }
+        else
+        {
+            self.btnMainMenu.center = CGPointMake(40, SCREEN_HEIGHT - 40);
+            self.btnMainMenu.selected = YES;
+            self.btnSettingMenu.selected = YES;
+            [self Touch_btnSettingMenu:nil];
+        }
     }];
 }
 
@@ -90,7 +115,18 @@
 {
     [UIView animateWithDuration:0.3 animations:^{
         
-        self.btnSettingMenu.center = self.btnSettingMenu.centerX == SCREEN_WIDTH?CGPointMake(SCREEN_WIDTH-40, SCREEN_HEIGHT - 40):CGPointMake(SCREEN_WIDTH, SCREEN_HEIGHT);
+        if (self.btnSettingMenu.selected)
+        {
+            self.btnSettingMenu.center = CGPointMake(SCREEN_WIDTH, SCREEN_HEIGHT);
+            self.btnSettingMenu.selected = NO;
+        }
+        else
+        {
+            self.btnSettingMenu.center = CGPointMake(SCREEN_WIDTH-40, SCREEN_HEIGHT - 40);
+            self.btnSettingMenu.selected = YES;
+            self.btnMainMenu.selected = YES;
+            [self Touch_btnMainMenu:nil];
+        }
     }];
 }
 
