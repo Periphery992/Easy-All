@@ -22,6 +22,7 @@
 @property (nonatomic, strong) TaskView *taskView_First;
 @property (nonatomic, strong) TaskView *taskView_Second;
 @property (nonatomic, strong) TaskView *taskView_Third;
+@property (nonatomic, strong) UIButton *btnCancel;
 
 
 @end
@@ -161,37 +162,77 @@
 
 - (void)Touch_btnGetTask:(id)sender
 {
-    self.taskView_First = [[TaskView alloc]initWithFrame:CGRectMake(0, 0, 80, 120)];
-    [self.view addSubview:self.taskView_First];
-    self.taskView_First.center = CGPointMake(self.view.centerX, SCREEN_HEIGHT-self.taskView_First.height/2);
+    self.btnGetTask.hidden = YES;
+    self.btnGetTask.alpha = 0;
     
+    if (!self.btnCancel)
+    {
+        self.btnCancel = [[UIButton alloc]initWithFrame:CGRectMake(0, 0, 80, 30)];
+        self.btnCancel.backgroundColor = [UIColor blueColor];
+        self.btnCancel.center = CGPointMake(self.view.centerX, SCREEN_HEIGHT - 70);
+        [self.btnCancel addTarget:self action:@selector(Touch_btnCancel:) forControlEvents:UIControlEventTouchUpInside];
+        [self.view addSubview:self.btnCancel];
+    }
+    self.btnCancel.hidden = NO;
+    
+    //第一任务卡
+    [self showTaskView:self.taskView_First index:0];
+    
+    //第二任务卡
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        [self showTaskView:self.taskView_Second index:1];
+    });
+    
+    //第三任务卡
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.2 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        [self showTaskView:self.taskView_Third index:2];
+    });
+}
+
+- (void)Touch_btnCancel:(id)sender
+{
+    self.btnCancel.hidden = YES;
+    self.btnGetTask.hidden = NO;
+    
+    [UIView animateWithDuration:0.5 animations:^{
+        self.taskView_First.alpha = 0;
+        self.taskView_Second.alpha = 0;
+        self.taskView_Third.alpha = 0;
+        self.btnGetTask.alpha = 1;
+    }];
+}
+
+- (void)showTaskView:(TaskView *)taskView index:(NSInteger)index
+{
     CGFloat width = (SCREEN_WIDTH-20)/3;
     
+    if (!taskView)
+    {
+        taskView = [[TaskView alloc]initWithFrame:CGRectMake(0, 0, width-10, (width-10)*1.5)];
+        [self.view addSubview:taskView];
+    }
+    taskView.center = CGPointMake(self.view.centerX, SCREEN_HEIGHT-taskView.height/2);
+    taskView.hidden = NO;
+    taskView.alpha = 1;
+    
     [UIView animateWithDuration:0.3 animations:^{
-        self.taskView_First.center = CGPointMake(10+width/2, SCREEN_HEIGHT/2);
+        taskView.center = CGPointMake(10+width/2+width*index, SCREEN_HEIGHT/2);
     }];
     
-    self.taskView_Second = [[TaskView alloc]initWithFrame:CGRectMake(0, 0, 80, 120)];
-    [self.view addSubview:self.taskView_Second];
-    self.taskView_Second.center = CGPointMake(self.view.centerX, SCREEN_HEIGHT-self.taskView_Second.height/2);
-    
-    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-        [UIView animateWithDuration:0.3 animations:^{
-            self.taskView_Second.center = CGPointMake(10+width/2+width, SCREEN_HEIGHT/2);
-        }];
-    });
-
-    
-    self.taskView_Third = [[TaskView alloc]initWithFrame:CGRectMake(0, 0, 80, 120)];
-    [self.view addSubview:self.taskView_Third];
-    self.taskView_Third.center = CGPointMake(self.view.centerX, SCREEN_HEIGHT-self.taskView_Third.height/2);
-    
-    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.2 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-        [UIView animateWithDuration:0.3 animations:^{
-            self.taskView_Third.center = CGPointMake(10+width/2+width*2, SCREEN_HEIGHT/2);
-        }];
-    });
+    if (index == 0)
+    {
+        self.taskView_First = taskView;
+    }
+    else if (index == 1)
+    {
+        self.taskView_Second = taskView;
+    }
+    else if (index == 2)
+    {
+        self.taskView_Third = taskView;
+    }
     
 }
+
 
 @end
