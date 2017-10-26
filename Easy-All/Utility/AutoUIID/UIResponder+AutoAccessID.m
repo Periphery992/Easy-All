@@ -6,10 +6,11 @@
 //  Copyright © 2017 chensa. All rights reserved.
 //
 
+
 #import "UIResponder+AutoAccessID.h"
 #import <objc/runtime.h>
 
-@implementation UIResponder (AutoAccessID)
+@implementation UIResponder (UIAutoTest)
 
 -(NSString *)nameWithInstance:(id)instance {
     unsigned int numIvars = 0;
@@ -44,6 +45,19 @@
     return name;
 }
 
+- (UITableView *)findTableView
+{
+    id nextResponder = [self nextResponder];
+    
+    if ([nextResponder isKindOfClass:[UITableView class]])
+    {
+        return (UITableView *)nextResponder;
+    }
+    else
+    {
+        return [nextResponder findTableView];
+    }
+}
 
 
 @end

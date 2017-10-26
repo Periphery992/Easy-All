@@ -8,8 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
-@interface UIResponder (AutoAccessID)
+@interface UIResponder (UIAutoTest)
 
 - (NSString *)findNameWithInstance:(UIView *) instance;
+
+- (UITableView *)findTableView;
 
 @end

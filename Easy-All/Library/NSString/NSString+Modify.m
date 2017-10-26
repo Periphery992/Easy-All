@@ -10,6 +10,7 @@
 
 @implementation NSString (Modify)
 
+//转化成千、百万、十亿为danwe
 - (NSString *)numStringSetUnit
 {
     NSString *strNewNum = @"";

@@ -33,6 +33,10 @@
 //    [HouseLoanManager sharedInstance];
 //    HouseLoanConfigViewController *controller = [[HouseLoanConfigViewController alloc]init];
 //    [self.navigationController pushViewController:controller animated:YES];
+    
+//    AutoUIIDTestViewController *controller = [[AutoUIIDTestViewController alloc]init];
+//    [self.navigationController pushViewController:controller animated:YES];
+    
     GameMainViewController *controller = [[GameMainViewController alloc]init];
     controller.navigationController.navigationBarHidden = YES;
     [self.navigationController pushViewController:controller animated:YES];
