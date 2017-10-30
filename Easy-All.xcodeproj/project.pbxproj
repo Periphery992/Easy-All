@@ -23,6 +23,11 @@
 		55B3EE841F7570520073DB65 /* InfoDictionary.m in Sources */ = {isa = PBXBuildFile; fileRef = 55B3EE831F7570520073DB65 /* InfoDictionary.m */; };
 		55B624F31F7C073D005B1E9D /* DeviceInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 55B624F21F7C073D005B1E9D /* DeviceInfoViewController.m */; };
 		55B624FB1F7C099D005B1E9D /* RadioBoxCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 55B624FA1F7C099D005B1E9D /* RadioBoxCell.m */; };
+		55BD91971FA5B54E00C17261 /* SocketViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 55BD91961FA5B54E00C17261 /* SocketViewController.m */; };
+		55BD919A1FA5C7E900C17261 /* BattleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 55BD91991FA5C7E900C17261 /* BattleViewController.m */; };
+		55BD919D1FA5D2A700C17261 /* CharacterView.m in Sources */ = {isa = PBXBuildFile; fileRef = 55BD919C1FA5D2A700C17261 /* CharacterView.m */; };
+		55D191FE1FA62437001CC867 /* SkillView.m in Sources */ = {isa = PBXBuildFile; fileRef = 55D191FD1FA62437001CC867 /* SkillView.m */; };
+		55D192011FA63012001CC867 /* StateView.m in Sources */ = {isa = PBXBuildFile; fileRef = 55D192001FA63012001CC867 /* StateView.m */; };
 		55F7B6D01F77623E0089B32F /* ApplicationInit.m in Sources */ = {isa = PBXBuildFile; fileRef = 55F7B6CF1F77623E0089B32F /* ApplicationInit.m */; };
 		7403D6581F974BF700601FFE /* HouseLoanConfigViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7403D6571F974BF700601FFE /* HouseLoanConfigViewController.m */; };
 		741B75111F78A44E00BFDA2F /* HLFDDLogFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = 741B75101F78A44E00BFDA2F /* HLFDDLogFormatter.m */; };
@@ -72,6 +77,16 @@
 		55B624F21F7C073D005B1E9D /* DeviceInfoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DeviceInfoViewController.m; sourceTree = "<group>"; };
 		55B624F91F7C099D005B1E9D /* RadioBoxCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RadioBoxCell.h; sourceTree = "<group>"; };
 		55B624FA1F7C099D005B1E9D /* RadioBoxCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RadioBoxCell.m; sourceTree = "<group>"; };
+		55BD91951FA5B54E00C17261 /* SocketViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SocketViewController.h; sourceTree = "<group>"; };
+		55BD91961FA5B54E00C17261 /* SocketViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SocketViewController.m; sourceTree = "<group>"; };
+		55BD91981FA5C7E900C17261 /* BattleViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BattleViewController.h; sourceTree = "<group>"; };
+		55BD91991FA5C7E900C17261 /* BattleViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BattleViewController.m; sourceTree = "<group>"; };
+		55BD919B1FA5D2A700C17261 /* CharacterView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CharacterView.h; sourceTree = "<group>"; };
+		55BD919C1FA5D2A700C17261 /* CharacterView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CharacterView.m; sourceTree = "<group>"; };
+		55D191FC1FA62437001CC867 /* SkillView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SkillView.h; sourceTree = "<group>"; };
+		55D191FD1FA62437001CC867 /* SkillView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SkillView.m; sourceTree = "<group>"; };
+		55D191FF1FA63012001CC867 /* StateView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = StateView.h; sourceTree = "<group>"; };
+		55D192001FA63012001CC867 /* StateView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = StateView.m; sourceTree = "<group>"; };
 		55F7B6C21F76BFD70089B32F /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		55F7B6CE1F77623E0089B32F /* ApplicationInit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ApplicationInit.h; sourceTree = "<group>"; };
 		55F7B6CF1F77623E0089B32F /* ApplicationInit.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ApplicationInit.m; sourceTree = "<group>"; };
@@ -184,6 +199,7 @@
 		552FA3CD1F74269F009EB5B2 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				55BD91941FA5B53700C17261 /* Socket */,
 				5591B4DD1F9C7E2A00E26024 /* Game */,
 				74CC65DC1F959DED00A0210C /* AutoUIIDTest */,
 				74CC65D81F959D8B00A0210C /* HouseLoan */,
@@ -218,8 +234,16 @@
 			children = (
 				5506A4421F9F917200EFAE36 /* GameMainViewController.h */,
 				5506A4431F9F917200EFAE36 /* GameMainViewController.m */,
+				55BD91981FA5C7E900C17261 /* BattleViewController.h */,
+				55BD91991FA5C7E900C17261 /* BattleViewController.m */,
+				55BD919B1FA5D2A700C17261 /* CharacterView.h */,
+				55BD919C1FA5D2A700C17261 /* CharacterView.m */,
+				55D191FC1FA62437001CC867 /* SkillView.h */,
+				55D191FD1FA62437001CC867 /* SkillView.m */,
 				74B80A0D1FA209E200E4673A /* TaskView.h */,
 				74B80A0E1FA209E200E4673A /* TaskView.m */,
+				55D191FF1FA63012001CC867 /* StateView.h */,
+				55D192001FA63012001CC867 /* StateView.m */,
 			);
 			path = Game;
 			sourceTree = "<group>";
@@ -282,6 +306,15 @@
 				55AA76FE1F82836000618628 /* InputBoxCell.m */,
 			);
 			path = UITableViewCell;
+			sourceTree = "<group>";
+		};
+		55BD91941FA5B53700C17261 /* Socket */ = {
+			isa = PBXGroup;
+			children = (
+				55BD91951FA5B54E00C17261 /* SocketViewController.h */,
+				55BD91961FA5B54E00C17261 /* SocketViewController.m */,
+			);
+			path = Socket;
 			sourceTree = "<group>";
 		};
 		55F7B6CD1F77622B0089B32F /* ApplicationInit */ = {
@@ -519,13 +552,16 @@
 			files = (
 				5517D46C1FA0D7BC00BFFAC4 /* CountView.m in Sources */,
 				74CE3D3A1F98CD22005CC0A7 /* UIResponder+AutoAccessID.m in Sources */,
+				55D192011FA63012001CC867 /* StateView.m in Sources */,
 				74CCEE581F7A2BC400A88A5B /* MainBean.m in Sources */,
 				55B3EE7D1F7560C30073DB65 /* UIView+Frame.m in Sources */,
 				74CE3D371F98BECF005CC0A7 /* UIView+AutoAccessID.m in Sources */,
 				74C254651FA0841E008E80F2 /* ProgressBar.m in Sources */,
 				55AA76FF1F82836000618628 /* InputBoxCell.m in Sources */,
 				74ADDF0A1F7651DC008980A5 /* CommonViewController.m in Sources */,
+				55D191FE1FA62437001CC867 /* SkillView.m in Sources */,
 				5534D19D1F7A9F5200BF84CF /* HouseLoanManager.m in Sources */,
+				55BD91971FA5B54E00C17261 /* SocketViewController.m in Sources */,
 				74CC65DF1F959E1400A0210C /* AutoUIIDTestViewController.m in Sources */,
 				55B3EE841F7570520073DB65 /* InfoDictionary.m in Sources */,
 				7403D6581F974BF700601FFE /* HouseLoanConfigViewController.m in Sources */,
@@ -534,11 +570,13 @@
 				74CCEE521F7A271900A88A5B /* MainManager.m in Sources */,
 				5506A4441F9F917200EFAE36 /* GameMainViewController.m in Sources */,
 				5524B6E41F98F23C00681717 /* MaskView.m in Sources */,
+				55BD919A1FA5C7E900C17261 /* BattleViewController.m in Sources */,
 				552FA3C61F7424DC009EB5B2 /* main.m in Sources */,
 				55F7B6D01F77623E0089B32F /* ApplicationInit.m in Sources */,
 				555D3B351F76B15F00C561FA /* MainViewController.m in Sources */,
 				55B624F31F7C073D005B1E9D /* DeviceInfoViewController.m in Sources */,
 				74B80A0F1FA209E200E4673A /* TaskView.m in Sources */,
+				55BD919D1FA5D2A700C17261 /* CharacterView.m in Sources */,
 				741B75111F78A44E00BFDA2F /* HLFDDLogFormatter.m in Sources */,
 				74ADDF0E1F7653C6008980A5 /* UIImage+Color.m in Sources */,
 				5517D4701FA0DE4900BFFAC4 /* NSString+Modify.m in Sources */,
