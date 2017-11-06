@@ -83,9 +83,9 @@
     }
     else
     {
-        NSInteger months = indexPath.section*12-12
-        MonthPayBean *bean =
-        mutarrString = []
+//        NSInteger months = indexPath.section*12-12
+//        MonthPayBean *bean =
+//        mutarrString = []
     }
     
     return cell;

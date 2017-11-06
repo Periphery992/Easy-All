@@ -33,6 +33,10 @@
 		74ADDF0E1F7653C6008980A5 /* UIImage+Color.m in Sources */ = {isa = PBXBuildFile; fileRef = 74ADDF0D1F7653C6008980A5 /* UIImage+Color.m */; };
 		74AEAF951F7A6CAB00D7095F /* MainList.plist in Resources */ = {isa = PBXBuildFile; fileRef = 74AEAF941F7A6CAB00D7095F /* MainList.plist */; };
 		74C254651FA0841E008E80F2 /* ProgressBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 74C254641FA0841E008E80F2 /* ProgressBar.m */; };
+		74C7F2231FB0861A00F09165 /* HLFRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 74C7F2121FB0861A00F09165 /* HLFRequest.m */; };
+		74C7F2271FB0861A00F09165 /* NetworkManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 74C7F21B1FB0861A00F09165 /* NetworkManager.m */; };
+		74C7F2291FB0861A00F09165 /* ResultBean.m in Sources */ = {isa = PBXBuildFile; fileRef = 74C7F2221FB0861A00F09165 /* ResultBean.m */; };
+		74C7F22E1FB0873D00F09165 /* HTTPTestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 74C7F22D1FB0873D00F09165 /* HTTPTestViewController.m */; };
 		74CC65DF1F959E1400A0210C /* AutoUIIDTestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 74CC65DE1F959E1400A0210C /* AutoUIIDTestViewController.m */; };
 		74CCEE521F7A271900A88A5B /* MainManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 74CCEE511F7A271900A88A5B /* MainManager.m */; };
 		74CCEE581F7A2BC400A88A5B /* MainBean.m in Sources */ = {isa = PBXBuildFile; fileRef = 74CCEE571F7A2BC400A88A5B /* MainBean.m */; };
@@ -97,6 +101,16 @@
 		74AEAF941F7A6CAB00D7095F /* MainList.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = MainList.plist; sourceTree = "<group>"; };
 		74C254631FA0841E008E80F2 /* ProgressBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProgressBar.h; sourceTree = "<group>"; };
 		74C254641FA0841E008E80F2 /* ProgressBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProgressBar.m; sourceTree = "<group>"; };
+		74C7F2101FB0861A00F09165 /* ApiUrl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ApiUrl.h; sourceTree = "<group>"; };
+		74C7F2111FB0861A00F09165 /* HLFRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HLFRequest.h; sourceTree = "<group>"; };
+		74C7F2121FB0861A00F09165 /* HLFRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HLFRequest.m; sourceTree = "<group>"; };
+		74C7F21A1FB0861A00F09165 /* NetworkManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NetworkManager.h; sourceTree = "<group>"; };
+		74C7F21B1FB0861A00F09165 /* NetworkManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NetworkManager.m; sourceTree = "<group>"; };
+		74C7F2201FB0861A00F09165 /* requestList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = requestList.h; sourceTree = "<group>"; };
+		74C7F2211FB0861A00F09165 /* ResultBean.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ResultBean.h; sourceTree = "<group>"; };
+		74C7F2221FB0861A00F09165 /* ResultBean.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ResultBean.m; sourceTree = "<group>"; };
+		74C7F22C1FB0873D00F09165 /* HTTPTestViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HTTPTestViewController.h; sourceTree = "<group>"; };
+		74C7F22D1FB0873D00F09165 /* HTTPTestViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HTTPTestViewController.m; sourceTree = "<group>"; };
 		74CC65DD1F959E1400A0210C /* AutoUIIDTestViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AutoUIIDTestViewController.h; sourceTree = "<group>"; };
 		74CC65DE1F959E1400A0210C /* AutoUIIDTestViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AutoUIIDTestViewController.m; sourceTree = "<group>"; };
 		74CCEE501F7A271900A88A5B /* MainManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainManager.h; sourceTree = "<group>"; };
@@ -185,6 +199,7 @@
 		552FA3CC1F742695009EB5B2 /* Manager */ = {
 			isa = PBXGroup;
 			children = (
+				74C7F20F1FB0861A00F09165 /* NetWork */,
 				5534D19A1F7A9EE400BF84CF /* HouseLoan */,
 				74CCEE4F1F7A227100A88A5B /* Main */,
 				741B750E1F78A3CF00BFDA2F /* DDLog */,
@@ -196,6 +211,7 @@
 		552FA3CD1F74269F009EB5B2 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				74C7F22B1FB0872B00F09165 /* HTTPTest */,
 				74CC65DC1F959DED00A0210C /* AutoUIIDTest */,
 				74CC65D81F959D8B00A0210C /* HouseLoan */,
 				55B624F01F7C073D005B1E9D /* DeviceInfo */,
@@ -329,6 +345,30 @@
 			path = UIColor;
 			sourceTree = "<group>";
 		};
+		74C7F20F1FB0861A00F09165 /* NetWork */ = {
+			isa = PBXGroup;
+			children = (
+				74C7F21A1FB0861A00F09165 /* NetworkManager.h */,
+				74C7F21B1FB0861A00F09165 /* NetworkManager.m */,
+				74C7F2111FB0861A00F09165 /* HLFRequest.h */,
+				74C7F2121FB0861A00F09165 /* HLFRequest.m */,
+				74C7F2211FB0861A00F09165 /* ResultBean.h */,
+				74C7F2221FB0861A00F09165 /* ResultBean.m */,
+				74C7F2201FB0861A00F09165 /* requestList.h */,
+				74C7F2101FB0861A00F09165 /* ApiUrl.h */,
+			);
+			path = NetWork;
+			sourceTree = "<group>";
+		};
+		74C7F22B1FB0872B00F09165 /* HTTPTest */ = {
+			isa = PBXGroup;
+			children = (
+				74C7F22C1FB0873D00F09165 /* HTTPTestViewController.h */,
+				74C7F22D1FB0873D00F09165 /* HTTPTestViewController.m */,
+			);
+			path = HTTPTest;
+			sourceTree = "<group>";
+		};
 		74CC65D81F959D8B00A0210C /* HouseLoan */ = {
 			isa = PBXGroup;
 			children = (
@@ -435,7 +475,7 @@
 				TargetAttributes = {
 					552FA3B21F7424DC009EB5B2 = {
 						CreatedOnToolsVersion = 9.0;
-						ProvisioningStyle = Automatic;
+						ProvisioningStyle = Manual;
 					};
 				};
 			};
@@ -533,7 +573,9 @@
 				5534D19D1F7A9F5200BF84CF /* HouseLoanManager.m in Sources */,
 				74CC65DF1F959E1400A0210C /* AutoUIIDTestViewController.m in Sources */,
 				55B3EE841F7570520073DB65 /* InfoDictionary.m in Sources */,
+				74C7F22E1FB0873D00F09165 /* HTTPTestViewController.m in Sources */,
 				7403D6581F974BF700601FFE /* HouseLoanConfigViewController.m in Sources */,
+				74C7F2231FB0861A00F09165 /* HLFRequest.m in Sources */,
 				5536F8141F7AAB8600765E15 /* MonthPayBean.m in Sources */,
 				55B624FB1F7C099D005B1E9D /* RadioBoxCell.m in Sources */,
 				74CCEE521F7A271900A88A5B /* MainManager.m in Sources */,
@@ -544,9 +586,11 @@
 				55304BD91FAE17BF0083F15C /* HouseLoanDetailViewController.m in Sources */,
 				555D3B351F76B15F00C561FA /* MainViewController.m in Sources */,
 				55304BDC1FAE190C0083F15C /* MoreTextCell.m in Sources */,
+				74C7F2271FB0861A00F09165 /* NetworkManager.m in Sources */,
 				55B624F31F7C073D005B1E9D /* DeviceInfoViewController.m in Sources */,
 				741B75111F78A44E00BFDA2F /* HLFDDLogFormatter.m in Sources */,
 				74ADDF0E1F7653C6008980A5 /* UIImage+Color.m in Sources */,
+				74C7F2291FB0861A00F09165 /* ResultBean.m in Sources */,
 				5517D4701FA0DE4900BFFAC4 /* NSString+Modify.m in Sources */,
 				552FA3B81F7424DC009EB5B2 /* AppDelegate.m in Sources */,
 				744E5D891F9F359E009AA1AB /* UIImage+TBUIAutoTest.m in Sources */,
@@ -665,15 +709,18 @@
 			baseConfigurationReference = 692A85F1BB50A18BF0605C34 /* Pods-Easy-All.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = UNB348Y3D7;
+				DEVELOPMENT_TEAM = 62Z6NEQLM7;
 				GCC_ENABLE_BUILTIN_FUNCTIONS = YES;
 				GCC_PREFIX_HEADER = "Easy-All/PrefixHeader.pch";
 				INFOPLIST_FILE = "Easy-All/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.chensa.Easy-All";
+				PRODUCT_BUNDLE_IDENTIFIER = com.customtest.customtest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "179ca9cb-0fd4-4e19-b590-3671f1c98875";
+				PROVISIONING_PROFILE_SPECIFIER = CustomTest_Development;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
@@ -683,15 +730,18 @@
 			baseConfigurationReference = 4B38C7397BD77B4D5754A1DE /* Pods-Easy-All.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = UNB348Y3D7;
+				DEVELOPMENT_TEAM = 62Z6NEQLM7;
 				GCC_ENABLE_BUILTIN_FUNCTIONS = YES;
 				GCC_PREFIX_HEADER = "Easy-All/PrefixHeader.pch";
 				INFOPLIST_FILE = "Easy-All/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.chensa.Easy-All";
+				PRODUCT_BUNDLE_IDENTIFIER = com.customtest.customtest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "5e83ce94-cf83-42d5-9169-1d7d43397f63";
+				PROVISIONING_PROFILE_SPECIFIER = CustomTest_ADHoc;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;

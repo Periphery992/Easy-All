@@ -9,7 +9,9 @@
 #import <Foundation/Foundation.h>
 
 typedef NS_ENUM(NSUInteger, MainType) {
-    ECMainSmallTools  = 0 ,
+    MainTypeSmallTools  = 0,
+    MainTypePrivateTools  = 1,
+    MainTypeEnd = 2,
 };
 
 

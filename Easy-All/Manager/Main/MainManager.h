@@ -21,4 +21,12 @@
  */
 - (NSMutableArray *)getMainList;
 
+- (NSInteger)getTypeCount;
+
+- (NSString *)getTypeNameByIndex:(NSInteger)index;
+
+- (NSInteger)getToolsCountWithType:(MainType)type;
+
+- (MainBean *)getToolsWithIndexPath:(NSIndexPath*)indexPath;
+
 @end

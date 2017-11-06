@@ -6,7 +6,7 @@
 		<key>Name</key>
 		<string>DeviceInfo</string>
 		<key>Controller</key>
-		<string>DeviceInfoViewContoller</string>
+		<string>DeviceInfoViewController</string>
 		<key>Type</key>
 		<integer>0</integer>
 		<key>iCon</key>
@@ -14,41 +14,21 @@
 	</dict>
 	<dict>
 		<key>Name</key>
-		<string>DeviceInfo1</string>
+		<string>HouseLoan</string>
 		<key>Controller</key>
-		<string>DeviceInfoViewContoller</string>
+		<string>HouseLoanConfigViewController</string>
+		<key>Type</key>
+		<integer>0</integer>
+		<key>iCon</key>
+		<string></string>
+	</dict>
+	<dict>
+		<key>Name</key>
+		<string>HTTPTest</string>
+		<key>Controller</key>
+		<string>HTTPTestViewController</string>
 		<key>Type</key>
 		<integer>1</integer>
-		<key>iCon</key>
-		<string></string>
-	</dict>
-	<dict>
-		<key>Name</key>
-		<string>DeviceInfo2</string>
-		<key>Controller</key>
-		<string>DeviceInfoViewContoller</string>
-		<key>Type</key>
-		<integer>1</integer>
-		<key>iCon</key>
-		<string></string>
-	</dict>
-	<dict>
-		<key>Name</key>
-		<string>DeviceInfo3</string>
-		<key>Controller</key>
-		<string>DeviceInfoViewContoller</string>
-		<key>Type</key>
-		<integer>0</integer>
-		<key>iCon</key>
-		<string></string>
-	</dict>
-	<dict>
-		<key>Name</key>
-		<string>DeviceInfo4</string>
-		<key>Controller</key>
-		<string>DeviceInfoViewContoller</string>
-		<key>Type</key>
-		<integer>0</integer>
 		<key>iCon</key>
 		<string></string>
 	</dict>
