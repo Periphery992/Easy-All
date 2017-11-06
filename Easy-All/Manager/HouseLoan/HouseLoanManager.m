@@ -9,7 +9,7 @@
 #import "HouseLoanManager.h"
 
 @interface HouseLoanManager()
-@property (nonatomic, assign) CGFloat fAllLoan;                                     //贷款总金额或房价总额
+@property (nonatomic, assign) NSInteger fAllLoan;                                     //贷款总金额或房价总额
 @property (nonatomic, assign) CGFloat fInterestRate;                                //利率
 @property (nonatomic, assign) NSInteger iMonths;                                    //贷款期数（月）
 @property (nonatomic, strong) NSMutableArray *mutarrMonth;                          //每月还款明细
@@ -58,7 +58,7 @@
 //配置房贷总额或房价总额
 - (void)configIAllLoan:(NSInteger)allLoan
 {
-    self.fAllLoan = allLoan*10000.0;
+    self.fAllLoan = allLoan;
 }
 
 //配置房贷比例
@@ -76,7 +76,7 @@
 //配置贷款利息
 - (void)configInterestRate:(CGFloat)InterestRate
 {
-    self.fInterestRate = InterestRate/100/12;
+    self.fInterestRate = InterestRate/100.0/12.0;
 }
 
 //配置贷款折扣
@@ -106,18 +106,20 @@
 {
     self.mutarrMonth = [[NSMutableArray alloc]init];
     
-    CGFloat fALoan = self.fAllLoan;
+    CGFloat fALoan = self.fAllLoan*10000;
     CGFloat fAInterestRate = self.fInterestRate * (self.iDiscount==0?100:self.iDiscount)/100.0;
     
     if (self.houseLoadCalculateWay == HouseLoanCalculateWayTotalHouse)
     {
-        fALoan = self.fAllLoan*self.fLoanRate;
+        fALoan = floor(self.fAllLoan*self.fLoanRate)*10000;
     }
     
     //每月月供额=〔贷款本金×月利率×(1＋月利率)＾还款月数〕÷〔(1＋月利率)＾还款月数-1〕
     CGFloat fMPayment = (fALoan * fAInterestRate * pow(1 + fAInterestRate, self.iMonths))/(pow(1 + fAInterestRate, self.iMonths)-1);
-    //总利息=还款月数×每月月供额-贷款本金
+    //总还款 = 还款月数 × 每月月供额
     CGFloat fAllPayment = self.iMonths * fMPayment;
+    //总利息 = 总还款额 - 贷款本金
+    self.fAllInterest = fAllPayment - fALoan;
     
     for (int index = 0; index < self.iMonths; index ++)
     {
@@ -136,16 +138,17 @@
     }
 }
 
+//等额本息
 - (void)getAverageInterestResult
 {
     self.mutarrMonth = [[NSMutableArray alloc]init];
     
-    CGFloat fALoan = self.fAllLoan;
+    CGFloat fALoan = self.fAllLoan*10000;
     CGFloat fAInterestRate = self.fInterestRate * (self.iDiscount==0?100:self.iDiscount)/100.0;
     
     if (self.houseLoadCalculateWay == HouseLoanCalculateWayTotalHouse)
     {
-        fALoan = self.fAllLoan*self.fLoanRate;
+        fALoan = self.fAllLoan*self.fLoanRate*10000;
     }
     
     //每月应还本金=贷款本金÷还款月数
@@ -154,6 +157,7 @@
     CGFloat fMReduce = fMPrincipal*fAInterestRate;
     //总利息=〔(总贷款额÷还款月数+总贷款额×月利率)+总贷款额÷还款月数×(1+月利率)〕÷2×还款月数-总贷款额
     CGFloat fAllInterest = (fALoan/self.iMonths+fALoan*fAInterestRate+fALoan/self.iMonths*(1+fAInterestRate))/2*self.iMonths - fALoan;
+    self.fAllInterest = fAllInterest;
     
     for (int index = 0; index < self.iMonths; index ++)
     {
@@ -229,22 +233,36 @@
 }
 
 //获取贷款总额
-- (CGFloat)getAllLoan
+- (NSInteger)getAllLoan
 {
     if (self.houseLoadCalculateWay == HouseLoanCalculateWayTotalHouse)
     {
-        return self.fAllLoan*self.fLoanRate;
+        return floor(self.fAllLoan*self.fLoanRate);
     }
     else
     {
-        return  self.fAllLoan;
+        return self.fAllLoan;
     }
 }
 
 //获取贷款利息
 - (CGFloat)getRate
 {
-    return self.fLoanRate;
+    return self.fInterestRate*12*self.iDiscount;
+}
+
+//获取贷款利息
+- (CGFloat)getFirstPayment
+{
+    MonthPayBean *bean = [self.mutarrMonth objectAtIndex:0];
+    
+    return bean.fMPayment;
+}
+
+//获取贷款利息
+- (CGFloat)getMonths
+{
+    return self.iMonths;
 }
 
 @end

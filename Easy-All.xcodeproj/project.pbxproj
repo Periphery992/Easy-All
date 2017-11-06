@@ -8,13 +8,15 @@
 
 /* Begin PBXBuildFile section */
 		2335C818C08412ABA790E455 /* libPods-Easy-All.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2696F10A3D81939386475F7F /* libPods-Easy-All.a */; };
-		5506A4441F9F917200EFAE36 /* GameMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5506A4431F9F917200EFAE36 /* GameMainViewController.m */; };
+		55103D1E1FACCD9D00BDE3E2 /* HLFProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 55103D1D1FACCD9D00BDE3E2 /* HLFProgressHUD.m */; };
 		5517D46C1FA0D7BC00BFFAC4 /* CountView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5517D46B1FA0D7BC00BFFAC4 /* CountView.m */; };
 		5517D4701FA0DE4900BFFAC4 /* NSString+Modify.m in Sources */ = {isa = PBXBuildFile; fileRef = 5517D46F1FA0DE4900BFFAC4 /* NSString+Modify.m */; };
 		5524B6E41F98F23C00681717 /* MaskView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5524B6E31F98F23C00681717 /* MaskView.m */; };
 		552FA3B81F7424DC009EB5B2 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 552FA3B71F7424DC009EB5B2 /* AppDelegate.m */; };
 		552FA3C01F7424DC009EB5B2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 552FA3BF1F7424DC009EB5B2 /* Assets.xcassets */; };
 		552FA3C61F7424DC009EB5B2 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 552FA3C51F7424DC009EB5B2 /* main.m */; };
+		55304BD91FAE17BF0083F15C /* HouseLoanDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 55304BD81FAE17BF0083F15C /* HouseLoanDetailViewController.m */; };
+		55304BDC1FAE190C0083F15C /* MoreTextCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 55304BDB1FAE190C0083F15C /* MoreTextCell.m */; };
 		5534D19D1F7A9F5200BF84CF /* HouseLoanManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 5534D19C1F7A9F5200BF84CF /* HouseLoanManager.m */; };
 		5536F8141F7AAB8600765E15 /* MonthPayBean.m in Sources */ = {isa = PBXBuildFile; fileRef = 5536F8131F7AAB8600765E15 /* MonthPayBean.m */; };
 		555D3B351F76B15F00C561FA /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 555D3B341F76B15F00C561FA /* MainViewController.m */; };
@@ -23,11 +25,6 @@
 		55B3EE841F7570520073DB65 /* InfoDictionary.m in Sources */ = {isa = PBXBuildFile; fileRef = 55B3EE831F7570520073DB65 /* InfoDictionary.m */; };
 		55B624F31F7C073D005B1E9D /* DeviceInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 55B624F21F7C073D005B1E9D /* DeviceInfoViewController.m */; };
 		55B624FB1F7C099D005B1E9D /* RadioBoxCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 55B624FA1F7C099D005B1E9D /* RadioBoxCell.m */; };
-		55BD91971FA5B54E00C17261 /* SocketViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 55BD91961FA5B54E00C17261 /* SocketViewController.m */; };
-		55BD919A1FA5C7E900C17261 /* BattleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 55BD91991FA5C7E900C17261 /* BattleViewController.m */; };
-		55BD919D1FA5D2A700C17261 /* CharacterView.m in Sources */ = {isa = PBXBuildFile; fileRef = 55BD919C1FA5D2A700C17261 /* CharacterView.m */; };
-		55D191FE1FA62437001CC867 /* SkillView.m in Sources */ = {isa = PBXBuildFile; fileRef = 55D191FD1FA62437001CC867 /* SkillView.m */; };
-		55D192011FA63012001CC867 /* StateView.m in Sources */ = {isa = PBXBuildFile; fileRef = 55D192001FA63012001CC867 /* StateView.m */; };
 		55F7B6D01F77623E0089B32F /* ApplicationInit.m in Sources */ = {isa = PBXBuildFile; fileRef = 55F7B6CF1F77623E0089B32F /* ApplicationInit.m */; };
 		7403D6581F974BF700601FFE /* HouseLoanConfigViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7403D6571F974BF700601FFE /* HouseLoanConfigViewController.m */; };
 		741B75111F78A44E00BFDA2F /* HLFDDLogFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = 741B75101F78A44E00BFDA2F /* HLFDDLogFormatter.m */; };
@@ -35,7 +32,6 @@
 		74ADDF0A1F7651DC008980A5 /* CommonViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 74ADDF091F7651DC008980A5 /* CommonViewController.m */; };
 		74ADDF0E1F7653C6008980A5 /* UIImage+Color.m in Sources */ = {isa = PBXBuildFile; fileRef = 74ADDF0D1F7653C6008980A5 /* UIImage+Color.m */; };
 		74AEAF951F7A6CAB00D7095F /* MainList.plist in Resources */ = {isa = PBXBuildFile; fileRef = 74AEAF941F7A6CAB00D7095F /* MainList.plist */; };
-		74B80A0F1FA209E200E4673A /* TaskView.m in Sources */ = {isa = PBXBuildFile; fileRef = 74B80A0E1FA209E200E4673A /* TaskView.m */; };
 		74C254651FA0841E008E80F2 /* ProgressBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 74C254641FA0841E008E80F2 /* ProgressBar.m */; };
 		74CC65DF1F959E1400A0210C /* AutoUIIDTestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 74CC65DE1F959E1400A0210C /* AutoUIIDTestViewController.m */; };
 		74CCEE521F7A271900A88A5B /* MainManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 74CCEE511F7A271900A88A5B /* MainManager.m */; };
@@ -47,8 +43,8 @@
 /* Begin PBXFileReference section */
 		2696F10A3D81939386475F7F /* libPods-Easy-All.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Easy-All.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4B38C7397BD77B4D5754A1DE /* Pods-Easy-All.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Easy-All.release.xcconfig"; path = "Pods/Target Support Files/Pods-Easy-All/Pods-Easy-All.release.xcconfig"; sourceTree = "<group>"; };
-		5506A4421F9F917200EFAE36 /* GameMainViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GameMainViewController.h; sourceTree = "<group>"; };
-		5506A4431F9F917200EFAE36 /* GameMainViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GameMainViewController.m; sourceTree = "<group>"; };
+		55103D1C1FACCD9D00BDE3E2 /* HLFProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HLFProgressHUD.h; sourceTree = "<group>"; };
+		55103D1D1FACCD9D00BDE3E2 /* HLFProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HLFProgressHUD.m; sourceTree = "<group>"; };
 		5517D46A1FA0D7BC00BFFAC4 /* CountView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CountView.h; sourceTree = "<group>"; };
 		5517D46B1FA0D7BC00BFFAC4 /* CountView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CountView.m; sourceTree = "<group>"; };
 		5517D46E1FA0DE4900BFFAC4 /* NSString+Modify.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSString+Modify.h"; sourceTree = "<group>"; };
@@ -61,6 +57,10 @@
 		552FA3BF1F7424DC009EB5B2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		552FA3C41F7424DC009EB5B2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		552FA3C51F7424DC009EB5B2 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		55304BD71FAE17BF0083F15C /* HouseLoanDetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HouseLoanDetailViewController.h; sourceTree = "<group>"; };
+		55304BD81FAE17BF0083F15C /* HouseLoanDetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HouseLoanDetailViewController.m; sourceTree = "<group>"; };
+		55304BDA1FAE190C0083F15C /* MoreTextCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MoreTextCell.h; sourceTree = "<group>"; };
+		55304BDB1FAE190C0083F15C /* MoreTextCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MoreTextCell.m; sourceTree = "<group>"; };
 		5534D19B1F7A9F5200BF84CF /* HouseLoanManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HouseLoanManager.h; sourceTree = "<group>"; };
 		5534D19C1F7A9F5200BF84CF /* HouseLoanManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HouseLoanManager.m; sourceTree = "<group>"; };
 		5536F8121F7AAB8600765E15 /* MonthPayBean.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MonthPayBean.h; sourceTree = "<group>"; };
@@ -77,16 +77,6 @@
 		55B624F21F7C073D005B1E9D /* DeviceInfoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DeviceInfoViewController.m; sourceTree = "<group>"; };
 		55B624F91F7C099D005B1E9D /* RadioBoxCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RadioBoxCell.h; sourceTree = "<group>"; };
 		55B624FA1F7C099D005B1E9D /* RadioBoxCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RadioBoxCell.m; sourceTree = "<group>"; };
-		55BD91951FA5B54E00C17261 /* SocketViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SocketViewController.h; sourceTree = "<group>"; };
-		55BD91961FA5B54E00C17261 /* SocketViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SocketViewController.m; sourceTree = "<group>"; };
-		55BD91981FA5C7E900C17261 /* BattleViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BattleViewController.h; sourceTree = "<group>"; };
-		55BD91991FA5C7E900C17261 /* BattleViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BattleViewController.m; sourceTree = "<group>"; };
-		55BD919B1FA5D2A700C17261 /* CharacterView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CharacterView.h; sourceTree = "<group>"; };
-		55BD919C1FA5D2A700C17261 /* CharacterView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CharacterView.m; sourceTree = "<group>"; };
-		55D191FC1FA62437001CC867 /* SkillView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SkillView.h; sourceTree = "<group>"; };
-		55D191FD1FA62437001CC867 /* SkillView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SkillView.m; sourceTree = "<group>"; };
-		55D191FF1FA63012001CC867 /* StateView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = StateView.h; sourceTree = "<group>"; };
-		55D192001FA63012001CC867 /* StateView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = StateView.m; sourceTree = "<group>"; };
 		55F7B6C21F76BFD70089B32F /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		55F7B6CE1F77623E0089B32F /* ApplicationInit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ApplicationInit.h; sourceTree = "<group>"; };
 		55F7B6CF1F77623E0089B32F /* ApplicationInit.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ApplicationInit.m; sourceTree = "<group>"; };
@@ -105,8 +95,6 @@
 		74ADDF111F76541B008980A5 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 		74ADDF121F7656B0008980A5 /* CommonDefine.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CommonDefine.pch; sourceTree = "<group>"; };
 		74AEAF941F7A6CAB00D7095F /* MainList.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = MainList.plist; sourceTree = "<group>"; };
-		74B80A0D1FA209E200E4673A /* TaskView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TaskView.h; sourceTree = "<group>"; };
-		74B80A0E1FA209E200E4673A /* TaskView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TaskView.m; sourceTree = "<group>"; };
 		74C254631FA0841E008E80F2 /* ProgressBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProgressBar.h; sourceTree = "<group>"; };
 		74C254641FA0841E008E80F2 /* ProgressBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProgressBar.m; sourceTree = "<group>"; };
 		74CC65DD1F959E1400A0210C /* AutoUIIDTestViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AutoUIIDTestViewController.h; sourceTree = "<group>"; };
@@ -133,6 +121,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		55103D1B1FACCD9D00BDE3E2 /* HLFProgressHUD */ = {
+			isa = PBXGroup;
+			children = (
+				55103D1C1FACCD9D00BDE3E2 /* HLFProgressHUD.h */,
+				55103D1D1FACCD9D00BDE3E2 /* HLFProgressHUD.m */,
+			);
+			path = HLFProgressHUD;
+			sourceTree = "<group>";
+		};
 		5517D4691FA0D77500BFFAC4 /* UIButton */ = {
 			isa = PBXGroup;
 			children = (
@@ -199,8 +196,6 @@
 		552FA3CD1F74269F009EB5B2 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				55BD91941FA5B53700C17261 /* Socket */,
-				5591B4DD1F9C7E2A00E26024 /* Game */,
 				74CC65DC1F959DED00A0210C /* AutoUIIDTest */,
 				74CC65D81F959D8B00A0210C /* HouseLoan */,
 				55B624F01F7C073D005B1E9D /* DeviceInfo */,
@@ -229,28 +224,10 @@
 			path = Main;
 			sourceTree = "<group>";
 		};
-		5591B4DD1F9C7E2A00E26024 /* Game */ = {
-			isa = PBXGroup;
-			children = (
-				5506A4421F9F917200EFAE36 /* GameMainViewController.h */,
-				5506A4431F9F917200EFAE36 /* GameMainViewController.m */,
-				55BD91981FA5C7E900C17261 /* BattleViewController.h */,
-				55BD91991FA5C7E900C17261 /* BattleViewController.m */,
-				55BD919B1FA5D2A700C17261 /* CharacterView.h */,
-				55BD919C1FA5D2A700C17261 /* CharacterView.m */,
-				55D191FC1FA62437001CC867 /* SkillView.h */,
-				55D191FD1FA62437001CC867 /* SkillView.m */,
-				74B80A0D1FA209E200E4673A /* TaskView.h */,
-				74B80A0E1FA209E200E4673A /* TaskView.m */,
-				55D191FF1FA63012001CC867 /* StateView.h */,
-				55D192001FA63012001CC867 /* StateView.m */,
-			);
-			path = Game;
-			sourceTree = "<group>";
-		};
 		55B3EE781F7560040073DB65 /* Library */ = {
 			isa = PBXGroup;
 			children = (
+				55103D1B1FACCD9D00BDE3E2 /* HLFProgressHUD */,
 				5517D46D1FA0DD5600BFFAC4 /* NSString */,
 				5517D4691FA0D77500BFFAC4 /* UIButton */,
 				55B624F81F7C0961005B1E9D /* UITableViewCell */,
@@ -308,15 +285,6 @@
 			path = UITableViewCell;
 			sourceTree = "<group>";
 		};
-		55BD91941FA5B53700C17261 /* Socket */ = {
-			isa = PBXGroup;
-			children = (
-				55BD91951FA5B54E00C17261 /* SocketViewController.h */,
-				55BD91961FA5B54E00C17261 /* SocketViewController.m */,
-			);
-			path = Socket;
-			sourceTree = "<group>";
-		};
 		55F7B6CD1F77622B0089B32F /* ApplicationInit */ = {
 			isa = PBXGroup;
 			children = (
@@ -366,6 +334,10 @@
 			children = (
 				7403D6561F974BF700601FFE /* HouseLoanConfigViewController.h */,
 				7403D6571F974BF700601FFE /* HouseLoanConfigViewController.m */,
+				55304BD71FAE17BF0083F15C /* HouseLoanDetailViewController.h */,
+				55304BD81FAE17BF0083F15C /* HouseLoanDetailViewController.m */,
+				55304BDA1FAE190C0083F15C /* MoreTextCell.h */,
+				55304BDB1FAE190C0083F15C /* MoreTextCell.m */,
 			);
 			path = HouseLoan;
 			sourceTree = "<group>";
@@ -552,31 +524,27 @@
 			files = (
 				5517D46C1FA0D7BC00BFFAC4 /* CountView.m in Sources */,
 				74CE3D3A1F98CD22005CC0A7 /* UIResponder+AutoAccessID.m in Sources */,
-				55D192011FA63012001CC867 /* StateView.m in Sources */,
 				74CCEE581F7A2BC400A88A5B /* MainBean.m in Sources */,
 				55B3EE7D1F7560C30073DB65 /* UIView+Frame.m in Sources */,
 				74CE3D371F98BECF005CC0A7 /* UIView+AutoAccessID.m in Sources */,
 				74C254651FA0841E008E80F2 /* ProgressBar.m in Sources */,
 				55AA76FF1F82836000618628 /* InputBoxCell.m in Sources */,
 				74ADDF0A1F7651DC008980A5 /* CommonViewController.m in Sources */,
-				55D191FE1FA62437001CC867 /* SkillView.m in Sources */,
 				5534D19D1F7A9F5200BF84CF /* HouseLoanManager.m in Sources */,
-				55BD91971FA5B54E00C17261 /* SocketViewController.m in Sources */,
 				74CC65DF1F959E1400A0210C /* AutoUIIDTestViewController.m in Sources */,
 				55B3EE841F7570520073DB65 /* InfoDictionary.m in Sources */,
 				7403D6581F974BF700601FFE /* HouseLoanConfigViewController.m in Sources */,
 				5536F8141F7AAB8600765E15 /* MonthPayBean.m in Sources */,
 				55B624FB1F7C099D005B1E9D /* RadioBoxCell.m in Sources */,
 				74CCEE521F7A271900A88A5B /* MainManager.m in Sources */,
-				5506A4441F9F917200EFAE36 /* GameMainViewController.m in Sources */,
 				5524B6E41F98F23C00681717 /* MaskView.m in Sources */,
-				55BD919A1FA5C7E900C17261 /* BattleViewController.m in Sources */,
 				552FA3C61F7424DC009EB5B2 /* main.m in Sources */,
+				55103D1E1FACCD9D00BDE3E2 /* HLFProgressHUD.m in Sources */,
 				55F7B6D01F77623E0089B32F /* ApplicationInit.m in Sources */,
+				55304BD91FAE17BF0083F15C /* HouseLoanDetailViewController.m in Sources */,
 				555D3B351F76B15F00C561FA /* MainViewController.m in Sources */,
+				55304BDC1FAE190C0083F15C /* MoreTextCell.m in Sources */,
 				55B624F31F7C073D005B1E9D /* DeviceInfoViewController.m in Sources */,
-				74B80A0F1FA209E200E4673A /* TaskView.m in Sources */,
-				55BD919D1FA5D2A700C17261 /* CharacterView.m in Sources */,
 				741B75111F78A44E00BFDA2F /* HLFDDLogFormatter.m in Sources */,
 				74ADDF0E1F7653C6008980A5 /* UIImage+Color.m in Sources */,
 				5517D4701FA0DE4900BFFAC4 /* NSString+Modify.m in Sources */,

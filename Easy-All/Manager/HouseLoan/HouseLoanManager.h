@@ -105,8 +105,12 @@ typedef NS_ENUM(NSUInteger, HouseLoanCalculateWay) {
 - (CGFloat)getAllInterest;
 
 //获取贷款总额
-- (CGFloat)getAllLoan;
+- (NSInteger)getAllLoan;
 
 - (CGFloat)getRate;
+
+- (CGFloat)getFirstPayment;
+
+- (CGFloat)getMonths;
 
 @end

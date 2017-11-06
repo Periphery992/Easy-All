@@ -13,9 +13,6 @@
 #import "InfoDictionary.h"
 #import "HouseLoanManager.h"
 #import "AutoUIIDTestViewController.h"
-#import "GameMainViewController.h"
-#import "SocketViewController.h"
-#import "BattleViewController.h"
 
 @interface MainViewController ()
 
@@ -32,8 +29,8 @@
 //    HouseLoanConfigViewController *controller = [[HouseLoanConfigViewController alloc]init];
 //    [self.navigationController pushViewController:controller animated:YES];
 //    [HouseLoanManager sharedInstance];
-//    HouseLoanConfigViewController *controller = [[HouseLoanConfigViewController alloc]init];
-//    [self.navigationController pushViewController:controller animated:YES];
+    HouseLoanConfigViewController *controller = [[HouseLoanConfigViewController alloc]init];
+    [self.navigationController pushViewController:controller animated:YES];
     
 //    AutoUIIDTestViewController *controller = [[AutoUIIDTestViewController alloc]init];
 //    [self.navigationController pushViewController:controller animated:YES];
@@ -41,9 +38,6 @@
 //    GameMainViewController *controller = [[GameMainViewController alloc]init];
 //    controller.navigationController.navigationBarHidden = YES;
 //    [self.navigationController pushViewController:controller animated:YES];
-    BattleViewController *controller = [[BattleViewController alloc]init];
-//    controller.navigationController.navigationBarHidden = YES;
-    [self.navigationController pushViewController:controller animated:YES];
 
     
 
