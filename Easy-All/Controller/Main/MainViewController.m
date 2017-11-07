@@ -27,6 +27,15 @@
     // Do any additional setup after loading the view.
     self.title = @"Main";
     [self initView];
+//    [self autoPush:@"HTTPTestViewController"];
+    
+}
+
+- (void)autoPush:(NSString *)vcclass
+{
+    UIViewController *viewcontroller = nil;
+    viewcontroller = [[NSClassFromString(vcclass) alloc]init];
+    [self.navigationController pushViewController:viewcontroller animated:YES];
 }
 
 - (void)initView
