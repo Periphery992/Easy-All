@@ -9,6 +9,7 @@
 #import "HTTPTestViewController.h"
 
 @interface HTTPTestViewController ()
+@property (nonatomic, strong) UITextView *txtvwHTTP;
 
 @end
 
@@ -22,13 +23,22 @@
     UIBarButtonItem *item = [[UIBarButtonItem alloc]initWithBarButtonSystemItem:UIBarButtonSystemItemAction target:self action:@selector(Touch_RightItem)];
     self.navigationItem.rightBarButtonItem = item;
     
+    self.txtvwHTTP = [[UITextView alloc]initWithFrame:CGRectMake(10, 15, SCREEN_WIDTH-20, 80)];
+    self.txtvwHTTP.font = [UIFont systemFontOfSize:16];
+    [self.view addSubview:self.txtvwHTTP];
+    
+    NSString *strContect = [[NSUserDefaults standardUserDefaults]objectForKey:@"HTTPURL"];
+    self.txtvwHTTP.text = strContect?strContect:@"http://39.108.216.0:8845/fairy";
+    
 }
 
 - (void)Touch_RightItem
 {
-    NSURL *url = [NSURL URLWithString:@"Fairy-Kindom://111111"];
-
+    [[NSUserDefaults standardUserDefaults]setObject:self.txtvwHTTP.text forKey:@"HTTPURL"];
     
+    NSString *strContect = [NSString stringWithFormat:@"Fairy-Kindom://%@",self.txtvwHTTP.text];
+    NSURL *url = [NSURL URLWithString:strContect];
+
     [[UIApplication sharedApplication] openURL:url];
 
 }
