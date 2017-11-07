@@ -303,6 +303,7 @@
 - (void)Touch_btnMore:(id)sender
 {
     HouseLoanDetailViewController *controller = [[HouseLoanDetailViewController alloc]init];
+    [self.maskView_Result removeFromSuperview];
     [self.navigationController pushViewController:controller animated:YES];
 }
 

@@ -111,6 +111,7 @@
 		74C7F2221FB0861A00F09165 /* ResultBean.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ResultBean.m; sourceTree = "<group>"; };
 		74C7F22C1FB0873D00F09165 /* HTTPTestViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HTTPTestViewController.h; sourceTree = "<group>"; };
 		74C7F22D1FB0873D00F09165 /* HTTPTestViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HTTPTestViewController.m; sourceTree = "<group>"; };
+		74C7F23D1FB1A94900F09165 /* UserDefaultsKey.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserDefaultsKey.h; sourceTree = "<group>"; };
 		74CC65DD1F959E1400A0210C /* AutoUIIDTestViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AutoUIIDTestViewController.h; sourceTree = "<group>"; };
 		74CC65DE1F959E1400A0210C /* AutoUIIDTestViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AutoUIIDTestViewController.m; sourceTree = "<group>"; };
 		74CCEE501F7A271900A88A5B /* MainManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainManager.h; sourceTree = "<group>"; };
@@ -199,6 +200,7 @@
 		552FA3CC1F742695009EB5B2 /* Manager */ = {
 			isa = PBXGroup;
 			children = (
+				74C7F23C1FB1A94900F09165 /* HLFUserDefaults */,
 				74C7F20F1FB0861A00F09165 /* NetWork */,
 				5534D19A1F7A9EE400BF84CF /* HouseLoan */,
 				74CCEE4F1F7A227100A88A5B /* Main */,
@@ -367,6 +369,14 @@
 				74C7F22D1FB0873D00F09165 /* HTTPTestViewController.m */,
 			);
 			path = HTTPTest;
+			sourceTree = "<group>";
+		};
+		74C7F23C1FB1A94900F09165 /* HLFUserDefaults */ = {
+			isa = PBXGroup;
+			children = (
+				74C7F23D1FB1A94900F09165 /* UserDefaultsKey.h */,
+			);
+			path = HLFUserDefaults;
 			sourceTree = "<group>";
 		};
 		74CC65D81F959D8B00A0210C /* HouseLoan */ = {
