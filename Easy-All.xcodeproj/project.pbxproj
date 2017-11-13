@@ -28,6 +28,8 @@
 		55F7B6D01F77623E0089B32F /* ApplicationInit.m in Sources */ = {isa = PBXBuildFile; fileRef = 55F7B6CF1F77623E0089B32F /* ApplicationInit.m */; };
 		7403D6581F974BF700601FFE /* HouseLoanConfigViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7403D6571F974BF700601FFE /* HouseLoanConfigViewController.m */; };
 		741B75111F78A44E00BFDA2F /* HLFDDLogFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = 741B75101F78A44E00BFDA2F /* HLFDDLogFormatter.m */; };
+		741DAD021FB5886C00608CFB /* LomoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 741DAD011FB5886C00608CFB /* LomoViewController.m */; };
+		741DAD061FB588DB00608CFB /* ECAuthorized.m in Sources */ = {isa = PBXBuildFile; fileRef = 741DAD051FB588DB00608CFB /* ECAuthorized.m */; };
 		744E5D891F9F359E009AA1AB /* UIImage+TBUIAutoTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 744E5D881F9F359E009AA1AB /* UIImage+TBUIAutoTest.m */; };
 		74ADDF0A1F7651DC008980A5 /* CommonViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 74ADDF091F7651DC008980A5 /* CommonViewController.m */; };
 		74ADDF0E1F7653C6008980A5 /* UIImage+Color.m in Sources */ = {isa = PBXBuildFile; fileRef = 74ADDF0D1F7653C6008980A5 /* UIImage+Color.m */; };
@@ -89,6 +91,10 @@
 		7403D6571F974BF700601FFE /* HouseLoanConfigViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HouseLoanConfigViewController.m; sourceTree = "<group>"; };
 		741B750F1F78A44E00BFDA2F /* HLFDDLogFormatter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HLFDDLogFormatter.h; sourceTree = "<group>"; };
 		741B75101F78A44E00BFDA2F /* HLFDDLogFormatter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HLFDDLogFormatter.m; sourceTree = "<group>"; };
+		741DAD001FB5886C00608CFB /* LomoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LomoViewController.h; sourceTree = "<group>"; };
+		741DAD011FB5886C00608CFB /* LomoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LomoViewController.m; sourceTree = "<group>"; };
+		741DAD041FB588DB00608CFB /* ECAuthorized.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ECAuthorized.h; sourceTree = "<group>"; };
+		741DAD051FB588DB00608CFB /* ECAuthorized.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ECAuthorized.m; sourceTree = "<group>"; };
 		744E5D871F9F359E009AA1AB /* UIImage+TBUIAutoTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+TBUIAutoTest.h"; sourceTree = "<group>"; };
 		744E5D881F9F359E009AA1AB /* UIImage+TBUIAutoTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+TBUIAutoTest.m"; sourceTree = "<group>"; };
 		74ADDF081F7651DC008980A5 /* CommonViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CommonViewController.h; sourceTree = "<group>"; };
@@ -213,6 +219,7 @@
 		552FA3CD1F74269F009EB5B2 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				741DACFF1FB5885100608CFB /* Lomo */,
 				74C7F22B1FB0872B00F09165 /* HTTPTest */,
 				74CC65DC1F959DED00A0210C /* AutoUIIDTest */,
 				74CC65D81F959D8B00A0210C /* HouseLoan */,
@@ -245,6 +252,7 @@
 		55B3EE781F7560040073DB65 /* Library */ = {
 			isa = PBXGroup;
 			children = (
+				741DAD031FB588DB00608CFB /* Authorized */,
 				55103D1B1FACCD9D00BDE3E2 /* HLFProgressHUD */,
 				5517D46D1FA0DD5600BFFAC4 /* NSString */,
 				5517D4691FA0D77500BFFAC4 /* UIButton */,
@@ -319,6 +327,24 @@
 				741B75101F78A44E00BFDA2F /* HLFDDLogFormatter.m */,
 			);
 			path = DDLog;
+			sourceTree = "<group>";
+		};
+		741DACFF1FB5885100608CFB /* Lomo */ = {
+			isa = PBXGroup;
+			children = (
+				741DAD001FB5886C00608CFB /* LomoViewController.h */,
+				741DAD011FB5886C00608CFB /* LomoViewController.m */,
+			);
+			path = Lomo;
+			sourceTree = "<group>";
+		};
+		741DAD031FB588DB00608CFB /* Authorized */ = {
+			isa = PBXGroup;
+			children = (
+				741DAD041FB588DB00608CFB /* ECAuthorized.h */,
+				741DAD051FB588DB00608CFB /* ECAuthorized.m */,
+			);
+			path = Authorized;
 			sourceTree = "<group>";
 		};
 		74ADDF071F7651C7008980A5 /* ViewController */ = {
@@ -597,10 +623,12 @@
 				555D3B351F76B15F00C561FA /* MainViewController.m in Sources */,
 				55304BDC1FAE190C0083F15C /* MoreTextCell.m in Sources */,
 				74C7F2271FB0861A00F09165 /* NetworkManager.m in Sources */,
+				741DAD021FB5886C00608CFB /* LomoViewController.m in Sources */,
 				55B624F31F7C073D005B1E9D /* DeviceInfoViewController.m in Sources */,
 				741B75111F78A44E00BFDA2F /* HLFDDLogFormatter.m in Sources */,
 				74ADDF0E1F7653C6008980A5 /* UIImage+Color.m in Sources */,
 				74C7F2291FB0861A00F09165 /* ResultBean.m in Sources */,
+				741DAD061FB588DB00608CFB /* ECAuthorized.m in Sources */,
 				5517D4701FA0DE4900BFFAC4 /* NSString+Modify.m in Sources */,
 				552FA3B81F7424DC009EB5B2 /* AppDelegate.m in Sources */,
 				744E5D891F9F359E009AA1AB /* UIImage+TBUIAutoTest.m in Sources */,

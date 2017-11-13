@@ -7,17 +7,26 @@
 //
 
 #import "HouseLoanManager.h"
+#import "UserDefaultsKey.h"
 
 @interface HouseLoanManager()
-@property (nonatomic, assign) NSInteger fAllLoan;                                     //贷款总金额或房价总额
-@property (nonatomic, assign) CGFloat fInterestRate;                                //利率
-@property (nonatomic, assign) NSInteger iMonths;                                    //贷款期数（月）
-@property (nonatomic, strong) NSMutableArray *mutarrMonth;                          //每月还款明细
-@property (nonatomic, assign) HouseLoanType houseLoanType;                          //房贷类型
+@property (nonatomic, assign) HouseLoanType houseLoanType;                          //贷款类型
+@property (nonatomic, assign) HouseLoanPaymentType houseLoanPaymentType;            //还贷方式
 @property (nonatomic, assign) HouseLoanCalculateWay houseLoadCalculateWay;          //房贷计算方式
-@property (nonatomic, assign) CGFloat fLoanRate;                                    //房贷比例
+@property (nonatomic, assign) NSInteger iAllLoan;                                   //贷款总金额
+@property (nonatomic, assign) NSInteger iSYLoan;                                    //商业贷款金额
+@property (nonatomic, assign) NSInteger iHousePrice;                                //房屋总价
+@property (nonatomic, assign) NSInteger iLoanRate;                                  //房贷比例
+@property (nonatomic, assign) NSInteger iMonths;                                    //贷款期数（月）
+@property (nonatomic, assign) CGFloat fInterestRate;                                //利率
 @property (nonatomic, assign) NSInteger iDiscount;                                  //房贷折扣
+@property (nonatomic, assign) NSInteger iGJJLoan;                                   //公积金贷款金额
+@property (nonatomic, assign) CGFloat fGJJRate;                                      //公积金贷款利率
+
+
 @property (nonatomic, assign) CGFloat fAllInterest;                                 //总利息
+@property (nonatomic, strong) NSMutableArray *mutarrMonth;                          //每月还款明细
+@property (nonatomic, assign) CGFloat fReduce;                                      //每月递减
 
 @end
 
@@ -37,7 +46,8 @@
 {
     if (self = [super init])
     {
-        
+        self.houseLoadCalculateWay = HouseLoanCalculateWayTotalLoan;
+        self.iLoanRate = 70;
     }
     return self;
 }
@@ -49,22 +59,45 @@
     self.houseLoanType = houseLoanType;
 }
 
-//配置房贷计算方式
-- (void)configHouseLoadCalculateWay:(HouseLoanCalculateWay)houseLoadCalculateWay
+//配置房贷类型
+- (void)configHouseLoanPaymentType:(HouseLoanPaymentType)houseLoanPaymentType
 {
-    self.houseLoadCalculateWay = houseLoadCalculateWay;
+    self.houseLoanPaymentType = houseLoanPaymentType;
 }
 
-//配置房贷总额或房价总额
+//配置房贷计算方式
+- (void)configHouseLoanCalculateWay:(HouseLoanCalculateWay)houseLoanCalculateWay
+{
+    self.houseLoadCalculateWay = houseLoanCalculateWay;
+    if (self.houseLoadCalculateWay == HouseLoanCalculateWayTotalLoan&&self.iHousePrice > 0&&self.iLoanRate > 0)
+    {
+        [self configIAllLoan:self.iHousePrice*self.iLoanRate/100];
+    }
+}
+
+//配置房贷总额
 - (void)configIAllLoan:(NSInteger)allLoan
 {
-    self.fAllLoan = allLoan;
+    self.iAllLoan = allLoan;
+}
+
+//配置房价总额
+- (void)configIHousePrice:(NSInteger)housePrice
+{
+    self.iHousePrice = housePrice;
+    [self configIAllLoan:self.iHousePrice*self.iLoanRate/100];
 }
 
 //配置房贷比例
-- (void)configLoanRate:(CGFloat)loanRate
+- (void)configLoanRate:(NSInteger)loanRate
 {
-    self.fLoanRate = loanRate;
+    self.iLoanRate = loanRate;
+    [self configIAllLoan:self.iHousePrice*self.iLoanRate/100];
+}
+
+- (void)configSYLoan:(NSInteger)SYLoan
+{
+    self.iSYLoan = SYLoan;
 }
 
 //配置贷款期数
@@ -80,20 +113,31 @@
 }
 
 //配置贷款折扣
-- (void)configDiscount:(CGFloat)discount
+- (void)configDiscount:(NSInteger)discount
 {
     self.iDiscount = discount;
 }
+
+- (void)configiGJJLoan:(NSInteger)GJJLoan
+{
+    self.iGJJLoan = GJJLoan;
+}
+
+- (void)configfGJJRate:(CGFloat)GJJRate
+{
+    self.fGJJRate = GJJRate;
+}
+
 
 #pragma mark - getData
 //计算结果
 - (NSMutableArray *)getResult
 {
-    if(self.houseLoanType == HouseLoanTypeAC) //如果是等额本金
+    if(self.houseLoanPaymentType == HouseLoanPaymentTypeAC) //如果是等额本金
     {
         [self getAverageCapitalResult];
     }
-    else if (self.houseLoanType == HouseLoanTypeACPL) //如果是等额本息
+    else if (self.houseLoanPaymentType == HouseLoanPaymentTypeACPL) //如果是等额本息
     {
         [self getAverageInterestResult];
     }
@@ -106,13 +150,8 @@
 {
     self.mutarrMonth = [[NSMutableArray alloc]init];
     
-    CGFloat fALoan = self.fAllLoan*10000;
+    CGFloat fALoan = self.iAllLoan*10000;
     CGFloat fAInterestRate = self.fInterestRate * (self.iDiscount==0?100:self.iDiscount)/100.0;
-    
-    if (self.houseLoadCalculateWay == HouseLoanCalculateWayTotalHouse)
-    {
-        fALoan = floor(self.fAllLoan*self.fLoanRate)*10000;
-    }
     
     //每月月供额=〔贷款本金×月利率×(1＋月利率)＾还款月数〕÷〔(1＋月利率)＾还款月数-1〕
     CGFloat fMPayment = (fALoan * fAInterestRate * pow(1 + fAInterestRate, self.iMonths))/(pow(1 + fAInterestRate, self.iMonths)-1);
@@ -143,18 +182,14 @@
 {
     self.mutarrMonth = [[NSMutableArray alloc]init];
     
-    CGFloat fALoan = self.fAllLoan*10000;
+    CGFloat fALoan = self.iAllLoan*10000;
     CGFloat fAInterestRate = self.fInterestRate * (self.iDiscount==0?100:self.iDiscount)/100.0;
-    
-    if (self.houseLoadCalculateWay == HouseLoanCalculateWayTotalHouse)
-    {
-        fALoan = self.fAllLoan*self.fLoanRate*10000;
-    }
     
     //每月应还本金=贷款本金÷还款月数
     CGFloat fMPrincipal = fALoan/self.iMonths;
     //每月月供递减额=每月应还本金×月利率=贷款本金÷还款月数×月利率
     CGFloat fMReduce = fMPrincipal*fAInterestRate;
+    self.fReduce = fMReduce;
     //总利息=〔(总贷款额÷还款月数+总贷款额×月利率)+总贷款额÷还款月数×(1+月利率)〕÷2×还款月数-总贷款额
     CGFloat fAllInterest = (fALoan/self.iMonths+fALoan*fAInterestRate+fALoan/self.iMonths*(1+fAInterestRate))/2*self.iMonths - fALoan;
     self.fAllInterest = fAllInterest;
@@ -215,9 +250,9 @@
 }
 
 //获取贷款类型
-- (HouseLoanType)getHouseLoanType
+- (HouseLoanPaymentType)getHouseLoanPaymentType
 {
-    return self.houseLoanType;
+    return self.houseLoanPaymentType;
 }
 
 //获取贷款计算发送
@@ -235,14 +270,7 @@
 //获取贷款总额
 - (NSInteger)getAllLoan
 {
-    if (self.houseLoadCalculateWay == HouseLoanCalculateWayTotalHouse)
-    {
-        return floor(self.fAllLoan*self.fLoanRate);
-    }
-    else
-    {
-        return self.fAllLoan;
-    }
+    return self.iAllLoan;
 }
 
 //获取贷款利息
@@ -260,9 +288,32 @@
 }
 
 //获取贷款利息
-- (CGFloat)getMonths
+- (NSInteger)getMonths
 {
     return self.iMonths;
+}
+
+//配置房贷比例
+- (NSInteger)getLoanRate
+{
+    return self.iLoanRate;
+}
+
+//配置房价总额
+- (NSInteger)getHousePrice
+{
+    return self.iHousePrice;
+}
+
+//配置贷款折扣
+- (NSInteger)getDiscount
+{
+    return self.iDiscount;
+}
+
+- (CGFloat)getReduce
+{
+    return self.fReduce;
 }
 
 @end

@@ -25,16 +25,20 @@ typedef enum : NSUInteger {
 
 @implementation ProgressBar
 
+//创建
 - (instancetype)initWithFrame:(CGRect)frame
 {
     if (self = [super initWithFrame:frame])
     {
+        //根据长宽比来确定方向是垂直或水平
         if (frame.size.height > frame.size.width)
         {
+            //如果高比宽长，为垂直方向
             self.orientation = ProgressBarOrientationVertical;
         }
         else
         {
+            //如果宽比高长，为水平方向
             self.orientation = ProgressBarOrientationHorizontal;
         }
         
@@ -48,16 +52,19 @@ typedef enum : NSUInteger {
     return self;
 }
 
+//配置进度条背景颜色
 - (void)configBackgroundColor:(UIColor *)color
 {
     self.backgroundColor = color;
 }
 
+//配置进度条颜色
 - (void)configProgressColor:(UIColor *)color
 {
     self.vwProgress.backgroundColor = color;
 }
 
+//配置进度和上限
 - (void)configProgressWithfNow:(float)fNow fTotal:(float)fTotal animated:(BOOL)animated
 {
     self.fTotal = fTotal;
@@ -78,6 +85,7 @@ typedef enum : NSUInteger {
     
 }
 
+//配置进度
 - (void)configProgressWithfNow:(float)fNow animated:(BOOL)animated
 {
     self.fNow = fNow;
@@ -96,6 +104,7 @@ typedef enum : NSUInteger {
     }
 }
 
+//配置进度比例
 - (void)configProgressWithfRate:(float)fRate animated:(BOOL)animated
 {
     self.fRate = fRate;

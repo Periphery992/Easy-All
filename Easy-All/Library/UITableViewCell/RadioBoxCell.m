@@ -23,6 +23,7 @@
     {
         self.selectionStyle = UITableViewCellSelectionStyleNone;
         
+        //第一项选择框
         self.btnRadioFirst = [[UIButton alloc]initWithFrame:CGRectMake(0, 0, 0, 0)];
         [self.btnRadioFirst addTarget:self action:@selector(Touch_btnRadioFirstIsConfig:) forControlEvents:UIControlEventTouchUpInside];
         self.btnRadioFirst.hidden = YES;
@@ -32,6 +33,7 @@
         self.btnRadioFirst.titleLabel.font = [UIFont systemFontOfSize:14];
         [self.contentView addSubview:self.btnRadioFirst];
         
+        //第二项选择框
         self.btnRadioSecond = [[UIButton alloc]initWithFrame:CGRectMake(0, 0, 0, 0)];
         [self.btnRadioSecond addTarget:self action:@selector(Touch_btnRadioSecondIsConfig:) forControlEvents:UIControlEventTouchUpInside];
         self.btnRadioSecond.hidden = YES;
@@ -41,6 +43,7 @@
         self.btnRadioSecond.titleLabel.font = [UIFont systemFontOfSize:14];
         [self.contentView addSubview:self.btnRadioSecond];
         
+        //第三项选择框
         self.btnRadioThird = [[UIButton alloc]initWithFrame:CGRectMake(0, 0, 0, 0)];
         [self.btnRadioThird addTarget:self action:@selector(Touch_btnRadioThirdIsConfig:) forControlEvents:UIControlEventTouchUpInside];
         self.btnRadioThird.hidden = YES;
@@ -56,13 +59,7 @@
 }
 
 #pragma mark - config
-- (void)configHiddenAllRadioBox
-{
-    self.btnRadioFirst.hidden = YES;
-    self.btnRadioSecond.hidden = YES;
-    self.btnRadioThird.hidden = YES;
-}
-
+//配置cell的文本属性
 - (void)configTitle:(NSString *)title font:(UIFont *)font color:(UIColor *)color
 {
     self.textLabel.text = title;
@@ -70,6 +67,7 @@
     self.textLabel.textColor = color?color:self.textLabel.textColor;
 }
 
+//配置第一项选择框文本属性
 - (void)configRadioFirstWithTitle:(NSString *)title font:(UIFont *)font color:(UIColor *)color isSelected:(BOOL)isSelected
 {
     self.btnRadioFirst.hidden = NO;
@@ -89,6 +87,7 @@
     [self fixPosition];
 }
 
+//配置第二项选择框文本属性
 - (void)configRadioSecondWithTitle:(NSString *)title font:(UIFont *)font color:(UIColor *)color isSelected:(BOOL)isSelected
 {
     self.btnRadioSecond.hidden = NO;
@@ -108,6 +107,7 @@
     [self fixPosition];
 }
 
+//配置第三项选择框文本属性
 - (void)configRadioThirdWithTitle:(NSString *)title font:(UIFont *)font color:(UIColor *)color isSelected:(BOOL)isSelected
 {
     self.btnRadioThird.hidden = NO;
@@ -127,6 +127,7 @@
     [self fixPosition];
 }
 
+//配置选中项
 - (void)configSelectedWithIndex:(NSInteger)index
 {
     if (index == 0)
@@ -147,6 +148,28 @@
    [self Touch_btnRadioFirstIsConfig:YES];
 }
 
+//获取当前选中项编号
+- (NSInteger)getIndexOfSelected
+{
+    if (self.btnRadioFirst.selected)
+    {
+        return 0;
+    }
+    
+    if (self.btnRadioSecond.selected)
+    {
+        return 1;
+    }
+    
+    if (self.btnRadioThird.selected)
+    {
+        return 2;
+    }
+    return 0;
+    
+}
+
+//调整位置
 - (void)fixPosition
 {
     CGFloat right = 10;
@@ -177,28 +200,8 @@
     
 }
 
-- (NSInteger)getIndexOfSelected
-{
-    if (self.btnRadioFirst.selected)
-    {
-        return 0;
-    }
-    
-    if (self.btnRadioSecond.selected)
-    {
-        return 1;
-    }
-    
-    if (self.btnRadioThird.selected)
-    {
-        return 2;
-    }
-    return 0;
-
-}
-
 #pragma mark - Event
-
+//选中第一项
 - (void)Touch_btnRadioFirstIsConfig:(BOOL)isConfig
 {
     if (!self.btnRadioThird.selected)
@@ -215,6 +218,7 @@
     }
 }
 
+//选中第二项
 - (void)Touch_btnRadioSecondIsConfig:(BOOL)isConfig
 {
     if (!self.btnRadioThird.selected)
@@ -230,6 +234,7 @@
     }
 }
 
+//选中第三项
 - (void)Touch_btnRadioThirdIsConfig:(BOOL)isConfig
 {
     if (!self.btnRadioThird.selected)
@@ -245,6 +250,7 @@
     }
 }
 
+//点击事件回调
 - (void)TouchEvent
 {
     if ([self.delegate respondsToSelector:@selector(radioBoxCell:indexOfSelected:)])

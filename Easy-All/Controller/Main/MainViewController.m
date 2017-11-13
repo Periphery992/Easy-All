@@ -27,7 +27,7 @@
     // Do any additional setup after loading the view.
     self.title = @"Main";
     [self initView];
-//    [self autoPush:@"HTTPTestViewController"];
+    [self autoPush:@"LomoViewController"];
     
 }
 

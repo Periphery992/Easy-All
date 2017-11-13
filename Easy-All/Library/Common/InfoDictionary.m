@@ -199,5 +199,35 @@ static const BOOL isAutoPrint = YES; //获取时自动打印
     return [timeString integerValue];
 }
 
+#pragma mark - getScreenImage
++ (UIImage *)getScreenshotImageWithSave:(BOOL)save
+{
+    UIWindow *screenWindow = [[UIApplication sharedApplication]keyWindow];
+    UIGraphicsBeginImageContextWithOptions(screenWindow.frame.size, NO, 0.0);
+    [screenWindow.layer renderInContext:UIGraphicsGetCurrentContext()];
+    UIImage* viewImage = UIGraphicsGetImageFromCurrentImageContext();
+    UIGraphicsEndImageContext();
+    
+    if (save)
+    {
+        UIImageWriteToSavedPhotosAlbum(viewImage,nil,nil,nil);
+    }
+    return viewImage;
+}
+
+
+#pragma mark - Other
++ (void)gotoApplicationSetting
+{
+    NSURL * url = [NSURL URLWithString:UIApplicationOpenSettingsURLString];
+    
+    if([[UIApplication sharedApplication] canOpenURL:url]) {
+        [[UIApplication sharedApplication] openURL:url];
+    }
+}
+
+
+
+
 
 @end

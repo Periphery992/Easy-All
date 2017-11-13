@@ -12,6 +12,7 @@
 #import "InputBoxCell.h"
 #import "MaskView.h"
 #import "HouseLoanDetailViewController.h"
+#import "InfoDictionary.h"
 
 @interface HouseLoanConfigViewController ()<UITableViewDelegate,UITableViewDataSource,RadioBoxCellDelegate,InputBoxCellDelegate>
 @property (nonatomic, strong) UITableView *tableview;
@@ -69,7 +70,7 @@
     
     
 
-    NSDecimalNumber *AllInterest = [self round:[NSString stringWithFormat:@"%0.4f",[[HouseLoanManager sharedInstance]getAllInterest]/10000.0] scale:3];
+    NSDecimalNumber *AllInterest = [InfoDictionary round:[NSString stringWithFormat:@"%0.4f",[[HouseLoanManager sharedInstance]getAllInterest]/10000.0] scale:3];
     //贷款总利息
     UILabel *lblAllInterest = [[UILabel alloc]initWithFrame:CGRectMake(vwBG.width/2, 45, vwBG.width/2-10, 20)];
     lblAllInterest.text = [NSString stringWithFormat:@"支付利息:%@万",AllInterest];
@@ -77,28 +78,40 @@
     [vwBG addSubview:lblAllInterest];
 
     
-    NSDecimalNumber *Rate = [self round:[NSString stringWithFormat:@"%0.4f",[[HouseLoanManager sharedInstance]getRate]] scale:4];
+    NSDecimalNumber *Rate = [InfoDictionary round:[NSString stringWithFormat:@"%0.4f",[[HouseLoanManager sharedInstance]getRate]] scale:4];
     //商贷利率
     UILabel *lblRate = [[UILabel alloc]initWithFrame:CGRectMake(vwBG.width/2, 70, vwBG.width/2-10, 20)];
     lblRate.text = [NSString stringWithFormat:@"商贷利率:%@%@",Rate,@"%"];
     lblRate.font = [UIFont systemFontOfSize:14];
     [vwBG addSubview:lblRate];
     
-    NSDecimalNumber *firstPayment = [self round:[NSString stringWithFormat:@"%0.4f",[[HouseLoanManager sharedInstance]getFirstPayment]] scale:0];
+    NSDecimalNumber *firstPayment = [InfoDictionary round:[NSString stringWithFormat:@"%0.4f",[[HouseLoanManager sharedInstance]getFirstPayment]] scale:0];
     //参考月供
     UILabel *lblPerPayment = [[UILabel alloc]initWithFrame:CGRectMake(vwBG.width/2, 95, vwBG.width/2-10, 20)];
-    if ([[HouseLoanManager sharedInstance]getHouseLoanType] == HouseLoanTypeAC)
+    if ([[HouseLoanManager sharedInstance]getHouseLoanPaymentType] == HouseLoanPaymentTypeAC)
     {
         lblPerPayment.text = [NSString stringWithFormat:@"参考月供:%@元/月",firstPayment];
     }
     else
     {
-        lblPerPayment.text = [NSString stringWithFormat:@"首月月供:%@",firstPayment];
+        lblPerPayment.text = [NSString stringWithFormat:@"首月月供:%@元",firstPayment];
     }
     
     lblPerPayment.font = [UIFont systemFontOfSize:14];
     [vwBG addSubview:lblPerPayment];
+    
 
+    if ([[HouseLoanManager sharedInstance]getHouseLoanPaymentType] == HouseLoanPaymentTypeACPL)
+    {
+        NSDecimalNumber *reduce = [InfoDictionary round:[NSString stringWithFormat:@"%f",[[HouseLoanManager sharedInstance]getReduce]] scale:2];
+        
+        UILabel *lblReduce = [[UILabel alloc]initWithFrame:CGRectMake(vwBG.width/2, 120, vwBG.width/2-10, 20)];
+        lblReduce.text = [NSString stringWithFormat:@"每月递减:%@元",reduce];
+        
+        lblReduce.font = [UIFont systemFontOfSize:14];
+        [vwBG addSubview:lblReduce];
+    }
+    
     UIButton *btnMore = [[UIButton alloc]initWithFrame:CGRectMake(0, 0, 80, 30)];
     btnMore.center = CGPointMake(vwBG.centerX, vwBG.height - 50);
     [btnMore setBackgroundColor:[UIColor redColor]];
@@ -151,7 +164,7 @@
             [cell configTitle:@"还款方式" font:nil color:nil];
             [cell configRadioFirstWithTitle:@"等额本金" font:nil color:nil isSelected:NO];
             [cell configRadioSecondWithTitle:@"等额本息" font:nil color:nil isSelected:NO];
-            [cell configSelectedWithIndex:[[HouseLoanManager sharedInstance]getHouseLoanType]];
+            [cell configSelectedWithIndex:[[HouseLoanManager sharedInstance]getHouseLoanPaymentType]];
         }
         else if (indexPath.section == HouseLoanCellSectionCalculateWay)
         {
@@ -180,16 +193,14 @@
         }
         
         [cell configUnit:nil font:nil color:nil];
-        
+        [cell configInputViewWithTextColor:nil textFont:nil keyboardType:UIKeyboardTypeNumberPad];
         if (indexPath.section == HouseLoanCellSectionLoanAll)
         {
             [cell configTitle:@"贷款总额" font:nil color:nil];
             [cell configUnit:@"万" font:nil color:nil];
-            [cell configInputViewWithTextColor:nil textFont:nil keyboardType:UIKeyboardTypePhonePad];
         }
         else if (indexPath.section == HouseLoanCellSectionHouseWorth)
         {
-            [cell configInputViewWithTextColor:nil textFont:nil keyboardType:UIKeyboardTypeNumberPad];
             if (indexPath.row == 0)
             {
                 [cell configTitle:@"房屋总价" font:nil color:nil];
@@ -210,12 +221,16 @@
         {
             [cell configTitle:@"贷款利率" font:nil color:nil];
             [cell configUnit:@"%" font:nil color:nil];
+            [cell configInputViewWithTextColor:nil textFont:nil keyboardType:UIKeyboardTypeNumbersAndPunctuation];
         }
         else if (indexPath.section == HouseLoanCellSectionDiscount)
         {
             [cell configTitle:@"贷款折扣" font:nil color:nil];
             [cell configUnit:@"%" font:nil color:nil];
+            
         }
+        
+        [cell configInputContect:[self getCellTextContectWithIndexPath:indexPath]];
         
         return cell;
     }
@@ -255,11 +270,11 @@
     NSIndexPath *indexPath = [self.tableview indexPathForCell:radioBoxCell];
     if (indexPath.section == HouseLoanCellSectionLoanType)
     {
-        [[HouseLoanManager sharedInstance]configHouseLoanType:index];
+        [[HouseLoanManager sharedInstance]configHouseLoanPaymentType:index];
     }
     if (indexPath.section == HouseLoanCellSectionCalculateWay)
     {
-        [[HouseLoanManager sharedInstance]configHouseLoadCalculateWay:index];
+        [[HouseLoanManager sharedInstance]configHouseLoanCalculateWay:index];
     }
     [self.tableview reloadData];
 }
@@ -277,7 +292,7 @@
     {
         if (indexPath.row == 0)
         {
-            [[HouseLoanManager sharedInstance]configIAllLoan:[text integerValue]];
+            [[HouseLoanManager sharedInstance]configIHousePrice:[text integerValue]];
         }
         else if (indexPath.row == 1)
         {
@@ -298,6 +313,46 @@
     }
 }
 
+- (NSString *)getCellTextContectWithIndexPath:(NSIndexPath *)indexPath
+{
+    NSString *strContext = @"";
+    
+    if (indexPath.section == HouseLoanCellSectionLoanAll)
+    {
+       strContext = [NSString stringWithFormat:@"%zi",[[HouseLoanManager sharedInstance]getAllLoan]];
+    }
+    else if (indexPath.section == HouseLoanCellSectionHouseWorth)
+    {
+        if (indexPath.row == 0)
+        {
+            strContext = [NSString stringWithFormat:@"%zi",[[HouseLoanManager sharedInstance]getHousePrice]];
+        }
+        else if (indexPath.row == 1)
+        {
+            strContext = [NSString stringWithFormat:@"%zi",[[HouseLoanManager sharedInstance]getLoanRate]];
+        }
+    }
+    else if (indexPath.section == HouseLoanCellSectionTime)
+    {
+        strContext = [NSString stringWithFormat:@"%zi",[[HouseLoanManager sharedInstance]getMonths]];
+    }
+    else if (indexPath.section == HouseLoanCellSectionInterestRate)
+    {
+        strContext = [NSString stringWithFormat:@"%f",[[HouseLoanManager sharedInstance]getRate]];
+        strContext = [NSString stringWithFormat:@"%@",[InfoDictionary round:strContext scale:4]];
+    }
+    else if (indexPath.section == HouseLoanCellSectionDiscount)
+    {
+        strContext = [NSString stringWithFormat:@"%zi",[[HouseLoanManager sharedInstance]getDiscount]];
+    }
+    
+    if ([strContext isEqualToString:@"0"])
+    {
+        return @"";
+    }
+    return strContext;
+}
+
 #pragma mark - Event
 
 - (void)Touch_btnMore:(id)sender
@@ -308,20 +363,6 @@
 }
 
 #pragma mark -
-- (NSDecimalNumber *)round:(NSString *)string scale:(NSInteger)scale
-{
-    NSDecimalNumberHandler *roundBankers = [NSDecimalNumberHandler
-                                            decimalNumberHandlerWithRoundingMode:NSRoundPlain
-                                            scale:scale
-                                            raiseOnExactness:NO
-                                            raiseOnOverflow:NO
-                                            raiseOnUnderflow:NO
-                                            raiseOnDivideByZero:YES];
-    
-    NSDecimalNumber *d = [NSDecimalNumber decimalNumberWithString:string];
-    d = [d decimalNumberByRoundingAccordingToBehavior:roundBankers];
-    
-    return d;
-}
+
 
 @end

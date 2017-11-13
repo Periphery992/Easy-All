@@ -93,4 +93,20 @@
  */
 + (NSInteger)getNowTimestamp;
 
+#pragma mark - getScreenImage
+
+/**
+ 获取屏幕截图
+
+ @param save 是否保存到相册
+ @return 屏幕截图
+ */
++ (UIImage *)getScreenshotImageWithSave:(BOOL)save;
+
+#pragma mark - Other
+
+/**
+ 前往应用设置页面
+ */
++ (void)gotoApplicationSetting;
 @end

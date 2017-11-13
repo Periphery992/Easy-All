@@ -90,6 +90,7 @@
     if (cell == nil)
     {
         cell = [[MoreTextCell alloc]initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:moreTextCell];
+        cell.selectionStyle = UITableViewCellSelectionStyleNone;
     }
     
     NSMutableArray *mutarrString = [[NSMutableArray alloc]init];

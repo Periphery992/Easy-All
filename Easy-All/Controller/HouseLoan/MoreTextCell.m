@@ -20,6 +20,7 @@
             UILabel *lblTitle = [[UILabel alloc]initWithFrame:CGRectMake(0+width*i, 0, width, 30)];
             lblTitle.tag = 10000+i;
             lblTitle.textAlignment = NSTextAlignmentCenter;
+            lblTitle.font = [UIFont systemFontOfSize:14];
             [self.contentView addSubview:lblTitle];
         }
     }

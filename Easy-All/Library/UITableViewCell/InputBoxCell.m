@@ -21,14 +21,16 @@
 {
     if (self = [super initWithStyle:style reuseIdentifier:reuseIdentifier])
     {
+        //输入款
         self.txtContent = [[UITextField alloc]initWithFrame:CGRectMake(0, 0, 0, 30)];
         self.txtContent.width = 130;
         self.txtContent.rightX = SCREEN_WIDTH - 15;
         self.txtContent.centerY = 22;
         self.txtContent.delegate = self;
-        self.txtContent.borderStyle = UITextBorderStyleRoundedRect;
+        self.txtContent.borderStyle = UITextBorderStyleRoundedRect; //圆角边框
         [self.contentView addSubview:self.txtContent];
         
+        //单位
         self.lblUnit = [[UILabel alloc]initWithFrame:CGRectMake(0, 0, 0, 0)];
         [self.contentView addSubview:self.lblUnit];
     }
@@ -36,6 +38,7 @@
 }
 
 #pragma mark - Config
+//配置cell的文本内容
 - (void)configTitle:(NSString *)title font:(UIFont *)font color:(UIColor *)color
 {
     self.textLabel.text = title;
@@ -43,6 +46,7 @@
     self.textLabel.textColor = color?color:self.textLabel.textColor;
 }
 
+//配置输入项的单位
 - (void)configUnit:(NSString *)Unit font:(UIFont *)font color:(UIColor *)color
 {
     self.lblUnit.text = Unit;
@@ -59,6 +63,7 @@
     self.txtContent.rightX = self.lblUnit.originX - 5;
 }
 
+//配置输入框的文本属性
 - (void)configInputViewWithTextColor:(UIColor *)textColor textFont:(UIFont *)font keyboardType:(UIKeyboardType)keyboardType
 {
     self.txtContent.textColor = textColor?textColor:self.txtContent.textColor;

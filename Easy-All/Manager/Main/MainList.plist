@@ -32,5 +32,15 @@
 		<key>iCon</key>
 		<string></string>
 	</dict>
+	<dict>
+		<key>Name</key>
+		<string>Lomo</string>
+		<key>Controller</key>
+		<string>LomoViewController</string>
+		<key>Type</key>
+		<integer>0</integer>
+		<key>iCon</key>
+		<string></string>
+	</dict>
 </array>
 </plist>

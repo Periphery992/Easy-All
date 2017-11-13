@@ -217,6 +217,25 @@
     return;
 }
 
+//获取视图自身的中心点
+- (CGPoint)selfCenter
+{
+    CGPoint selfCenter = CGPointMake(self.width/2, self.height/2);
+    return selfCenter;
+}
+
+//获取视图自身的中心点X轴坐标
+- (CGFloat)selfCenterX
+{
+    return self.width/2;
+}
+
+//获取摄图自身的中心点Y轴坐标
+- (CGFloat)selfCenterY
+{
+    return self.height/2;
+}
+
 /**
  移除此view上的所有子视图
  */

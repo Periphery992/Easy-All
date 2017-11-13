@@ -10,9 +10,16 @@
 #ifndef UserDefaultsKey_h
 #define UserDefaultsKey_h
 
-#define USKey_HttpUrl   @"USKey_HttpUrl"
-
-#define USKey_Account   @"USKey_Account"
+#pragma mark - HouseLoan
+#define USKey_HouseLoanType         @"USKey_HouseLoanType"
+#define USKey_HouseLoanCalculateWay @"USKey_HouseLoanCalculateWay"
+#define USKey_AllLoan               @"USkey_AllLoan"
+#define USkey_HousePrice            @"USkey_HousePrice"
+#define USKey_InterestRate          @"USkey_InterestRate"
+#define USKey_Months                @"USKey_Months"
+#define USKey_LoanRate              @"USKey_LoanRate"
+#define USKey_Discount              @"USKey_Discount"
+#define USKey_AllInterest           @"USKey_AllInterest"
 
 
 

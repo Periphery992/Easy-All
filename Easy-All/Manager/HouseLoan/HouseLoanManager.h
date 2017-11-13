@@ -22,8 +22,14 @@ typedef NS_ENUM(NSUInteger, HouseLoanCellSection) {
 };
 
 typedef NS_ENUM(NSUInteger, HouseLoanType) {
-    HouseLoanTypeAC = 0,       //等额本息
-    HouseLoanTypeACPL = 1,     //等额本金
+    HouseLoanTypeShangYe = 0,       //商业贷款
+    HouseLoanTypeGongJiJin = 1,     //公积金贷款
+    HouseLoanTypeZuHe = 2,          //组合贷款
+};
+
+typedef NS_ENUM(NSUInteger, HouseLoanPaymentType) {
+    HouseLoanPaymentTypeAC = 0,       //等额本息
+    HouseLoanPaymentTypeACPL = 1,     //等额本金
 };
 
 typedef NS_ENUM(NSUInteger, HouseLoanCalculateWay) {
@@ -38,30 +44,33 @@ typedef NS_ENUM(NSUInteger, HouseLoanCalculateWay) {
 /**
  配置还款方式
 
- @param houseLoanType 还款方式
+ @param houseLoanPaymentType 还款方式
  */
-- (void)configHouseLoanType:(HouseLoanType)houseLoanType;
+- (void)configHouseLoanPaymentType:(HouseLoanPaymentType)houseLoanPaymentType;
 
 /**
  配置贷款金额计算方式
 
- @param houseLoadCalculateWay 贷款金额计算方式
+ @param houseLoanCalculateWay 贷款金额计算方式
  */
-- (void)configHouseLoadCalculateWay:(HouseLoanCalculateWay)houseLoadCalculateWay;
+- (void)configHouseLoanCalculateWay:(HouseLoanCalculateWay)houseLoanCalculateWay;
 
 /**
  配置贷款总金额或房屋总价
 
- @param allLoan 贷款总金额或房屋总价
+ @param allLoan 贷款总金额
  */
 - (void)configIAllLoan:(NSInteger)allLoan;
+
+//配置房价总额
+- (void)configIHousePrice:(NSInteger)housePrice;
 
 /**
  配置贷款比例
 
  @param loanRate 贷款比例
  */
-- (void)configLoanRate:(CGFloat)loanRate;
+- (void)configLoanRate:(NSInteger)loanRate;
 
 /**
  配置还款期数
@@ -82,7 +91,7 @@ typedef NS_ENUM(NSUInteger, HouseLoanCalculateWay) {
 
  @param discount 贷款折扣
  */
-- (void)configDiscount:(CGFloat)discount;
+- (void)configDiscount:(NSInteger)discount;
 
 /**
  计算还款
@@ -96,7 +105,7 @@ typedef NS_ENUM(NSUInteger, HouseLoanCalculateWay) {
 
 - (NSInteger)getHouseLoadCellRowCountWithSeciton:(HouseLoanCellSection)section;
 
-- (HouseLoanType)getHouseLoanType;
+- (HouseLoanPaymentType)getHouseLoanPaymentType;
 
 //获取贷款计算发送
 - (HouseLoanCalculateWay)getHouseLoanCalculateWay;
@@ -111,6 +120,17 @@ typedef NS_ENUM(NSUInteger, HouseLoanCalculateWay) {
 
 - (CGFloat)getFirstPayment;
 
-- (CGFloat)getMonths;
+- (NSInteger)getMonths;
+
+//配置房贷比例
+- (NSInteger)getLoanRate;
+
+//配置房价总额
+- (NSInteger)getHousePrice;
+
+//配置贷款折扣
+- (NSInteger)getDiscount;
+
+- (CGFloat)getReduce;
 
 @end

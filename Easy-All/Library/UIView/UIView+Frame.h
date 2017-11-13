@@ -51,6 +51,21 @@
 @property (nonatomic) CGFloat centerY;
 
 /**
+ 本身的中心点X坐标
+ */
+@property (nonatomic,readonly) CGFloat selfCenterX;
+
+/**
+ 本身的中心点Y坐标
+ */
+@property (nonatomic,readonly) CGFloat selfCenterY;
+
+/**
+ 本身的中心点坐标
+ */
+@property (nonatomic,readonly) CGPoint selfCenter;
+
+/**
  view的origin
  */
 @property (nonatomic) CGPoint origin;
