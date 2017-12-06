@@ -12,6 +12,13 @@
 @interface HouseLoanManager()
 @property (nonatomic, assign) HouseLoanType houseLoanType;                          //贷款类型
 @property (nonatomic, assign) HouseLoanPaymentType houseLoanPaymentType;            //还贷方式
+@property (nonatomic, assign) NSInteger fAllLoan;                                   //贷款总金额或房价总额
+@property (nonatomic, assign) CGFloat fInterestRate;                                //利率
+@property (nonatomic, assign) NSInteger iMonths;                                    //贷款期数（月）
+@property (nonatomic, strong) NSMutableArray *mutarrMonth;                          //每月还款明细
+@property (nonatomic, assign) HouseLoanType houseLoanType;                          //房贷类型
+@property (nonatomic, assign) HouseLoanType houseLoanType;                          //贷款类型
+@property (nonatomic, assign) HouseLoanPaymentType houseLoanPaymentType;            //还贷方式
 @property (nonatomic, assign) HouseLoanCalculateWay houseLoadCalculateWay;          //房贷计算方式
 @property (nonatomic, assign) NSInteger iAllLoan;                                   //贷款总金额
 @property (nonatomic, assign) NSInteger iSYLoan;                                    //商业贷款金额
@@ -90,6 +97,12 @@
 
 //配置房贷比例
 - (void)configLoanRate:(NSInteger)loanRate
+{
+    self.iLoanRate = loanRate;
+    [self configIAllLoan:self.iHousePrice*self.iLoanRate/100];
+}
+
+- (void)configSYLoan:(NSInteger)SYLoan
 {
     self.iLoanRate = loanRate;
     [self configIAllLoan:self.iHousePrice*self.iLoanRate/100];

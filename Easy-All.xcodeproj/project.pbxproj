@@ -39,11 +39,8 @@
 		74C7F2271FB0861A00F09165 /* NetworkManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 74C7F21B1FB0861A00F09165 /* NetworkManager.m */; };
 		74C7F2291FB0861A00F09165 /* ResultBean.m in Sources */ = {isa = PBXBuildFile; fileRef = 74C7F2221FB0861A00F09165 /* ResultBean.m */; };
 		74C7F22E1FB0873D00F09165 /* HTTPTestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 74C7F22D1FB0873D00F09165 /* HTTPTestViewController.m */; };
-		74CC65DF1F959E1400A0210C /* AutoUIIDTestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 74CC65DE1F959E1400A0210C /* AutoUIIDTestViewController.m */; };
 		74CCEE521F7A271900A88A5B /* MainManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 74CCEE511F7A271900A88A5B /* MainManager.m */; };
 		74CCEE581F7A2BC400A88A5B /* MainBean.m in Sources */ = {isa = PBXBuildFile; fileRef = 74CCEE571F7A2BC400A88A5B /* MainBean.m */; };
-		74CE3D371F98BECF005CC0A7 /* UIView+AutoAccessID.m in Sources */ = {isa = PBXBuildFile; fileRef = 74CE3D361F98BECF005CC0A7 /* UIView+AutoAccessID.m */; };
-		74CE3D3A1F98CD22005CC0A7 /* UIResponder+AutoAccessID.m in Sources */ = {isa = PBXBuildFile; fileRef = 74CE3D391F98CD22005CC0A7 /* UIResponder+AutoAccessID.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -118,16 +115,10 @@
 		74C7F22C1FB0873D00F09165 /* HTTPTestViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HTTPTestViewController.h; sourceTree = "<group>"; };
 		74C7F22D1FB0873D00F09165 /* HTTPTestViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HTTPTestViewController.m; sourceTree = "<group>"; };
 		74C7F23D1FB1A94900F09165 /* UserDefaultsKey.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserDefaultsKey.h; sourceTree = "<group>"; };
-		74CC65DD1F959E1400A0210C /* AutoUIIDTestViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AutoUIIDTestViewController.h; sourceTree = "<group>"; };
-		74CC65DE1F959E1400A0210C /* AutoUIIDTestViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AutoUIIDTestViewController.m; sourceTree = "<group>"; };
 		74CCEE501F7A271900A88A5B /* MainManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainManager.h; sourceTree = "<group>"; };
 		74CCEE511F7A271900A88A5B /* MainManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainManager.m; sourceTree = "<group>"; };
 		74CCEE561F7A2BC400A88A5B /* MainBean.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainBean.h; sourceTree = "<group>"; };
 		74CCEE571F7A2BC400A88A5B /* MainBean.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainBean.m; sourceTree = "<group>"; };
-		74CE3D351F98BECF005CC0A7 /* UIView+AutoAccessID.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+AutoAccessID.h"; sourceTree = "<group>"; };
-		74CE3D361F98BECF005CC0A7 /* UIView+AutoAccessID.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+AutoAccessID.m"; sourceTree = "<group>"; };
-		74CE3D381F98CD22005CC0A7 /* UIResponder+AutoAccessID.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIResponder+AutoAccessID.h"; sourceTree = "<group>"; };
-		74CE3D391F98CD22005CC0A7 /* UIResponder+AutoAccessID.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIResponder+AutoAccessID.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -221,7 +212,6 @@
 			children = (
 				741DACFF1FB5885100608CFB /* Lomo */,
 				74C7F22B1FB0872B00F09165 /* HTTPTest */,
-				74CC65DC1F959DED00A0210C /* AutoUIIDTest */,
 				74CC65D81F959D8B00A0210C /* HouseLoan */,
 				55B624F01F7C073D005B1E9D /* DeviceInfo */,
 				555D3B321F76B14900C561FA /* Main */,
@@ -418,15 +408,6 @@
 			path = HouseLoan;
 			sourceTree = "<group>";
 		};
-		74CC65DC1F959DED00A0210C /* AutoUIIDTest */ = {
-			isa = PBXGroup;
-			children = (
-				74CC65DD1F959E1400A0210C /* AutoUIIDTestViewController.h */,
-				74CC65DE1F959E1400A0210C /* AutoUIIDTestViewController.m */,
-			);
-			path = AutoUIIDTest;
-			sourceTree = "<group>";
-		};
 		74CCEE4F1F7A227100A88A5B /* Main */ = {
 			isa = PBXGroup;
 			children = (
@@ -442,22 +423,8 @@
 		74CE3D2C1F98BE85005CC0A7 /* Utility */ = {
 			isa = PBXGroup;
 			children = (
-				74CE3D341F98BECF005CC0A7 /* AutoUIID */,
 			);
 			path = Utility;
-			sourceTree = "<group>";
-		};
-		74CE3D341F98BECF005CC0A7 /* AutoUIID */ = {
-			isa = PBXGroup;
-			children = (
-				744E5D871F9F359E009AA1AB /* UIImage+TBUIAutoTest.h */,
-				744E5D881F9F359E009AA1AB /* UIImage+TBUIAutoTest.m */,
-				74CE3D351F98BECF005CC0A7 /* UIView+AutoAccessID.h */,
-				74CE3D361F98BECF005CC0A7 /* UIView+AutoAccessID.m */,
-				74CE3D381F98CD22005CC0A7 /* UIResponder+AutoAccessID.h */,
-				74CE3D391F98CD22005CC0A7 /* UIResponder+AutoAccessID.m */,
-			);
-			path = AutoUIID;
 			sourceTree = "<group>";
 		};
 		842E58931D9438720EBB0FC9 /* Pods */ = {
@@ -511,7 +478,7 @@
 				TargetAttributes = {
 					552FA3B21F7424DC009EB5B2 = {
 						CreatedOnToolsVersion = 9.0;
-						ProvisioningStyle = Manual;
+						ProvisioningStyle = Automatic;
 					};
 				};
 			};
@@ -599,15 +566,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				5517D46C1FA0D7BC00BFFAC4 /* CountView.m in Sources */,
-				74CE3D3A1F98CD22005CC0A7 /* UIResponder+AutoAccessID.m in Sources */,
 				74CCEE581F7A2BC400A88A5B /* MainBean.m in Sources */,
 				55B3EE7D1F7560C30073DB65 /* UIView+Frame.m in Sources */,
-				74CE3D371F98BECF005CC0A7 /* UIView+AutoAccessID.m in Sources */,
 				74C254651FA0841E008E80F2 /* ProgressBar.m in Sources */,
 				55AA76FF1F82836000618628 /* InputBoxCell.m in Sources */,
 				74ADDF0A1F7651DC008980A5 /* CommonViewController.m in Sources */,
 				5534D19D1F7A9F5200BF84CF /* HouseLoanManager.m in Sources */,
-				74CC65DF1F959E1400A0210C /* AutoUIIDTestViewController.m in Sources */,
 				55B3EE841F7570520073DB65 /* InfoDictionary.m in Sources */,
 				74C7F22E1FB0873D00F09165 /* HTTPTestViewController.m in Sources */,
 				7403D6581F974BF700601FFE /* HouseLoanConfigViewController.m in Sources */,
@@ -631,7 +595,6 @@
 				741DAD061FB588DB00608CFB /* ECAuthorized.m in Sources */,
 				5517D4701FA0DE4900BFFAC4 /* NSString+Modify.m in Sources */,
 				552FA3B81F7424DC009EB5B2 /* AppDelegate.m in Sources */,
-				744E5D891F9F359E009AA1AB /* UIImage+TBUIAutoTest.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
